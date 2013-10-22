@@ -5,7 +5,9 @@ execute pathogen#helptags()
 
 syntax on
 filetype plugin indent on
-colorscheme Monokai
+colorscheme Molokai
+
+hi ColorColumn ctermbg=DarkMagenta guibg=DarkMagenta
 
 set nocompatible
 set tabstop=4
@@ -19,10 +21,11 @@ set ruler
 set wildmenu
 set number
 set omnifunc=syntaxcomplete#Complete
-set colorcolumn=79
+set colorcolumn=80
 set wrap
 set linebreak
 set nolist
+set tags=~/ctags
 
 let mapleader=","
 
