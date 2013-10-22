@@ -20,19 +20,36 @@ set wildmenu
 set number
 set omnifunc=syntaxcomplete#Complete
 set colorcolumn=79
+set wrap
+set linebreak
+set nolist
 
 let mapleader=","
 
-nmap <leader>rc :vsplit $MYVIMRC<CR>
+nmap <Leader>rc :vsplit $MYVIMRC<CR>
 
-nnoremap <leader>h :help 
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
-nnoremap <leader>qf :q!<CR>
-nnoremap <leader>vn :vne<CR>
-nnoremap <leader>tn :tab :new<CR>
-nnoremap <leader>tc :tabc<CR>
-nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>h :help 
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>qf :q!<CR>
+nnoremap <Leader>vn :vne<CR>
+nnoremap <Leader>tn :tab :new<CR>
+nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <S-k> <C-w>k
+nnoremap <S-j> <C-w>j
+nnoremap <S-h> <C-w>h
+nnoremap <S-l> <C-w>l
+nnoremap k gk
+nnoremap j gj
+
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
 
 if has("autocmd")
   autocmd FocusLost * :wa
