@@ -7,7 +7,7 @@ syntax on
 filetype plugin indent on
 colorscheme Molokai
 
-hi ColorColumn ctermbg=DarkMagenta guibg=DarkMagenta
+highlight ColorColumn ctermbg=DarkMagenta guibg=DarkMagenta
 
 set nocompatible
 set tabstop=4
@@ -25,19 +25,22 @@ set colorcolumn=80
 set wrap
 set linebreak
 set nolist
+set hlsearch
+set incsearch
 set tags=~/ctags
 
 let mapleader=","
 
-nmap <Leader>rc :vsplit $MYVIMRC<CR>
+noremap <Leader>rc :vsplit $MYVIMRC<CR>
 
-nnoremap <Leader>h :help 
+nnoremap <Leader>h :help
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>qf :q!<CR>
 nnoremap <Leader>vn :vne<CR>
 nnoremap <Leader>tn :tab :new<CR>
 nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader><Space> :nohlsearch<CR>
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
@@ -48,14 +51,18 @@ nnoremap <S-h> <C-w>h
 nnoremap <S-l> <C-w>l
 nnoremap k gk
 nnoremap j gj
+nnoremap / /\v
 
 inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
+inoremap jj <Esc>
+
+vnoremap / /\v
 
 if has("autocmd")
-  autocmd FocusLost * :wa
-  autocmd! BufWritePost .vimrc :so $MYVIMRC
+  autocmd! FocusLost * :wall
+  autocmd! BufWritePost .vimrc :source $MYVIMRC
 endif
 
