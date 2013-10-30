@@ -5,7 +5,7 @@ execute pathogen#helptags()
 
 syntax on
 filetype plugin indent on
-colorscheme Molokai
+colorscheme wombat256
 
 highlight ColorColumn ctermbg=DarkMagenta guibg=DarkMagenta
 
@@ -32,13 +32,17 @@ set tags=~/ctags
 let mapleader=","
 
 noremap <Leader>rc :vsplit $MYVIMRC<CR>
+noremap <Leader>grc :vsplit $MYGVIMRC<CR>
 
 nnoremap <Leader>h :help
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>wn :w
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>qa :qa<CR>
 nnoremap <Leader>qf :q!<CR>
 nnoremap <Leader>vn :vne<CR>
 nnoremap <Leader>tn :tab :new<CR>
+nnoremap <Leader>so :so %<CR>
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader><Space> :nohlsearch<CR>
 nnoremap <Up> <Nop>
@@ -49,6 +53,8 @@ nnoremap <S-k> <C-w>k
 nnoremap <S-j> <C-w>j
 nnoremap <S-h> <C-w>h
 nnoremap <S-l> <C-w>l
+nnoremap <Tab> :tabn<CR>
+nnoremap <S-Tab> :tabp<CR>
 nnoremap k gk
 nnoremap j gj
 nnoremap / /\v
@@ -62,7 +68,6 @@ inoremap jj <Esc>
 vnoremap / /\v
 
 if has("autocmd")
-  autocmd! FocusLost * :wall
   autocmd! BufWritePost .vimrc :source $MYVIMRC
 endif
 
