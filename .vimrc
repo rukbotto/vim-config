@@ -7,7 +7,7 @@ syntax on
 filetype plugin indent on
 colorscheme wombat256
 
-highlight ColorColumn ctermbg=DarkMagenta guibg=DarkMagenta
+highlight ColorColumn ctermbg=LightGray guibg=LightGray
 
 set nocompatible
 set tabstop=4
@@ -30,9 +30,10 @@ set incsearch
 set tags=~/ctags
 
 let mapleader=","
+let maplocalleader="\\"
 
-noremap <Leader>rc :vsplit $MYVIMRC<CR>
-noremap <Leader>grc :vsplit $MYGVIMRC<CR>
+noremap <Leader>rc :edit $MYVIMRC<CR>
+noremap <Leader>grc :edit $MYGVIMRC<CR>
 
 nnoremap <Leader>h :help
 nnoremap <Leader>w :w<CR>
@@ -40,6 +41,7 @@ nnoremap <Leader>wn :w
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>qa :qa<CR>
 nnoremap <Leader>qf :q!<CR>
+nnoremap <Leader>qfa :qa!<CR>
 nnoremap <Leader>vn :vne<CR>
 nnoremap <Leader>tn :tab :new<CR>
 nnoremap <Leader>so :so %<CR>

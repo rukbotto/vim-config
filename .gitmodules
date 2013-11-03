@@ -17,3 +17,6 @@
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
     ignore = dirty
+[submodule "bundle/potion"]
+	path = bundle/potion
+	url = https://github.com/rukbotto/vim_potion_plugin.git
