@@ -30,6 +30,7 @@ let mapleader=","
 let maplocalleader="\\"
 
 noremap <Leader>rc :edit $MYVIMRC<CR>
+noremap <Leader>lrc :edit $MYVIMRC.local<CR>
 noremap <Leader>grc :edit $MYGVIMRC<CR>
 
 nnoremap <Leader>h :help
@@ -76,4 +77,3 @@ endif
 if filereadable(expand("~/.vimrc.local"))
     source ~/.vimrc.local
 endif
-
