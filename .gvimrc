@@ -37,5 +37,5 @@ if has('gui_macvim')
 endif
 
 if has("autocmd")
-  autocmd! BufWritePost .gvimrc :source $MYGVIMRC
+    autocmd! BufWritePost .gvimrc source $MYGVIMRC
 endif

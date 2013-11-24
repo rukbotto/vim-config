@@ -39,13 +39,14 @@ nnoremap <Leader>wn :write
 nnoremap <Leader>q :quit<CR>
 nnoremap <Leader>qa :qall<CR>
 nnoremap <Leader>qf :quit!<CR>
-nnoremap <Leader>qfa :qall!<CR>
+nnoremap <Leader>qaf :qall!<CR>
 nnoremap <Leader>vn :vnew<CR>
 nnoremap <Leader>tn :tab :new<CR>
 nnoremap <Leader>so :source %<CR>
-nnoremap <Leader>r viws
+nnoremap <Leader>ws viws
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader><Space> :nohlsearch<CR>
+nnoremap <Leader>s :%substitute//
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
@@ -59,21 +60,29 @@ nnoremap <S-Tab> :tabprevious<CR>
 nnoremap k gk
 nnoremap j gj
 nnoremap / /\v
-nnoremap <Leader>fr :%substitute/\v<C-R><C-W>/
 
 inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
+inoremap <Esc> <Nop>
 inoremap jj <Esc>
 
 vnoremap / /\v
-vnoremap <Leader>fr :%substitute/\v<C-R><C-W>/
 
-if has("autocmd")
-  autocmd! BufWritePost .vimrc :source $MYVIMRC
-endif
+xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
+
+function! s:SearchVisualSelection()
+    let l:temp = @s
+    normal! gv"sy
+    let @/ = '\V' . substitute(escape(@s, '\/'), '\n', '\\n', "g")
+    let @s = l:temp
+endfunction
 
 if filereadable(expand("~/.vimrc.local"))
     source ~/.vimrc.local
+endif
+
+if has("autocmd")
+    autocmd! BufWritePost .vimrc source $MYVIMRC
 endif
