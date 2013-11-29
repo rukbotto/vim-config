@@ -35,6 +35,7 @@ noremap <Leader>grc :edit $MYGVIMRC<CR>
 
 nnoremap <Leader>h :help
 nnoremap <Leader>w :write<CR>
+nnoremap <Leader>wa :wall<CR>
 nnoremap <Leader>wn :write
 nnoremap <Leader>q :quit<CR>
 nnoremap <Leader>qa :qall<CR>
@@ -48,14 +49,20 @@ nnoremap <Leader>s :%substitute//
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>tgc :VimCtagsCompile<CR>
 nnoremap <Leader>tgs :VimCtagsScanDirs<CR>
+nnoremap <Leader>es :UltiSnipsEdit<CR>
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
-nnoremap <S-k> <C-w>k
-nnoremap <S-j> <C-w>j
-nnoremap <S-h> <C-w>h
-nnoremap <S-l> <C-w>l
+nnoremap K <C-w>k
+nnoremap J <C-w>j
+nnoremap H <C-w>h
+nnoremap L <C-w>l
+nnoremap HH <C-w>H
+nnoremap LL <C-w>K
+nnoremap JJ <C-f>
+nnoremap KK <C-b>
+nnoremap = <C-w>=
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
 nnoremap k gk
