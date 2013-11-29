@@ -43,10 +43,11 @@ nnoremap <Leader>qaf :qall!<CR>
 nnoremap <Leader>vn :vnew<CR>
 nnoremap <Leader>tn :tab :new<CR>
 nnoremap <Leader>so :source %<CR>
-nnoremap <Leader>ws viws
-nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader><Space> :nohlsearch<CR>
 nnoremap <Leader>s :%substitute//
+nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>tgc :VimCtagsCompile<CR>
+nnoremap <Leader>tgs :VimCtagsScanDirs<CR>
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
