@@ -48,9 +48,8 @@ nnoremap <Leader>tn :tab :new<CR>
 nnoremap <Leader>so :source %<CR>
 nnoremap <Leader><Space> :nohlsearch<CR>
 nnoremap <Leader>s :%substitute//
-nnoremap <Leader>nt :NERDTreeToggle<CR>
-nnoremap <Leader>tgc :VimCtagsCompile<CR>
-nnoremap <Leader>tgs :VimCtagsScanDirs<CR>
+nnoremap <Leader>1 :NERDTreeToggle<CR>
+nnoremap <Leader>2 :TagbarToggle<CR>
 nnoremap <Leader>es :UltiSnipsEdit<CR>
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
