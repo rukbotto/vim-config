@@ -25,6 +25,8 @@ set linebreak
 set nolist
 set hlsearch
 set incsearch
+set completeopt=menu
+set laststatus=2
 
 let mapleader=","
 let maplocalleader="\\"
@@ -92,5 +94,10 @@ if filereadable(expand("~/.vimrc.local"))
 endif
 
 if has("autocmd")
-    autocmd! BufWritePost .vimrc source $MYVIMRC
+    if !exists("autocommands_loaded")
+        let autocommands_loaded = 1
+        autocmd BufRead,BufNewFile *.hx set autowrite
+        autocmd BufRead,BufNewFile *.hxml set autowrite
+        autocmd BufWritePost .vimrc source $MYVIMRC
+    endif
 endif
