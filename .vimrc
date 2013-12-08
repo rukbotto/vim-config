@@ -31,6 +31,10 @@ set laststatus=2
 let mapleader=","
 let maplocalleader="\\"
 
+" =============================================================================
+" Normal mode mappings
+" =============================================================================
+
 noremap <Leader>rc :edit $MYVIMRC<CR>
 noremap <Leader>lrc :edit $MYVIMRC.local<CR>
 noremap <Leader>grc :edit $MYGVIMRC<CR>
@@ -70,6 +74,10 @@ nnoremap k gk
 nnoremap j gj
 nnoremap / /\v
 
+" =============================================================================
+" Insert mode mappings
+" =============================================================================
+
 inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
@@ -77,9 +85,16 @@ inoremap <Right> <Nop>
 inoremap <Esc> <Nop>
 inoremap jj <Esc>
 
-vnoremap / /\v
+" =============================================================================
+" Visual mode mappings
+" =============================================================================
 
+vnoremap / /\v
 xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
+
+" =============================================================================
+" Function for selecting a word in visual mode
+" =============================================================================
 
 function! s:SearchVisualSelection()
     let l:temp = @s
@@ -88,9 +103,49 @@ function! s:SearchVisualSelection()
     let @s = l:temp
 endfunction
 
+" =============================================================================
+" NERDTree settings
+" =============================================================================
+
+let NERDTreeQuitOnOpen = 1
+let NERDTreeShowBookmarks = 1
+let NERDTreeShowHidden = 1
+
+" =============================================================================
+" UltiSnips settings
+" =============================================================================
+
+let g:UltiSnipsEditSplit = "vertical"
+
+" =============================================================================
+" Airline settings
+" =============================================================================
+
+let g:airline_left_sep = ' '
+let g:airline_right_sep = ' '
+
+" =============================================================================
+" Neocomplcache settings
+" =============================================================================
+
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_auto_select = 1
+if !exists('g:neocomplcache_omni_patterns')
+    let g:neocomplcache_omni_patterns = {} " set a default pattern dict
+endif
+let g:neocomplcache_omni_patterns.haxe = '\v([\]''"\)]|\w|(^\s*))(\.|\()'
+
+" =============================================================================
+" Source local vimrc file
+" =============================================================================
+
 if filereadable(expand("~/.vimrc.local"))
     source ~/.vimrc.local
 endif
+
+" =============================================================================
+" Autocommands
+" =============================================================================
 
 if has("autocmd")
     if !exists("autocommands_loaded")
