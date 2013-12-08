@@ -31,3 +31,6 @@
 [submodule "bundle/lawrencium"]
 	path = bundle/lawrencium
 	url = https://github.com/ludovicchabant/vim-lawrencium.git
+[submodule "bundle/virtualenv"]
+	path = bundle/virtualenv
+	url = https://github.com/jmcantrell/vim-virtualenv.git
