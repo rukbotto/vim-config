@@ -104,7 +104,7 @@ function! s:SearchVisualSelection()
 endfunction
 
 " =============================================================================
-" NERDTree settings
+" NERDTree bundle settings
 " =============================================================================
 
 let NERDTreeQuitOnOpen = 1
@@ -112,20 +112,20 @@ let NERDTreeShowBookmarks = 1
 let NERDTreeShowHidden = 1
 
 " =============================================================================
-" UltiSnips settings
+" UltiSnips bundle settings
 " =============================================================================
 
 let g:UltiSnipsEditSplit = "vertical"
 
 " =============================================================================
-" Airline settings
+" Airline bundle settings
 " =============================================================================
 
 let g:airline_left_sep = ' '
 let g:airline_right_sep = ' '
 
 " =============================================================================
-" Neocomplcache settings
+" Neocomplcache bundle settings
 " =============================================================================
 
 let g:neocomplcache_enable_at_startup = 1
@@ -150,8 +150,12 @@ endif
 if has("autocmd")
     if !exists("autocommands_loaded")
         let autocommands_loaded = 1
-        autocmd BufRead,BufNewFile *.hx set autowrite
-        autocmd BufRead,BufNewFile *.hxml set autowrite
+        autocmd FileType haxe set autowrite
+        autocmd FileType hxml set autowrite
+        autocmd FileType python set omnifunc=pythoncomplete#Complete
+        autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+        autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+        autocmd FileType css set omnifunc=csscomplete#CompleteCSS
         autocmd BufWritePost .vimrc source $MYVIMRC
     endif
 endif
