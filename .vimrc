@@ -27,6 +27,8 @@ set hlsearch
 set incsearch
 set completeopt=menu
 set laststatus=2
+set scrolloff=999
+set relativenumber
 
 let mapleader=","
 let maplocalleader="\\"
