@@ -27,8 +27,6 @@ set hlsearch
 set incsearch
 set completeopt=menu
 set laststatus=2
-set scrolloff=999
-set relativenumber
 
 let mapleader=","
 let maplocalleader="\\"
@@ -72,9 +70,8 @@ nnoremap KK <C-b>
 nnoremap = <C-w>=
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
-nnoremap k gk
-nnoremap j gj
 nnoremap / /\v
+nnoremap <Leader>n :call <SID>ToggleRelativeNumber()<CR>
 
 " =============================================================================
 " Insert mode mappings
@@ -103,6 +100,20 @@ function! s:SearchVisualSelection()
     normal! gv"sy
     let @/ = '\V' . substitute(escape(@s, '\/'), '\n', '\\n', "g")
     let @s = l:temp
+endfunction
+
+" =============================================================================
+" Function for toggle relative lines numbers
+" =============================================================================
+
+function! s:ToggleRelativeNumber()
+    if exists("g:toggle_relativenum")
+        set norelativenumber
+        unlet g:toggle_relativenum
+    else
+        set relativenumber
+        let g:toggle_relativenum = 1
+    endif
 endfunction
 
 " =============================================================================
