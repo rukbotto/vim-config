@@ -5,7 +5,7 @@ execute pathogen#helptags()
 
 syntax on
 filetype plugin indent on
-colorscheme wombat256
+colorscheme smyck
 
 highlight ColorColumn ctermbg=DarkCyan guibg=DarkCyan
 
@@ -71,7 +71,7 @@ nnoremap = <C-w>=
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
 nnoremap / /\v
-nnoremap <Leader>n :call <SID>ToggleRelativeNumber()<CR>
+nnoremap <Leader>n :set norelativenumber!<CR>
 
 " =============================================================================
 " Insert mode mappings
@@ -100,20 +100,6 @@ function! s:SearchVisualSelection()
     normal! gv"sy
     let @/ = '\V' . substitute(escape(@s, '\/'), '\n', '\\n', "g")
     let @s = l:temp
-endfunction
-
-" =============================================================================
-" Function for toggle relative lines numbers
-" =============================================================================
-
-function! s:ToggleRelativeNumber()
-    if exists("g:toggle_relativenum")
-        set norelativenumber
-        unlet g:toggle_relativenum
-    else
-        set relativenumber
-        let g:toggle_relativenum = 1
-    endif
 endfunction
 
 " =============================================================================
