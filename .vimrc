@@ -5,9 +5,9 @@ execute pathogen#helptags()
 
 syntax on
 filetype plugin indent on
-colorscheme smyck
+colorscheme monokai
 
-highlight ColorColumn ctermbg=DarkCyan guibg=DarkCyan
+highlight ColorColumn ctermbg=241 guibg=#64645e
 
 set nocompatible
 set tabstop=4
@@ -49,12 +49,17 @@ nnoremap <Leader>qf :quit!<CR>
 nnoremap <Leader>qaf :qall!<CR>
 nnoremap <Leader>vn :vnew<CR>
 nnoremap <Leader>tn :tab :new<CR>
+nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>so :source %<CR>
 nnoremap <Leader><Space> :nohlsearch<CR>
 nnoremap <Leader>s :%substitute//
 nnoremap <Leader>1 :NERDTreeToggle<CR>
 nnoremap <Leader>2 :TagbarToggle<CR>
 nnoremap <Leader>es :UltiSnipsEdit<CR>
+nnoremap <Leader>n :set norelativenumber!<CR>
+nnoremap <Leader>b :buffer
+nnoremap <Leader>bn :bnext<CR>
+nnoremap <Leader>bp :bprevious<CR>
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
@@ -71,7 +76,6 @@ nnoremap = <C-w>=
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
 nnoremap / /\v
-nnoremap <Leader>n :set norelativenumber!<CR>
 
 " =============================================================================
 " Insert mode mappings
@@ -81,8 +85,6 @@ inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
-inoremap <Esc> <Nop>
-inoremap jj <Esc>
 
 " =============================================================================
 " Visual mode mappings
