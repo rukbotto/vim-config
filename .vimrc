@@ -7,7 +7,7 @@ syntax on
 filetype plugin indent on
 colorscheme monokai
 
-highlight ColorColumn ctermbg=241 guibg=#64645e
+highlight ColorColumn ctermbg=237 guibg=#3c3d37
 
 set nocompatible
 set tabstop=4
