@@ -60,6 +60,9 @@ nnoremap <Leader>n :set norelativenumber!<CR>
 nnoremap <Leader>b :buffer
 nnoremap <Leader>bn :bnext<CR>
 nnoremap <Leader>bp :bprevious<CR>
+nnoremap <Leader>qg :Qargs<CR>
+nnoremap <Leader>ad :argdo
+nnoremap <Leader>vg :vimgrep /
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
