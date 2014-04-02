@@ -34,9 +34,6 @@
 [submodule "bundle/virtualenv"]
 	path = bundle/virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
-[submodule "bundle/django"]
-	path = bundle/django
-	url = https://github.com/rukbotto/vim-django.git
 [submodule "bundle/html5"]
 	path = bundle/html5
 	url = https://github.com/othree/html5.vim.git
