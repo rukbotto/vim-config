@@ -52,3 +52,6 @@
 [submodule "bundle/qargs"]
 	path = bundle/qargs
 	url = https://github.com/nelstrom/vim-qargs.git
+[submodule "bundle/django"]
+	path = bundle/django
+	url = https://github.com/cwood/vim-django.git
