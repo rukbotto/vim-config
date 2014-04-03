@@ -48,6 +48,7 @@ nnoremap <Leader>qa :qall<CR>
 nnoremap <Leader>qf :quit!<CR>
 nnoremap <Leader>qaf :qall!<CR>
 nnoremap <Leader>vn :vnew<CR>
+nnoremap <Leader>nw :new<CR>
 nnoremap <Leader>tn :tab :new<CR>
 nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>so :source %<CR>
