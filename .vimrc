@@ -27,6 +27,7 @@ set hlsearch
 set incsearch
 set completeopt=menu
 set laststatus=2
+set scrolloff=8
 
 let mapleader=","
 let maplocalleader="\\"
@@ -129,17 +130,6 @@ let g:UltiSnipsEditSplit = "vertical"
 
 let g:airline_left_sep = ' '
 let g:airline_right_sep = ' '
-
-" =============================================================================
-" Neocomplcache bundle settings
-" =============================================================================
-
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_auto_select = 1
-if !exists('g:neocomplcache_omni_patterns')
-    let g:neocomplcache_omni_patterns = {} " set a default pattern dict
-endif
-let g:neocomplcache_omni_patterns.haxe = '\v([\]''"\)]|\w|(^\s*))(\.|\()'
 
 " =============================================================================
 " Tagbar bundle settings
