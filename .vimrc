@@ -57,7 +57,6 @@ nnoremap <Leader><Space> :nohlsearch<CR>
 nnoremap <Leader>s :%substitute//
 nnoremap <Leader>1 :NERDTreeToggle<CR>
 nnoremap <Leader>2 :TagbarToggle<CR>
-nnoremap <Leader>es :UltiSnipsEdit<CR>
 nnoremap <Leader>n :set norelativenumber!<CR>
 nnoremap <Leader>b :buffer
 nnoremap <Leader>bn :bnext<CR>
@@ -123,6 +122,7 @@ let NERDTreeShowHidden = 1
 " =============================================================================
 
 let g:UltiSnipsEditSplit = "vertical"
+let g:UltiSnipsExpandTrigger = "<C-j>"
 
 " =============================================================================
 " Airline bundle settings
@@ -165,6 +165,5 @@ if has("autocmd")
         autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
         autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
         autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-        autocmd BufWritePost .vimrc source $MYVIMRC
     endif
 endif
