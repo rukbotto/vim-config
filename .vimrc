@@ -65,6 +65,7 @@ nnoremap <Leader>bd :bdelete<CR>
 nnoremap <Leader>qg :Qargs<CR>
 nnoremap <Leader>ad :argdo
 nnoremap <Leader>vg :vimgrep /
+nnoremap <Leader>o :only<CR>
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
@@ -159,6 +160,7 @@ endif
 if has("autocmd")
     if !exists("autocommands_loaded")
         let autocommands_loaded = 1
+        autocmd BufRead,BufNewFile *.md set filetype=markdown
         autocmd FileType haxe set autowrite
         autocmd FileType hxml set autowrite
         autocmd FileType python set omnifunc=pythoncomplete#Complete
