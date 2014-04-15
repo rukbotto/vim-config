@@ -52,9 +52,6 @@
 [submodule "bundle/django"]
 	path = bundle/django
 	url = https://github.com/cwood/vim-django.git
-[submodule "UltiSnips"]
-	path = UltiSnips
-	url = https://github.com/rukbotto/ultisnippets.git
 [submodule "bundle/ycm"]
 	path = bundle/ycm
 	url = https://github.com/Valloric/YouCompleteMe.git
