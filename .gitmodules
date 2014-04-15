@@ -58,3 +58,6 @@
 [submodule "bundle/ycm"]
 	path = bundle/ycm
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/jinja"]
+	path = bundle/jinja
+	url = https://github.com/mitsuhiko/vim-jinja.git
