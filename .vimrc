@@ -123,7 +123,7 @@ let NERDTreeShowHidden = 1
 " =============================================================================
 
 let g:UltiSnipsEditSplit = "vertical"
-let g:UltiSnipsExpandTrigger = "<C-j>"
+let g:UltiSnipsExpandTrigger = "<C-h>"
 
 " =============================================================================
 " Airline bundle settings
