@@ -55,3 +55,6 @@
 [submodule "bundle/jinja"]
 	path = bundle/jinja
 	url = https://github.com/mitsuhiko/vim-jinja.git
+[submodule "bundle/monokai"]
+	path = bundle/monokai
+	url = https://github.com/rukbotto/vim-monokai.git
