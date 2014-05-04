@@ -28,6 +28,7 @@ set incsearch
 set completeopt=menu
 set laststatus=2
 set scrolloff=8
+set relativenumber
 
 let mapleader=","
 let maplocalleader="\\"
@@ -144,13 +145,6 @@ let g:tagbar_autoclose = 1
 " =============================================================================
 
 let g:django_activate_virtualenv = 1
-
-" =============================================================================
-" Syntastic bundle settings
-" =============================================================================
-
-let g:syntastic_check_on_open = 1;
-let g:syntastic_check_on_wq = 0;
 
 " =============================================================================
 " Source local vimrc file
