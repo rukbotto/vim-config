@@ -64,3 +64,6 @@
 [submodule "bundle/css3"]
 	path = bundle/css3
 	url = https://github.com/hail2u/vim-css3-syntax.git
+[submodule "bundle/css"]
+	path = bundle/css
+	url = https://github.com/JulesWang/css.vim.git
