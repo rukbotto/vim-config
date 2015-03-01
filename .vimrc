@@ -142,12 +142,6 @@ let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 
 " =============================================================================
-" Django bundle settings
-" =============================================================================
-
-let g:django_activate_virtualenv = 1
-
-" =============================================================================
 " Indent-guides bundle settings
 " =============================================================================
 
@@ -170,8 +164,6 @@ if has("autocmd")
     if !exists("autocommands_loaded")
         let autocommands_loaded = 1
         autocmd BufRead,BufNewFile *.md set filetype=markdown
-        autocmd FileType haxe set autowrite
-        autocmd FileType hxml set autowrite
         autocmd FileType python set omnifunc=pythoncomplete#Complete
         autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
         autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
