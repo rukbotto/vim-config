@@ -1,15 +1,35 @@
-runtime bundle/pathogen/autoload/pathogen.vim
+set nocompatible
+filetype off
 
-execute pathogen#infect()
-execute pathogen#helptags()
+set rtp+=~/.dotvim/bundle/Vundle.vim
+
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdcommenter.git'
+Plugin 'tpope/vim-surround'
+Plugin 'SirVer/ultisnips.git'
+Plugin 'bling/vim-airline.git'
+Plugin 'majutsushi/tagbar.git'
+Plugin 'othree/html5.vim.git'
+Plugin 'mattn/emmet-vim.git'
+Plugin 'groenewege/vim-less.git'
+Plugin 'nelstrom/vim-qargs.git'
+Plugin 'nathanaelkane/vim-indent-guides.git'
+Plugin 'JulesWang/css.vim.git'
+
+" Color scheme
+Plugin 'endel/vim-github-colorscheme'
+
+call vundle#end()
 
 syntax on
 filetype plugin indent on
-colorscheme monokai
+colorscheme github
 
 highlight ColorColumn ctermbg=237 guibg=#3c3d37
 
-set nocompatible
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -132,7 +152,7 @@ let g:UltiSnipsExpandTrigger = "<C-h>"
 
 let g:airline_left_sep = ' '
 let g:airline_right_sep = ' '
-let g:airline_theme = "molokai"
+let g:airline_theme = "sol"
 
 " =============================================================================
 " Tagbar bundle settings
