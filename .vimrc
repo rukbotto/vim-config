@@ -8,7 +8,10 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/nerdcommenter.git'
+Plugin 'wincent/Command-T'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'SirVer/ultisnips.git'
 Plugin 'bling/vim-airline.git'
 Plugin 'majutsushi/tagbar.git'
@@ -26,30 +29,60 @@ call vundle#end()
 
 syntax on
 filetype plugin indent on
+
+" Set colorscheme
 colorscheme github
 
-highlight ColorColumn ctermbg=237 guibg=#3c3d37
-
+" Insert spaces instead of tabs when indenting text
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set encoding=utf-8
+
+" Autoindent text
 set autoindent
+
+" Set encoding to utf-8
+set encoding=utf-8
+
+" highlight the current line
 set cursorline
+
+" Display info at the bottom of each window
 set ruler
+
+" Display line numbers
 set number
+
+" Display a color column 80 chars at the right
 set colorcolumn=80
+
+" Wrap long lines
 set wrap
 set linebreak
-set nolist
+
+" Highlight all search matches as we type
 set hlsearch
 set incsearch
+
+" Use a popup menu for displaying completions
 set completeopt=menu
+
+" All windows will have a status line
 set laststatus=2
+
+" Cursor will be 8 lines away from top/down edges when scrolling
 set scrolloff=8
+
+" Line numbers are relative to the current line
 set relativenumber
 
+" Use special unicode chars for displaying hidden tab chars, trail spaces and
+" whitespace
+set list
+exec "set listchars=tab:\uBB\uBB,trail:\uAB,nbsp:."
+
+" Leader and local leader remappings
 let mapleader=","
 let maplocalleader="\\"
 
@@ -57,57 +90,126 @@ let maplocalleader="\\"
 " Normal mode mappings
 " =============================================================================
 
+" Open .vimrc in the current buffer
 noremap <Leader>rc :edit $MYVIMRC<CR>
+
+" Open .vimrc.local in the current buffer
 noremap <Leader>lrc :edit $MYVIMRC.local<CR>
+
+" Open .gvimrc in the current buffer
 noremap <Leader>grc :edit $MYGVIMRC<CR>
 
-nnoremap <Leader>h :help
+" Display the help file for a given tag
+nnoremap <Leader>h :help<Space>
+
+" Save the current buffer
 nnoremap <Leader>w :write<CR>
+
+" Save all open buffers
 nnoremap <Leader>wa :wall<CR>
-nnoremap <Leader>wn :write
+
+" Save the current buffer to a new file
+nnoremap <Leader>wn :write<Space>
+
+" Quit the current window
 nnoremap <Leader>q :quit<CR>
-nnoremap <Leader>qa :qall<CR>
 nnoremap <Leader>qf :quit!<CR>
+
+" Quit all windows
+nnoremap <Leader>qa :qall<CR>
 nnoremap <Leader>qaf :qall!<CR>
+
+" Open a new vertical split
 nnoremap <Leader>vn :vnew<CR>
+
+" Open a new horizontal split
 nnoremap <Leader>nw :new<CR>
+
+" Open a new tab
 nnoremap <Leader>tn :tab :new<CR>
+
+" Close the current tab
 nnoremap <Leader>tc :tabclose<CR>
+
+" Source the current buffer
 nnoremap <Leader>so :source %<CR>
+
+" Turn off search highlights
 nnoremap <Leader><Space> :nohlsearch<CR>
+
+" Execute the string subtitution command
 nnoremap <Leader>s :%substitute//
-nnoremap <Leader>1 :NERDTreeToggle<CR>
-nnoremap <Leader>2 :TagbarToggle<CR>
+
+" Toggle relative line numbers
 nnoremap <Leader>n :set norelativenumber!<CR>
-nnoremap <Leader>b :buffer
+
+" Edit the given buffer
+nnoremap <Leader>b :buffer<Space>
+
+" Display the next buffer in buffer list
 nnoremap <Leader>bn :bnext<CR>
+
+" Display the previous buffer in buffer list
 nnoremap <Leader>bp :bprevious<CR>
+
+" Delete the current buffer
 nnoremap <Leader>bd :bdelete<CR>
+
 nnoremap <Leader>qg :Qargs<CR>
-nnoremap <Leader>ad :argdo
+
+" Execute the given command for each file in argument list
+nnoremap <Leader>ad :argdo<Space>
+
+" Search for a pattern in the given files
 nnoremap <Leader>vg :vimgrep /
+
+" Close the other windows
 nnoremap <Leader>o :only<CR>
+
+" Disable arrow keys in normal mode
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
+
+" Move cursor to other windows
 nnoremap K <C-w>k
 nnoremap J <C-w>j
 nnoremap H <C-w>h
 nnoremap L <C-w>l
-nnoremap HH <C-w>H
-nnoremap LL <C-w>K
+
+" Scroll down by one page
 nnoremap JJ <C-f>
+
+" Scroll up by one page
 nnoremap KK <C-b>
+
+" Make all windows the same size
 nnoremap = <C-w>=
+
+" Display the next tab in tab list
 nnoremap <Tab> :tabnext<CR>
+
+" Display the previous tab in tab list
 nnoremap <S-Tab> :tabprevious<CR>
+
+" Search for a pattern in current buffer
 nnoremap / /\v
+
+" Execute fuzzy finder
+nnoremap <Leader>t :CommandT<CR>
+
+" Display/hide file explorer
+nnoremap <Leader>1 :NERDTreeToggle<CR>
+
+" Display/hide code symbols explorer
+nnoremap <Leader>2 :TagbarToggle<CR>
 
 " =============================================================================
 " Insert mode mappings
 " =============================================================================
 
+" Disable arrow keys in insert mode
 inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
@@ -117,7 +219,10 @@ inoremap <Right> <Nop>
 " Visual mode mappings
 " =============================================================================
 
+" Search for a pattern in current buffer
 vnoremap / /\v
+
+" Search the current word in current buffer
 xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
 
 " =============================================================================
@@ -143,7 +248,6 @@ let NERDTreeShowHidden = 1
 " UltiSnips bundle settings
 " =============================================================================
 
-let g:UltiSnipsEditSplit = "vertical"
 let g:UltiSnipsExpandTrigger = "<C-h>"
 
 " =============================================================================
@@ -165,8 +269,12 @@ let g:tagbar_autoclose = 1
 " Indent-guides bundle settings
 " =============================================================================
 
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 1
+let g:indent_guides_guide_size = 0
+let g:indent_guides_space_guides = 1
+let g:indent_guides_color_change_percent = 4
+let g:indent_guides_default_mapping = 1
 
 " =============================================================================
 " Source local vimrc file
