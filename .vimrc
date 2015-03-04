@@ -273,7 +273,6 @@ let g:tagbar_autoclose = 1
 " Indent-guides bundle settings
 " =============================================================================
 
-let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 1
 let g:indent_guides_guide_size = 0
 let g:indent_guides_space_guides = 1
