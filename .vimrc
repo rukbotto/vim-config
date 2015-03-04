@@ -22,8 +22,9 @@ Plugin 'nelstrom/vim-qargs.git'
 Plugin 'nathanaelkane/vim-indent-guides.git'
 Plugin 'JulesWang/css.vim.git'
 
-" Color scheme
-Plugin 'endel/vim-github-colorscheme'
+" Color schemes
+Plugin 'tomasr/molokai'
+Plugin 'git@bitbucket.org:chadhs/smyck.vim.git'
 
 call vundle#end()
 
@@ -31,7 +32,7 @@ syntax on
 filetype plugin indent on
 
 " Set colorscheme
-colorscheme github
+colorscheme smyck
 
 " Insert spaces instead of tabs when indenting text
 set tabstop=4
@@ -202,6 +203,9 @@ nnoremap <Leader>t :CommandT<CR>
 " Display/hide file explorer
 nnoremap <Leader>1 :NERDTreeToggle<CR>
 
+" Edit the bookmarks file
+nnoremap <Leader>ntf :e $HOME/.NERDTreeBookmarks<CR>
+
 " Display/hide code symbols explorer
 nnoremap <Leader>2 :TagbarToggle<CR>
 
@@ -256,7 +260,7 @@ let g:UltiSnipsExpandTrigger = "<C-h>"
 
 let g:airline_left_sep = ' '
 let g:airline_right_sep = ' '
-let g:airline_theme = "sol"
+let g:airline_theme = "wombat"
 
 " =============================================================================
 " Tagbar bundle settings
