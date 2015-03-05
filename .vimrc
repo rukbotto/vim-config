@@ -103,6 +103,9 @@ noremap <Leader>grc :edit $MYGVIMRC<CR>
 " Display the help file for a given tag
 nnoremap <Leader>h :help<Space>
 
+" Reload current file
+nnoremap <Leader>r :e %<CR>
+
 " Save the current buffer
 nnoremap <Leader>w :write<CR>
 
@@ -296,8 +299,23 @@ if has("autocmd")
         let autocommands_loaded = 1
         autocmd BufRead,BufNewFile *.md set filetype=markdown
         autocmd FileType python set omnifunc=pythoncomplete#Complete
-        autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-        autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
         autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+        " Autocommands for html files
+        " ---------------------------------------------------------------------
+
+        autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+        autocmd FileType html set nowrap
+        autocmd FileType html set colorcolumn=""
+
+        " Autocommands for javascript files
+        " ---------------------------------------------------------------------
+
+        autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
+        " Set the indentation to 2 columns
+        autocmd FileType javascript set tabstop=2
+        autocmd FileType javascript set shiftwidth=2
+        autocmd FileType javascript set softtabstop=2
     endif
 endif
