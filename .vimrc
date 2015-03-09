@@ -31,6 +31,9 @@ call vundle#end()
 syntax on
 filetype plugin indent on
 
+" Enable matchit macro
+runtime macros/matchit.vim
+
 " Set colorscheme
 colorscheme smyck
 
@@ -305,8 +308,10 @@ if has("autocmd")
         " ---------------------------------------------------------------------
 
         autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-        autocmd FileType html set nowrap
-        autocmd FileType html set colorcolumn=""
+
+        " Text is not wrapped, color column is not displayed
+        autocmd FileType html setlocal nowrap
+        autocmd FileType html setlocal colorcolumn=""
 
         " Autocommands for javascript files
         " ---------------------------------------------------------------------
@@ -314,8 +319,8 @@ if has("autocmd")
         autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
         " Set the indentation to 2 columns
-        autocmd FileType javascript set tabstop=2
-        autocmd FileType javascript set shiftwidth=2
-        autocmd FileType javascript set softtabstop=2
+        autocmd FileType javascript setlocal tabstop=2
+        autocmd FileType javascript setlocal shiftwidth=2
+        autocmd FileType javascript setlocal softtabstop=2
     endif
 endif
