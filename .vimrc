@@ -61,6 +61,9 @@ set number
 " Display a color column 80 chars at the right
 set colorcolumn=80
 
+" Set the colorcolumn color to dark grey
+highlight ColorColumn ctermbg=8
+
 " Wrap long lines
 set wrap
 set linebreak
@@ -312,6 +315,13 @@ if has("autocmd")
         " Text is not wrapped, color column is not displayed
         autocmd FileType html setlocal nowrap
         autocmd FileType html setlocal colorcolumn=""
+
+        " Autocommands for htmldjango files
+        " ---------------------------------------------------------------------
+
+        " Text is not wrapped, color column is not displayed
+        autocmd FileType htmldjango setlocal nowrap
+        autocmd FileType htmldjango setlocal colorcolumn=""
 
         " Autocommands for javascript files
         " ---------------------------------------------------------------------
