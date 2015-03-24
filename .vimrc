@@ -22,6 +22,7 @@ Plugin 'nelstrom/vim-qargs.git'
 Plugin 'nathanaelkane/vim-indent-guides.git'
 Plugin 'JulesWang/css.vim.git'
 Plugin 'scrooloose/syntastic'
+Plugin 'rukbotto/vim-django'
 
 " Color schemes
 Plugin 'tomasr/molokai'
