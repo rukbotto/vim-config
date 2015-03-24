@@ -2,7 +2,7 @@ if has('gui_macvim')
     set guifont=Monaco:h13
 
     " Set the colorcolumn color to dark grey
-    highlight ColorColumn guibg=DarkGrey
+    highlight ColorColumn guibg=#333333
 
     macm File.New\ Tab key=<Nop>
     macm File.Open\.\.\. key=<Nop>
@@ -35,6 +35,6 @@ if has('gui_macvim')
     macm Tools.Spelling.To\ Next\ error key=<Nop>
     macm Tools.Spelling.Suggest\ Corrections key=<Nop>
 
-    macm Window.Select\ Next\ Tab key=<Nop>
-    macm Window.Select\ Previous\ Tab key=<Nop>
+    macm Window.Select\ Next\ Tab key=<S-D-}>
+    macm Window.Select\ Previous\ Tab key=<S-D-{>
 endif

@@ -21,6 +21,7 @@ Plugin 'groenewege/vim-less.git'
 Plugin 'nelstrom/vim-qargs.git'
 Plugin 'nathanaelkane/vim-indent-guides.git'
 Plugin 'JulesWang/css.vim.git'
+Plugin 'scrooloose/syntastic'
 
 " Color schemes
 Plugin 'tomasr/molokai'
@@ -250,36 +251,37 @@ function! s:SearchVisualSelection()
 endfunction
 
 " =============================================================================
-" NERDTree bundle settings
+" NERDTree settings
 " =============================================================================
 
+let NERDTreeIgnore = ['\.pyc$']
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowBookmarks = 1
 let NERDTreeShowHidden = 1
 
 " =============================================================================
-" UltiSnips bundle settings
+" UltiSnips settings
 " =============================================================================
 
 let g:UltiSnipsExpandTrigger = "<C-h>"
 
 " =============================================================================
-" Airline bundle settings
+" Airline settings
 " =============================================================================
 
-let g:airline_left_sep = ' '
-let g:airline_right_sep = ' '
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 let g:airline_theme = "wombat"
 
 " =============================================================================
-" Tagbar bundle settings
+" Tagbar settings
 " =============================================================================
 
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 
 " =============================================================================
-" Indent-guides bundle settings
+" Indent-guides settings
 " =============================================================================
 
 let g:indent_guides_start_level = 1
@@ -287,6 +289,13 @@ let g:indent_guides_guide_size = 0
 let g:indent_guides_space_guides = 1
 let g:indent_guides_color_change_percent = 4
 let g:indent_guides_default_mapping = 1
+
+
+" =============================================================================
+" Command-T settings
+" =============================================================================
+
+let g:CommandTWildIgnore = &wildignore . ",*.pyc"
 
 " =============================================================================
 " Source local vimrc file
