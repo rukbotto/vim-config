@@ -10,8 +10,6 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/nerdcommenter.git'
 Plugin 'wincent/Command-T'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'SirVer/ultisnips.git'
 Plugin 'bling/vim-airline.git'
 Plugin 'majutsushi/tagbar.git'
@@ -21,7 +19,6 @@ Plugin 'groenewege/vim-less.git'
 Plugin 'nelstrom/vim-qargs.git'
 Plugin 'nathanaelkane/vim-indent-guides.git'
 Plugin 'JulesWang/css.vim.git'
-Plugin 'scrooloose/syntastic'
 Plugin 'rukbotto/vim-django'
 
 " Color schemes
@@ -166,6 +163,12 @@ nnoremap <Leader>bp :bprevious<CR>
 
 " Delete the current buffer
 nnoremap <Leader>bd :bdelete<CR>
+
+" Set spell checking in current buffer
+nnoremap <Leader>sp :setlocal spell spelllang=
+
+" Set filetype in current buffer
+nnoremap <Leader>sf :setfiletype<Space>
 
 nnoremap <Leader>qg :Qargs<CR>
 
