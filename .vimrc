@@ -295,12 +295,12 @@ let g:indent_guides_space_guides = 1
 let g:indent_guides_color_change_percent = 4
 let g:indent_guides_default_mapping = 1
 
-
 " =============================================================================
 " Command-T settings
 " =============================================================================
 
-let g:CommandTWildIgnore = &wildignore . ",*.pyc"
+let g:CommandTWildIgnore = &wildignore . ",*.pyc,*.jpg,*.png"
+let g:CommandTMaxFiles = 50000
 
 " =============================================================================
 " Source local vimrc file
