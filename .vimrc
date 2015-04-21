@@ -15,15 +15,16 @@ Plugin 'bling/vim-airline.git'
 Plugin 'majutsushi/tagbar.git'
 Plugin 'othree/html5.vim.git'
 Plugin 'mattn/emmet-vim.git'
-Plugin 'groenewege/vim-less.git'
+Plugin 'genoma/vim-less'
 Plugin 'nelstrom/vim-qargs.git'
 Plugin 'nathanaelkane/vim-indent-guides.git'
 Plugin 'JulesWang/css.vim.git'
 Plugin 'rukbotto/vim-django'
+Plugin 'plasticboy/vim-markdown'
 
 " Color schemes
 Plugin 'tomasr/molokai'
-Plugin 'git@bitbucket.org:chadhs/smyck.vim.git'
+Plugin 'git@bitbucket.org:rukbotto/smyck.vim.git'
 
 call vundle#end()
 
