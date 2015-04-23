@@ -182,6 +182,9 @@ nnoremap <Leader>vg :vimgrep /
 " Close the other windows
 nnoremap <Leader>o :only<CR>
 
+" Make all windows the same size
+nnoremap <Leader>= <C-w>=
+
 " Disable arrow keys in normal mode
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
@@ -199,9 +202,6 @@ nnoremap JJ <C-f>
 
 " Scroll up by one page
 nnoremap KK <C-b>
-
-" Make all windows the same size
-nnoremap = <C-w>=
 
 " Display the next tab in tab list
 nnoremap <Tab> :tabnext<CR>
