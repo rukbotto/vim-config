@@ -26,6 +26,9 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'tomasr/molokai'
 Plugin 'git@bitbucket.org:rukbotto/smyck.vim.git'
 
+" Airline themes
+Plugin 'paranoida/vim-airlineish'
+
 call vundle#end()
 
 syntax on
@@ -276,7 +279,7 @@ let g:UltiSnipsExpandTrigger = "<C-h>"
 
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-let g:airline_theme = "wombat"
+let g:airline_theme = "airlineish"
 
 " =============================================================================
 " Tagbar settings
