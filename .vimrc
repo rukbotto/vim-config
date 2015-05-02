@@ -6,7 +6,6 @@ set rtp+=~/.dotvim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/nerdcommenter.git'
 Plugin 'wincent/Command-T'
 Plugin 'tpope/vim-surround'
@@ -215,14 +214,17 @@ nnoremap <S-Tab> :tabprevious<CR>
 " Search for a pattern in current buffer
 nnoremap / /\v
 
+" Explore current directory in current windw
+nnoremap <Leader>e :Explore<CR>
+
+" Explore current directory in split
+nnoremap <Leader>se :Sexplore<CR>
+
+" Explore current directory in vertical split
+nnoremap <Leader>ve :Vexplore<CR>
+
 " Execute fuzzy finder
-nnoremap <Leader>t :CommandT<CR>
-
-" Display/hide file explorer
-nnoremap <Leader>1 :NERDTreeToggle<CR>
-
-" Edit the bookmarks file
-nnoremap <Leader>ntf :e $HOME/.NERDTreeBookmarks<CR>
+nnoremap <C-Space> :CommandT<CR>
 
 " Display/hide code symbols explorer
 nnoremap <Leader>2 :TagbarToggle<CR>
@@ -259,15 +261,6 @@ function! s:SearchVisualSelection()
 endfunction
 
 " =============================================================================
-" NERDTree settings
-" =============================================================================
-
-let NERDTreeIgnore = ['\.pyc$']
-let NERDTreeQuitOnOpen = 1
-let NERDTreeShowBookmarks = 1
-let NERDTreeShowHidden = 1
-
-" =============================================================================
 " UltiSnips settings
 " =============================================================================
 
@@ -302,7 +295,7 @@ let g:indent_guides_default_mapping = 1
 " Command-T settings
 " =============================================================================
 
-let g:CommandTWildIgnore = &wildignore . ",*.pyc,*.jpg,*.png"
+let g:CommandTWildIgnore = &wildignore . ",*.pyc,*.jpg,*.png,*.swp,*.swo"
 let g:CommandTMaxFiles = 50000
 
 " =============================================================================
