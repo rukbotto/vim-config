@@ -20,6 +20,7 @@ Plugin 'nathanaelkane/vim-indent-guides.git'
 Plugin 'JulesWang/css.vim.git'
 Plugin 'rukbotto/vim-django'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'mitsuhiko/vim-jinja'
 
 " Color schemes
 Plugin 'tomasr/molokai'
@@ -37,7 +38,7 @@ filetype plugin indent on
 runtime macros/matchit.vim
 
 " Set colorscheme
-colorscheme smyck
+colorscheme molokai
 
 " Insert spaces instead of tabs when indenting text
 set tabstop=4
@@ -167,13 +168,17 @@ nnoremap <Leader>bp :bprevious<CR>
 " Delete the current buffer
 nnoremap <Leader>bd :bdelete<CR>
 
+" Delete the all buffers
+nnoremap <Leader>bda :bdelete *<C-a><CR>
+
 " Set spell checking in current buffer
 nnoremap <Leader>sp :setlocal spell spelllang=
 
 " Set filetype in current buffer
 nnoremap <Leader>sf :setfiletype<Space>
 
-nnoremap <Leader>qg :Qargs<CR>
+" Populate argument list using the quickfix list's content
+nnoremap <Leader>ar :Qargs<CR>
 
 " Execute the given command for each file in argument list
 nnoremap <Leader>ad :argdo<Space>
@@ -222,6 +227,9 @@ nnoremap <Leader>se :Sexplore<CR>
 
 " Explore current directory in vertical split
 nnoremap <Leader>ve :Vexplore<CR>
+
+" Explore current directory in new tab
+nnoremap <Leader>te :Texplore<CR>
 
 " Execute fuzzy finder
 nnoremap <C-Space> :CommandT<CR>
@@ -295,8 +303,22 @@ let g:indent_guides_default_mapping = 1
 " Command-T settings
 " =============================================================================
 
-let g:CommandTWildIgnore = &wildignore . ",*.pyc,*.jpg,*.png,*.swp,*.swo"
+let g:CommandTWildIgnore = &wildignore . ",*.pyc,*.jpg,*.jpeg,*.png,*.swp,"
+    \ . "*.swo,*.pdf,backup,media"
 let g:CommandTMaxFiles = 50000
+
+" =============================================================================
+" Markdown settings
+" =============================================================================
+
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_folding_disabled = 1
+
+" =============================================================================
+" Jinja settings
+" =============================================================================
+
+let g:htmljinja_disable_detection = 1
 
 " =============================================================================
 " Source local vimrc file
@@ -313,7 +335,6 @@ endif
 if has("autocmd")
     if !exists("autocommands_loaded")
         let autocommands_loaded = 1
-        autocmd BufRead,BufNewFile *.md set filetype=markdown
         autocmd FileType python set omnifunc=pythoncomplete#Complete
         autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
