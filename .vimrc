@@ -354,6 +354,13 @@ if has("autocmd")
         autocmd FileType htmldjango setlocal nowrap
         autocmd FileType htmldjango setlocal colorcolumn=""
 
+        " Autocommands for htmljinja files
+        " ---------------------------------------------------------------------
+
+        " Text is not wrapped, color column is not displayed
+        autocmd FileType htmljinja setlocal nowrap
+        autocmd FileType htmljinja setlocal colorcolumn=""
+
         " Autocommands for javascript files
         " ---------------------------------------------------------------------
 
