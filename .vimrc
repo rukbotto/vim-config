@@ -21,6 +21,7 @@ Plugin 'JulesWang/css.vim.git'
 Plugin 'rukbotto/vim-django'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mitsuhiko/vim-jinja'
+Plugin 'tmhedberg/SimpylFold'
 
 " Color schemes
 Plugin 'tomasr/molokai'
@@ -319,6 +320,12 @@ let g:vim_markdown_folding_disabled = 1
 " =============================================================================
 
 let g:htmljinja_disable_detection = 1
+
+" =============================================================================
+" SimpylFold settings
+" =============================================================================
+
+let g:SimpylFold_fold_docstring = 0
 
 " =============================================================================
 " Source local vimrc file
