@@ -305,7 +305,8 @@ let g:indent_guides_default_mapping = 1
 " =============================================================================
 
 let g:CommandTWildIgnore = &wildignore . ",*.pyc,*.jpg,*.jpeg,*.png,*.swp,"
-    \ . "*.swo,*.pdf,backup,media"
+    \ . "*.swo,*.pdf,*.ai,*.psd,*.eot,*.svg,*.ttf,*.woff,backup,media,"
+    \ . "node_modules"
 let g:CommandTMaxFiles = 50000
 
 " =============================================================================
