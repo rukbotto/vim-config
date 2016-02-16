@@ -281,7 +281,7 @@ let g:UltiSnipsExpandTrigger = "<C-h>"
 
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-let g:airline_theme = "airlineish"
+let g:airline_theme = "molokai"
 
 " =============================================================================
 " Tagbar settings
