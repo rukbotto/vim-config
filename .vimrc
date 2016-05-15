@@ -6,22 +6,18 @@ set rtp+=~/.dotvim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdcommenter.git'
 Plugin 'wincent/Command-T'
 Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips.git'
 Plugin 'bling/vim-airline.git'
-Plugin 'majutsushi/tagbar.git'
 Plugin 'othree/html5.vim.git'
 Plugin 'mattn/emmet-vim.git'
 Plugin 'genoma/vim-less'
 Plugin 'nelstrom/vim-qargs.git'
-Plugin 'nathanaelkane/vim-indent-guides.git'
 Plugin 'JulesWang/css.vim.git'
 Plugin 'rukbotto/vim-django'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mitsuhiko/vim-jinja'
-Plugin 'tmhedberg/SimpylFold'
 
 " Color schemes
 Plugin 'tomasr/molokai'
@@ -110,44 +106,6 @@ noremap <Leader>lrc :edit $MYVIMRC.local<CR>
 " Open .gvimrc in the current buffer
 noremap <Leader>grc :edit $MYGVIMRC<CR>
 
-" Display the help file for a given tag
-nnoremap <Leader>h :help<Space>
-
-" Reload current file
-nnoremap <Leader>r :e %<CR>
-
-" Save the current buffer
-nnoremap <Leader>w :write<CR>
-
-" Save all open buffers
-nnoremap <Leader>wa :wall<CR>
-
-" Save the current buffer to a new file
-nnoremap <Leader>wn :write<Space>
-
-" Quit the current window
-nnoremap <Leader>q :quit<CR>
-nnoremap <Leader>qf :quit!<CR>
-
-" Quit all windows
-nnoremap <Leader>qa :qall<CR>
-nnoremap <Leader>qaf :qall!<CR>
-
-" Open a new vertical split
-nnoremap <Leader>vn :vnew<CR>
-
-" Open a new horizontal split
-nnoremap <Leader>nw :new<CR>
-
-" Open a new tab
-nnoremap <Leader>tn :tab :new<CR>
-
-" Close the current tab
-nnoremap <Leader>tc :tabclose<CR>
-
-" Source the current buffer
-nnoremap <Leader>so :source %<CR>
-
 " Turn off search highlights
 nnoremap <Leader><Space> :nohlsearch<CR>
 
@@ -157,41 +115,8 @@ nnoremap <Leader>s :%substitute//
 " Toggle relative line numbers
 nnoremap <Leader>n :set norelativenumber!<CR>
 
-" Edit the given buffer
-nnoremap <Leader>b :buffer<Space>
-
-" Display the next buffer in buffer list
-nnoremap <Leader>bn :bnext<CR>
-
-" Display the previous buffer in buffer list
-nnoremap <Leader>bp :bprevious<CR>
-
-" Delete the current buffer
-nnoremap <Leader>bd :bdelete<CR>
-
-" Delete the all buffers
-nnoremap <Leader>bda :bdelete *<C-a><CR>
-
 " Set spell checking in current buffer
 nnoremap <Leader>sp :setlocal spell spelllang=
-
-" Set filetype in current buffer
-nnoremap <Leader>sf :setfiletype<Space>
-
-" Populate argument list using the quickfix list's content
-nnoremap <Leader>ar :Qargs<CR>
-
-" Execute the given command for each file in argument list
-nnoremap <Leader>ad :argdo<Space>
-
-" Search for a pattern in the given files
-nnoremap <Leader>vg :vimgrep /
-
-" Close the other windows
-nnoremap <Leader>o :only<CR>
-
-" Make all windows the same size
-nnoremap <Leader>= <C-w>=
 
 " Disable arrow keys in normal mode
 nnoremap <Up> <Nop>
@@ -199,44 +124,8 @@ nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 
-" Move cursor to other windows
-nnoremap K <C-w>k
-nnoremap J <C-w>j
-nnoremap H <C-w>h
-nnoremap L <C-w>l
-
-" Scroll down by one page
-nnoremap JJ <C-f>
-
-" Scroll up by one page
-nnoremap KK <C-b>
-
-" Display the next tab in tab list
-nnoremap <Tab> :tabnext<CR>
-
-" Display the previous tab in tab list
-nnoremap <S-Tab> :tabprevious<CR>
-
 " Search for a pattern in current buffer
 nnoremap / /\v
-
-" Explore current directory in current windw
-nnoremap <Leader>e :Explore<CR>
-
-" Explore current directory in split
-nnoremap <Leader>se :Sexplore<CR>
-
-" Explore current directory in vertical split
-nnoremap <Leader>ve :Vexplore<CR>
-
-" Explore current directory in new tab
-nnoremap <Leader>te :Texplore<CR>
-
-" Execute fuzzy finder
-nnoremap <C-Space> :CommandT<CR>
-
-" Display/hide code symbols explorer
-nnoremap <Leader>2 :TagbarToggle<CR>
 
 " =============================================================================
 " Insert mode mappings
@@ -284,29 +173,11 @@ let g:airline_right_sep = ''
 let g:airline_theme = "molokai"
 
 " =============================================================================
-" Tagbar settings
-" =============================================================================
-
-let g:tagbar_autofocus = 1
-let g:tagbar_autoclose = 1
-
-" =============================================================================
-" Indent-guides settings
-" =============================================================================
-
-let g:indent_guides_start_level = 1
-let g:indent_guides_guide_size = 0
-let g:indent_guides_space_guides = 1
-let g:indent_guides_color_change_percent = 4
-let g:indent_guides_default_mapping = 1
-
-" =============================================================================
 " Command-T settings
 " =============================================================================
 
 let g:CommandTWildIgnore = &wildignore . ",*.pyc,*.jpg,*.jpeg,*.png,*.swp,"
-    \ . "*.swo,*.pdf,*.ai,*.psd,*.eot,*.svg,*.ttf,*.woff,backup,media,"
-    \ . "node_modules"
+    \ . "*.swo,*.pdf,*.ai,*.psd,*.eot,*.svg,*.ttf,*.woff,node_modules"
 let g:CommandTMaxFiles = 50000
 
 " =============================================================================
@@ -321,12 +192,6 @@ let g:vim_markdown_folding_disabled = 1
 " =============================================================================
 
 let g:htmljinja_disable_detection = 1
-
-" =============================================================================
-" SimpylFold settings
-" =============================================================================
-
-let g:SimpylFold_fold_docstring = 0
 
 " =============================================================================
 " Source local vimrc file
