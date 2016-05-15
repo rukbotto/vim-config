@@ -24,7 +24,7 @@ Plugin 'tomasr/molokai'
 Plugin 'git@bitbucket.org:rukbotto/smyck.vim.git'
 
 " Airline themes
-Plugin 'paranoida/vim-airlineish'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
