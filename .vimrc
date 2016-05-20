@@ -208,40 +208,22 @@ endif
 if has("autocmd")
     if !exists("autocommands_loaded")
         let autocommands_loaded = 1
-        autocmd FileType python set omnifunc=pythoncomplete#Complete
+
         autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
-        " Autocommands for html files
-        " ---------------------------------------------------------------------
-
         autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-
-        " Text is not wrapped, color column is not displayed
-        autocmd FileType html setlocal nowrap
-        autocmd FileType html setlocal colorcolumn=""
-
-        " Autocommands for htmldjango files
-        " ---------------------------------------------------------------------
-
-        " Text is not wrapped, color column is not displayed
-        autocmd FileType htmldjango setlocal nowrap
-        autocmd FileType htmldjango setlocal colorcolumn=""
-
-        " Autocommands for htmljinja files
-        " ---------------------------------------------------------------------
-
-        " Text is not wrapped, color column is not displayed
-        autocmd FileType htmljinja setlocal nowrap
-        autocmd FileType htmljinja setlocal colorcolumn=""
-
-        " Autocommands for javascript files
-        " ---------------------------------------------------------------------
-
         autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+        autocmd FileType python set omnifunc=pythoncomplete#Complete
+
+        " Text is not wrapped
+        autocmd FileType html,htmldjango,htmljinja,phtml,xml setlocal nowrap
+
+        " Color column is not displayed
+        autocmd FileType html,htmldjango,htmljinja setlocal colorcolumn=""
+        autocmd FileType phtml,xml setlocal colorcolumn=""
 
         " Set the indentation to 2 columns
-        autocmd FileType javascript setlocal tabstop=2
-        autocmd FileType javascript setlocal shiftwidth=2
-        autocmd FileType javascript setlocal softtabstop=2
+        autocmd FileType javascript,less,scss,css setlocal tabstop=2
+        autocmd FileType javascript,less,scss,css setlocal shiftwidth=2
+        autocmd FileType javascript,less,scss,css setlocal softtabstop=2
     endif
 endif
