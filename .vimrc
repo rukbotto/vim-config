@@ -20,6 +20,7 @@ Plugin 'rukbotto/vim-django'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'Yggdroot/indentLine'
 
 " Color schemes
 Plugin 'tomasr/molokai'
