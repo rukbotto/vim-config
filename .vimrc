@@ -19,6 +19,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'rukbotto/vim-django'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mitsuhiko/vim-jinja'
+Plugin 'digitaltoad/vim-pug'
 
 " Color schemes
 Plugin 'tomasr/molokai'
@@ -88,7 +89,7 @@ set relativenumber
 " Use special unicode chars for displaying hidden tab chars, trail spaces and
 " whitespace
 set list
-exec "set listchars=tab:\uBB\uBB,trail:\uAB,nbsp:."
+exec "set listchars=tab:>-,trail:-,extends:»,precedes:«"
 
 " Leader and local leader remappings
 let mapleader=","
@@ -195,6 +196,12 @@ let g:vim_markdown_folding_disabled = 1
 let g:htmljinja_disable_detection = 1
 
 " =============================================================================
+" Molokai colorscheme settings
+" =============================================================================
+
+let g:rehash256 = 1
+
+" =============================================================================
 " Source local vimrc file
 " =============================================================================
 
@@ -216,15 +223,16 @@ if has("autocmd")
         autocmd FileType python set omnifunc=pythoncomplete#Complete
 
         " Text is not wrapped
-        autocmd FileType html,htmldjango,htmljinja,phtml,xml setlocal nowrap
+        autocmd FileType html,htmldjango,htmljinja,phtml,pug setlocal nowrap
+        autocmd FileType xml setlocal nowrap
 
         " Color column is not displayed
         autocmd FileType html,htmldjango,htmljinja setlocal colorcolumn=""
-        autocmd FileType phtml,xml setlocal colorcolumn=""
+        autocmd FileType phtml,pug,xml setlocal colorcolumn=""
 
         " Set the indentation to 2 columns
-        autocmd FileType javascript,less,scss,css setlocal tabstop=2
-        autocmd FileType javascript,less,scss,css setlocal shiftwidth=2
-        autocmd FileType javascript,less,scss,css setlocal softtabstop=2
+        autocmd FileType css,javascript,less,pug,scss setlocal tabstop=2
+        autocmd FileType css,javascript,less,pug,scss setlocal shiftwidth=2
+        autocmd FileType css,javascript,less,pug,scss setlocal softtabstop=2
     endif
 endif
