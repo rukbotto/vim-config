@@ -179,8 +179,7 @@ let g:airline_theme = "zenburn"
 " Command-T settings
 " =============================================================================
 
-let g:CommandTWildIgnore = &wildignore . ",*.pyc,*.jpg,*.jpeg,*.png,*.swp,"
-    \ . "*.swo,*.pdf,*.ai,*.psd,*.eot,*.svg,*.ttf,*.woff,node_modules"
+let g:CommandTWildIgnore = &wildignore . ",*.pyc,*.swp,*.swo,node_modules"
 let g:CommandTMaxFiles = 50000
 
 " =============================================================================
