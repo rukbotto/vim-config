@@ -17,6 +17,7 @@ Plugin 'rukbotto/vim-django'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'tpope/vim-commentary'
 
 " Color schemes
 Plugin 'tomasr/molokai'
