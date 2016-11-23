@@ -13,7 +13,6 @@ Plugin 'bling/vim-airline.git'
 Plugin 'othree/html5.vim.git'
 Plugin 'mattn/emmet-vim.git'
 Plugin 'nelstrom/vim-qargs.git'
-Plugin 'rukbotto/vim-django'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'digitaltoad/vim-pug'
@@ -22,7 +21,6 @@ Plugin 'jdonaldson/vaxe'
 
 " Color schemes
 Plugin 'tomasr/molokai'
-Plugin 'git@bitbucket.org:rukbotto/smyck.vim.git'
 
 " Airline themes
 Plugin 'vim-airline/vim-airline-themes'
