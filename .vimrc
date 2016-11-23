@@ -21,11 +21,7 @@ Plugin 'jdonaldson/vaxe'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
-
-" Color schemes
 Plugin 'tomasr/molokai'
-
-" Airline themes
 Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
