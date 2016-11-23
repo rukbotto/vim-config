@@ -56,8 +56,8 @@ set ruler
 " Display line numbers
 set number
 
-" Display a color column 80 chars at the right
-set colorcolumn=80
+" Colorize screen past 80 character limit
+let &colorcolumn=join(range(81,999),",")
 
 " Set the colorcolumn color to dark grey
 highlight ColorColumn ctermbg=8
