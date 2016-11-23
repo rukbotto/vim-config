@@ -18,6 +18,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'tpope/vim-commentary'
+Plugin 'jdonaldson/vaxe'
 
 " Color schemes
 Plugin 'tomasr/molokai'
@@ -168,9 +169,9 @@ let g:UltiSnipsExpandTrigger = "<C-h>"
 " Airline settings
 " =============================================================================
 
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_theme = "zenburn"
+let g:airline_left_sep = '|'
+let g:airline_right_sep = '|'
+let g:airline_theme = "molokai"
 
 " =============================================================================
 " Command-T settings
@@ -218,6 +219,9 @@ if has("autocmd")
         autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
         autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
         autocmd FileType python set omnifunc=pythoncomplete#Complete
+
+        " Autowrite on
+        autocmd FileType haxe set autowrite
 
         " Text is not wrapped
         autocmd FileType html,htmldjango,htmljinja,phtml,pug setlocal nowrap
