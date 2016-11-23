@@ -84,8 +84,7 @@ set relativenumber
 
 " Use special unicode chars for displaying hidden tab chars, trail spaces and
 " whitespace
-set list
-exec "set listchars=tab:>-,trail:-,extends:»,precedes:«"
+set list listchars=tab:‣\ ,trail:∙,extends:»,precedes:«
 
 " Leader and local leader remappings
 let mapleader=","
@@ -152,6 +151,12 @@ function! s:SearchVisualSelection()
     let @/ = '\V' . substitute(escape(@s, '\/'), '\n', '\\n', "g")
     let @s = l:temp
 endfunction
+
+" =============================================================================
+" Netrw settings
+" =============================================================================
+
+let g:netrw_liststyle = 3
 
 " =============================================================================
 " UltiSnips settings
