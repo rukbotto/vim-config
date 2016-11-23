@@ -18,6 +18,9 @@ Plugin 'mitsuhiko/vim-jinja'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'tpope/vim-commentary'
 Plugin 'jdonaldson/vaxe'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-repeat'
 
 " Color schemes
 Plugin 'tomasr/molokai'
@@ -113,9 +116,6 @@ nnoremap <Leader>s :%substitute//
 
 " Toggle relative line numbers
 nnoremap <Leader>n :set norelativenumber!<CR>
-
-" Set spell checking in current buffer
-nnoremap <Leader>sp :setlocal spell spelllang=
 
 " Disable arrow keys in normal mode
 nnoremap <Up> <Nop>
