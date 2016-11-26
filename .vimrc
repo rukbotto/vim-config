@@ -23,6 +23,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 Plugin 'tomasr/molokai'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ludovicchabant/vim-lawrencium'
 
 call vundle#end()
 
@@ -57,7 +59,7 @@ set ruler
 set number
 
 " Colorize screen past 80 character limit
-let &colorcolumn=join(range(81,999),",")
+let &colorcolumn=join(range(80,999),",")
 
 " Set the colorcolumn color to dark grey
 highlight ColorColumn ctermbg=8
@@ -228,11 +230,15 @@ if has("autocmd")
 
         " Color column is not displayed
         autocmd FileType html,htmldjango,htmljinja setlocal colorcolumn=""
-        autocmd FileType phtml,pug,xml setlocal colorcolumn=""
+        autocmd FileType phtml,pug,xml,markdown setlocal colorcolumn=""
 
         " Set the indentation to 2 columns
         autocmd FileType css,javascript,less,pug,scss setlocal tabstop=2
         autocmd FileType css,javascript,less,pug,scss setlocal shiftwidth=2
         autocmd FileType css,javascript,less,pug,scss setlocal softtabstop=2
+
+        " Set automatic formatting
+        autocmd FileType markdown setlocal formatoptions=tcran
+        autocmd FileType markdown setlocal textwidth=80
     endif
 endif
