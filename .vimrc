@@ -68,6 +68,9 @@ highlight ColorColumn ctermbg=8
 set wrap
 set linebreak
 
+" Setting textwidth to 80 characters
+set textwidth=80
+
 " Highlight all search matches as we type
 set hlsearch
 set incsearch
@@ -104,9 +107,6 @@ noremap <Leader>lrc :edit $MYVIMRC.local<CR>
 
 " Open .gvimrc in the current buffer
 noremap <Leader>grc :edit $MYGVIMRC<CR>
-
-" Turn off search highlights
-nnoremap <Leader><Space> :nohlsearch<CR>
 
 " Execute the string subtitution command
 nnoremap <Leader>s :%substitute//
@@ -178,7 +178,8 @@ let g:airline_theme = "molokai"
 " Command-T settings
 " =============================================================================
 
-let g:CommandTWildIgnore = &wildignore . ",*.pyc,*.swp,*.swo,node_modules"
+let g:CommandTWildIgnore = &wildignore
+            \ . ",*.pyc,*.swp,*.swo,*.swm,*.swn,node_modules,bin,_site"
 let g:CommandTMaxFiles = 50000
 
 " =============================================================================
@@ -221,24 +222,26 @@ if has("autocmd")
         autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
         autocmd FileType python set omnifunc=pythoncomplete#Complete
 
-        " Autowrite on
+        " Setting autowrite on
         autocmd FileType haxe set autowrite
 
         " Text is not wrapped
-        autocmd FileType html,htmldjango,htmljinja,phtml,pug setlocal nowrap
-        autocmd FileType xml setlocal nowrap
+        autocmd FileType
+                    \ html,htmldjango,htmljinja,phtml,pug,xml
+                    \ setlocal nowrap
 
-        " Color column is not displayed
-        autocmd FileType html,htmldjango,htmljinja setlocal colorcolumn=""
-        autocmd FileType phtml,pug,xml,markdown setlocal colorcolumn=""
+        " Hidding color column
+        autocmd FileType
+                    \ html,htmldjango,htmljinja,phtml,pug,xml,markdown
+                    \ setlocal colorcolumn=""
 
-        " Set the indentation to 2 columns
-        autocmd FileType css,javascript,less,pug,scss setlocal tabstop=2
-        autocmd FileType css,javascript,less,pug,scss setlocal shiftwidth=2
-        autocmd FileType css,javascript,less,pug,scss setlocal softtabstop=2
-
-        " Set automatic formatting
-        autocmd FileType markdown setlocal formatoptions=tcran
-        autocmd FileType markdown setlocal textwidth=80
+        " Settting indentation to 2 columns
+        autocmd FileType css,javascript,less,pug,scss,yaml setlocal tabstop=2
+        autocmd FileType
+                    \ css,javascript,less,pug,scss,yaml
+                    \ setlocal shiftwidth=2
+        autocmd FileType
+                    \ css,javascript,less,pug,scss,yaml
+                    \ setlocal softtabstop=2
     endif
 endif
