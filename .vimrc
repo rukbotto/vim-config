@@ -179,7 +179,8 @@ let g:airline_theme = "molokai"
 " =============================================================================
 
 let g:CommandTWildIgnore = &wildignore
-            \ . ",*.pyc,*.swp,*.swo,*.swm,*.swn,node_modules,bin,_site"
+            \ . ",*.pyc,*.swp,*.swo,*.swm,*.swn,node_modules,bin,_site,"
+            \ . ",output*,out"
 let g:CommandTMaxFiles = 50000
 
 " =============================================================================
