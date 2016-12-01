@@ -1,4 +1,4 @@
 # Dotvim
 
-Rukbotto's vim configuration.
+Vim configuration files.
 
