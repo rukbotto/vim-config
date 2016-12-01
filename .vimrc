@@ -25,6 +25,7 @@ Plugin 'tomasr/molokai'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ludovicchabant/vim-lawrencium'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 
@@ -111,8 +112,8 @@ noremap <Leader>grc :edit $MYGVIMRC<CR>
 " Execute the string subtitution command
 nnoremap <Leader>s :%substitute//
 
-" Toggle relative line numbers
-nnoremap <Leader>n :set norelativenumber!<CR>
+" Open tagbar window
+nnoremap tag :TagbarOpen fjc<CR>
 
 " Disable arrow keys in normal mode
 nnoremap <Up> <Nop>
