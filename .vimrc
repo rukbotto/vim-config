@@ -26,6 +26,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'majutsushi/tagbar'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 
@@ -34,9 +35,6 @@ filetype plugin indent on
 
 " Enable matchit macro
 runtime macros/matchit.vim
-
-" Set colorscheme
-colorscheme molokai
 
 " Insert spaces instead of tabs when indenting text
 set tabstop=4
@@ -61,9 +59,6 @@ set number
 
 " Colorize screen past 80 character limit
 let &colorcolumn=join(range(80,999),",")
-
-" Set the colorcolumn color to dark grey
-highlight ColorColumn ctermbg=DarkGray
 
 " Wrap long lines
 set wrap
@@ -173,7 +168,6 @@ let g:UltiSnipsExpandTrigger = "<C-h>"
 
 let g:airline_left_sep = '|'
 let g:airline_right_sep = '|'
-let g:airline_theme = "molokai"
 
 " =============================================================================
 " Command-T settings
@@ -196,12 +190,6 @@ let g:vim_markdown_folding_disabled = 1
 " =============================================================================
 
 let g:htmljinja_disable_detection = 1
-
-" =============================================================================
-" Molokai colorscheme settings
-" =============================================================================
-
-let g:rehash256 = 1
 
 " =============================================================================
 " Vaxe settings
