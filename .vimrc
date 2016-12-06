@@ -63,7 +63,7 @@ set number
 let &colorcolumn=join(range(80,999),",")
 
 " Set the colorcolumn color to dark grey
-highlight ColorColumn ctermbg=8
+highlight ColorColumn ctermbg=DarkGray
 
 " Wrap long lines
 set wrap
