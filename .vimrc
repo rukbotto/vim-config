@@ -27,6 +27,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'majutsushi/tagbar'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'mustache/vim-mustache-handlebars'
 
 call vundle#end()
 
@@ -37,9 +38,9 @@ filetype plugin indent on
 runtime macros/matchit.vim
 
 " Insert spaces instead of tabs when indenting text
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 " Autoindent text
@@ -57,12 +58,11 @@ set ruler
 " Display line numbers
 set number
 
-" Colorize screen past 80 character limit
-let &colorcolumn=join(range(80,999),",")
+" No colorcolumn
+let &colorcolumn = ''
 
-" Wrap long lines
-set wrap
-set linebreak
+" Don't wrap lines
+set nowrap
 
 " Setting textwidth to 80 characters
 set textwidth=80
@@ -151,12 +151,6 @@ function! s:SearchVisualSelection()
 endfunction
 
 " =============================================================================
-" Netrw settings
-" =============================================================================
-
-let g:netrw_liststyle = 3
-
-" =============================================================================
 " UltiSnips settings
 " =============================================================================
 
@@ -175,7 +169,7 @@ let g:airline_right_sep = '|'
 
 let g:CommandTWildIgnore = &wildignore
             \ . ",*.pyc,*.swp,*.swo,*.swm,*.swn,node_modules,bin,_site,"
-            \ . ",output*,out"
+            \ . ",output*,out,public"
 let g:CommandTMaxFiles = 50000
 
 " =============================================================================
@@ -221,23 +215,13 @@ if has("autocmd")
         " Setting autowrite on
         autocmd FileType haxe set autowrite
 
-        " Text is not wrapped
-        autocmd FileType
-                    \ html,htmldjango,htmljinja,phtml,pug,xml
-                    \ setlocal nowrap
+        " Displaying color column
+        autocmd FileType c++,haxe,java,python,ruby,vim
+                    \ let &colorcolumn=join(range(80,999),",")
 
-        " Hidding color column
-        autocmd FileType
-                    \ html,htmldjango,htmljinja,phtml,pug,xml,markdown
-                    \ setlocal colorcolumn=""
-
-        " Settting indentation to 2 columns
-        autocmd FileType css,javascript,less,pug,scss,yaml setlocal tabstop=2
-        autocmd FileType
-                    \ css,javascript,less,pug,scss,yaml
-                    \ setlocal shiftwidth=2
-        autocmd FileType
-                    \ css,javascript,less,pug,scss,yaml
-                    \ setlocal softtabstop=2
+        " Settting indentation to 4 columns
+        autocmd FileType c++,haxe,java,python,ruby,vim setlocal tabstop=4
+        autocmd FileType c++,haxe,java,python,ruby,vim setlocal shiftwidth=4
+        autocmd FileType c++,haxe,java,python,ruby,vim setlocal softtabstop=4
     endif
 endif
