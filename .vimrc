@@ -216,7 +216,7 @@ if has("autocmd")
         autocmd FileType haxe set autowrite
 
         " Displaying color column
-        autocmd FileType c++,haxe,java,markdown,python,ruby,vim
+        autocmd FileType c++,haxe,java,javascript,markdown,python,ruby,vim
                     \ let &colorcolumn=join(range(80,999),",")
 
         " Settting indentation to 4 columns
