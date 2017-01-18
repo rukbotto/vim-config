@@ -64,9 +64,6 @@ let &colorcolumn = ''
 " Don't wrap lines
 set nowrap
 
-" Setting textwidth to 80 characters
-set textwidth=80
-
 " Highlight all search matches as we type
 set hlsearch
 set incsearch
