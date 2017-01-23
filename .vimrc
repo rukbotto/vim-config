@@ -157,8 +157,8 @@ let g:UltiSnipsExpandTrigger = "<C-h>"
 " Airline settings
 " =============================================================================
 
-let g:airline_left_sep = '|'
-let g:airline_right_sep = '|'
+let g:airline_left_sep = ' '
+let g:airline_right_sep = ' '
 
 " =============================================================================
 " Command-T settings
