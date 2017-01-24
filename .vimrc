@@ -59,7 +59,7 @@ set ruler
 set number
 
 " No colorcolumn
-let &colorcolumn = ''
+let &colorcolumn=''
 
 " Don't wrap lines
 set nowrap
@@ -168,6 +168,7 @@ let g:CommandTWildIgnore = &wildignore
             \ . ",*.pyc,*.swp,*.swo,*.swm,*.swn,node_modules,bin,_site,"
             \ . ",output*,out,public"
 let g:CommandTMaxFiles = 50000
+let g:CommandTAcceptSelectionSplitMap = "<C-g>"
 
 " =============================================================================
 " Markdown settings
