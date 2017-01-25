@@ -28,6 +28,7 @@ Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'majutsushi/tagbar'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'tpope/vim-obsession'
 
 call vundle#end()
 
