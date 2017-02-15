@@ -219,8 +219,8 @@ if has("autocmd")
                     \ let &colorcolumn=join(range(80,999),",")
 
         " Settting indentation to 4 columns
-        autocmd FileType c++,haxe,java,python,ruby,vim setlocal tabstop=4
-        autocmd FileType c++,haxe,java,python,ruby,vim setlocal shiftwidth=4
-        autocmd FileType c++,haxe,java,python,ruby,vim setlocal softtabstop=4
+        autocmd FileType c++,haxe,java,python,vim setlocal tabstop=4
+        autocmd FileType c++,haxe,java,python,vim setlocal shiftwidth=4
+        autocmd FileType c++,haxe,java,python,vim setlocal softtabstop=4
     endif
 endif
