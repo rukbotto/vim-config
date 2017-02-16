@@ -85,6 +85,9 @@ set relativenumber
 " whitespace
 set list listchars=tab:‣\ ,trail:∙,extends:»,precedes:«
 
+" Make clipboard work with tmux
+set clipboard=unnamed
+
 " Leader and local leader remappings
 let mapleader=","
 let maplocalleader="\\"
