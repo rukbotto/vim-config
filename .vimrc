@@ -6,7 +6,6 @@ set rtp+=~/.dotvim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'wincent/Command-T'
 Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips.git'
 Plugin 'bling/vim-airline.git'
@@ -29,6 +28,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-obsession'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 
@@ -60,7 +61,7 @@ set ruler
 set number
 
 " No colorcolumn
-let &colorcolumn=''
+set colorcolumn=
 
 " Don't wrap lines
 set nowrap
@@ -87,6 +88,9 @@ set list listchars=tab:‣\ ,trail:∙,extends:»,precedes:«
 
 " Make clipboard work with tmux
 set clipboard=unnamed
+
+" Highlight text background when length is beyond 80 chars
+match ErrorMsg '\%>80v.\+'
 
 " Leader and local leader remappings
 let mapleader=","
@@ -216,10 +220,6 @@ if has("autocmd")
 
         " Setting autowrite on
         autocmd FileType haxe set autowrite
-
-        " Displaying color column
-        autocmd FileType c++,haxe,java,javascript,markdown,python,ruby,vim
-                    \ let &colorcolumn=join(range(80,999),",")
 
         " Settting indentation to 4 columns
         autocmd FileType c++,haxe,java,python,vim setlocal tabstop=4
