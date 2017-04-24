@@ -89,7 +89,7 @@ set list listchars=tab:‣\ ,trail:∙,extends:»,precedes:«
 " Make clipboard work with tmux
 set clipboard=unnamed
 
-" Highlight text background when length is beyond 80 chars
+" Highlight text when line length is beyond 80 chars
 match ErrorMsg '\%>80v.\+'
 
 " Leader and local leader remappings
@@ -114,6 +114,12 @@ nnoremap <Leader>s :%substitute//
 
 " Open tagbar window
 nnoremap tag :TagbarOpen fjc<CR>
+
+" Fuzzy find files
+nnoremap <Leader><Space> :Files<CR>
+
+" Fuzzy find buffers
+nnoremap <Leader>b :Buffers<CR>
 
 " Disable arrow keys in normal mode
 nnoremap <Up> <Nop>
