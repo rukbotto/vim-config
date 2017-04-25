@@ -175,16 +175,6 @@ let g:airline_left_sep = ' '
 let g:airline_right_sep = ' '
 
 " =============================================================================
-" Command-T settings
-" =============================================================================
-
-let g:CommandTWildIgnore = &wildignore
-            \ . ",*.pyc,*.swp,*.swo,*.swm,*.swn,node_modules,bin,_site,"
-            \ . ",output*,out,public"
-let g:CommandTMaxFiles = 50000
-let g:CommandTAcceptSelectionSplitMap = "<C-b>"
-
-" =============================================================================
 " Markdown settings
 " =============================================================================
 
