@@ -89,9 +89,6 @@ set list listchars=tab:‣\ ,trail:∙,extends:»,precedes:«
 " Make clipboard work with tmux
 set clipboard=unnamed
 
-" Highlight text when line length is beyond 80 chars
-match ErrorMsg '\%>80v.\+'
-
 " Leader and local leader remappings
 let mapleader=","
 let maplocalleader="\\"
@@ -209,6 +206,10 @@ if has("autocmd")
     if !exists("autocommands_loaded")
         let autocommands_loaded = 1
 
+        " Highlight text when line length is beyond 80 chars
+        autocmd BufEnter * match ErrorMsg '\%>80v.\+'
+
+        " Setting autocompletion functions
         autocmd FileType css set omnifunc=csscomplete#CompleteCSS
         autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
         autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -217,7 +218,7 @@ if has("autocmd")
         " Setting autowrite on
         autocmd FileType haxe set autowrite
 
-        " Settting indentation to 4 columns
+        " Setting indentation to 4 columns
         autocmd FileType c++,haxe,java,python,vim setlocal tabstop=4
         autocmd FileType c++,haxe,java,python,vim setlocal shiftwidth=4
         autocmd FileType c++,haxe,java,python,vim setlocal softtabstop=4
