@@ -51,7 +51,7 @@ set autoindent
 " Set encoding to utf-8
 set encoding=utf-8
 
-" highlight the current line
+" Highlight the current line
 set cursorline
 
 " Display info at the bottom of each window
@@ -60,7 +60,7 @@ set ruler
 " Display line numbers
 set number
 
-" No colorcolumn
+" No color column
 set colorcolumn=
 
 " Don't wrap lines
@@ -88,6 +88,9 @@ set list listchars=tab:‣\ ,trail:∙,extends:»,precedes:«
 
 " Make clipboard work with tmux
 set clipboard=unnamed
+
+" Set spellfile
+set spellfile=~/.vim/spell/spell.utf-8.add
 
 " Leader and local leader remappings
 let mapleader=","
