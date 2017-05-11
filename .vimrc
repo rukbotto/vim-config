@@ -89,9 +89,6 @@ set list listchars=tab:‣\ ,trail:∙,extends:»,precedes:«
 " Make clipboard work with tmux
 set clipboard=unnamed
 
-" Set spellfile
-set spellfile=~/.vim/spell/spell.utf-8.add
-
 " Leader and local leader remappings
 let mapleader=","
 let maplocalleader="\\"
