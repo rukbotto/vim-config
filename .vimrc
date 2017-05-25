@@ -12,7 +12,6 @@ Plugin 'bling/vim-airline.git'
 Plugin 'othree/html5.vim.git'
 Plugin 'mattn/emmet-vim.git'
 Plugin 'nelstrom/vim-qargs.git'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'tpope/vim-commentary'
@@ -175,8 +174,8 @@ let g:airline_right_sep = ' '
 " Markdown settings
 " =============================================================================
 
-let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_folding_disabled = 1
+let g:markdown_fenced_languages = ['c', 'cpp', 'css', 'html', 'java',
+      \ 'javascript', 'python', 'ruby', 'sass', 'scss']
 
 " =============================================================================
 " Jinja settings
