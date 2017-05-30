@@ -174,7 +174,7 @@ let g:airline_right_sep = ' '
 " Markdown settings
 " =============================================================================
 
-let g:markdown_fenced_languages = ['c', 'cpp', 'css', 'html', 'java',
+let g:markdown_fenced_languages = ['c', 'cpp', 'css', 'haxe', 'html', 'java',
       \ 'javascript', 'python', 'ruby', 'sass', 'scss']
 
 " =============================================================================
