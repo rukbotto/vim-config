@@ -1,4 +1,4 @@
-# Dotvim
+# Vim Config
 
 Vim configuration files.
 
