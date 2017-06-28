@@ -171,14 +171,6 @@ let g:vaxe_enable_airline_defaults = 0
 let g:fzf_layout = { 'down': '~20%' }
 
 " =============================================================================
-" Source local vimrc file
-" =============================================================================
-
-if filereadable(expand("~/.vimrc.local"))
-    source ~/.vimrc.local
-endif
-
-" =============================================================================
 " Commands
 " =============================================================================
 
@@ -246,3 +238,11 @@ function! CloseHiddenBuffers()
     endfor
     echon "Deleted " . l:tally . " buffers"
 endfunction
+
+" =============================================================================
+" Source local vimrc file
+" =============================================================================
+
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
