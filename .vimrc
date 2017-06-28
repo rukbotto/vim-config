@@ -147,17 +147,6 @@ vnoremap / /\v
 xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
 
 " =============================================================================
-" Function for selecting a word in visual mode
-" =============================================================================
-
-function! s:SearchVisualSelection()
-    let l:temp = @s
-    normal! gv"sy
-    let @/ = '\V' . substitute(escape(@s, '\/'), '\n', '\\n', "g")
-    let @s = l:temp
-endfunction
-
-" =============================================================================
 " UltiSnips settings
 " =============================================================================
 
@@ -204,6 +193,12 @@ if filereadable(expand("~/.vimrc.local"))
 endif
 
 " =============================================================================
+" Commands
+" =============================================================================
+
+command! -nargs=* Only call CloseHiddenBuffers()
+
+" =============================================================================
 " Autocommands
 " =============================================================================
 
@@ -232,3 +227,35 @@ if has("autocmd")
         autocmd FileType c++,haxe,java,python,vim setlocal softtabstop=4
     endif
 endif
+
+" =============================================================================
+" Functions
+" =============================================================================
+
+" Select a word in visual mode
+function! s:SearchVisualSelection()
+    let l:temp = @s
+    normal! gv"sy
+    let @/ = '\V' . substitute(escape(@s, '\/'), '\n', '\\n', "g")
+    let @s = l:temp
+endfunction
+
+" Close hidden buffers
+function! CloseHiddenBuffers()
+    " figure out which buffers are visible in any tab
+    let visible = {}
+    for t in range(1, tabpagenr('$'))
+        for b in tabpagebuflist(t)
+            let visible[b] = 1
+        endfor
+    endfor
+    " close any buffer that are loaded and not visible
+    let l:tally = 0
+    for b in range(1, bufnr('$'))
+        if bufloaded(b) && !has_key(visible, b)
+            let l:tally += 1
+            exe 'bw ' . b
+        endif
+    endfor
+    echon "Deleted " . l:tally . " buffers"
+endfunction
