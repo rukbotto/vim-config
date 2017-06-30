@@ -1,11 +1,8 @@
 if has('gui_macvim')
     set guifont=Monaco:h12
 
-    macm File.New\ Tab key=<Nop>
-    macm File.Open\.\.\. key=<Nop>
     macm File.Open\ Tab\.\.\. key=<Nop>
     macm File.Close\ Window key=<Nop>
-    macm File.Close key=<Nop>
     macm File.Save key=<Nop>
     macm File.Save\ As\.\.\. key=<Nop>
     macm File.Save\ All key=<Nop>
