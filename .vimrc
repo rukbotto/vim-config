@@ -50,9 +50,6 @@ set autoindent
 " Set encoding to utf-8
 set encoding=utf-8
 
-" Highlight the current line
-set cursorline
-
 " Display info at the bottom of each window
 set ruler
 
@@ -156,6 +153,12 @@ let g:UltiSnipsExpandTrigger = "<C-h>"
 " Airline settings
 let g:airline_left_sep = ' '
 let g:airline_right_sep = ' '
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.linenr = ''
+let g:airline_symbols.maxlinenr = ''
 
 " Markdown settings
 let g:markdown_fenced_languages = ['c', 'cpp', 'css', 'haxe', 'html', 'java',
