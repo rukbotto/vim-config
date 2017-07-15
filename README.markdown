@@ -39,12 +39,16 @@ each other:
 
 |Color Scheme|Airline Theme|
 |------------|-------------|
-|TBD|base16_chalk|
-|TBD|base16_default|
-|TBD|base16_grayscale|
-|TBD|base16_pop|
 |alduin|hybridline|
+|badwolf|base16_chalk|
+|badwolf|base16_default|
+|cabin|badcat|
+|cabin|jellybeans|
+|cabin|fairyfloss|
+|evening|base16_grayscale|
+|itg_flat|hybridline|
 |sierra|hybridline|
-|TBD|qwq|
-|TBD|understated|
+|xoria256|base16_pop|
+|xoria256|qwq|
+|xoria256|term|
 |xoria256|wombat|
