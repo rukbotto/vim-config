@@ -2,10 +2,40 @@
 
 Vim configuration files.
 
+## Installation
+
+Clone this repo in your home directory:
+
+```bash
+$ git clone https://github.com/rukbotto/vim-config.git ~/.vim
+```
+
+## Usage
+
+Link `.vimrc` file to your home directory:
+
+```bash
+$ ln -svf ~/.vim/.vimrc ~/.vimrc
+```
+
+If you use MacVim, you may want to link `.gvimrc` file too:
+
+```bash
+$ ln -svf ~/.vim/.gvimrc ~/.gvimrc
+```
+
+Create a local `.vimrc` file in your home directory, so you can overwrite
+variables, setup color scheme / airline theme and spelling settings:
+
+```bash
+$ touch ~/.vimrc.local
+$ vim ~/.vimrc.local
+```
+
 ## Color Scheme / Airline Theme Combinations
 
-This is a suggested list of color scheme / airline theme combinations that look
-nice.
+This is a suggested list of color scheme / airline theme combinations that play
+nice with each other.
 
 |Color Scheme|Airline Theme|
 |------------|-------------|
