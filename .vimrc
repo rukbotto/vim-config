@@ -173,6 +173,9 @@ let g:vaxe_enable_airline_defaults = 0
 " FZF settings
 let g:fzf_layout = { 'down': '~20%' }
 
+" Syntastic settings
+let g:syntastic_html_checkers = [""]
+
 " =============================================================================
 " Commands
 " =============================================================================
