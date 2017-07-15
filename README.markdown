@@ -34,7 +34,7 @@ $ vim ~/.vimrc.local
 
 ## Color Scheme / Airline Theme Combinations
 
-This is a suggested list of color scheme / airline themes that play nice with
+This is a suggested list of color schemes / airline themes that play nice with
 each other:
 
 |Color Scheme|Airline Theme|
