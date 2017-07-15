@@ -24,8 +24,8 @@ If you use MacVim, you may want to link `.gvimrc` file too:
 $ ln -svf ~/.vim/.gvimrc ~/.gvimrc
 ```
 
-Create a local `.vimrc` file in your home directory, so you can overwrite
-variables, setup color scheme / airline theme and spelling settings:
+Create a `.vimrc.local` file in your home directory, so you can overwrite
+variables, setup color scheme / airline theme and add spelling settings:
 
 ```bash
 $ touch ~/.vimrc.local
