@@ -152,7 +152,7 @@ set statusline+=\ %m%r
 set statusline+=\ %h%w
 set statusline+=\ %{StatusLineBranchName()}
 set statusline+=%=%y
-set statusline+=\ %l:%c/%L
+set statusline+=\ %l/%L:C%c
 set statusline+=\ %P
 set statusline+=\ %{SyntasticStatuslineFlag()}
 
