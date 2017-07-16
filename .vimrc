@@ -142,6 +142,18 @@ vnoremap / /\v
 xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
 
 " =============================================================================
+" Status line
+" =============================================================================
+
+set statusline=
+set statusline+=%f
+set statusline+=\ %m%r
+set statusline+=\ %h%w
+set statusline+=%=%y
+set statusline+=\ %l:%c/%L
+set statusline+=\ %P
+
+" =============================================================================
 " Plugin settings
 " =============================================================================
 
