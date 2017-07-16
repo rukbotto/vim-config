@@ -27,6 +27,7 @@ Plugin 'tpope/vim-obsession'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-vinegar'
+Plugin 'ChesleyTan/wordCount.vim'
 
 call vundle#end()
 
