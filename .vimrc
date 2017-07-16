@@ -149,6 +149,7 @@ set statusline=
 set statusline+=%f
 set statusline+=\ %m%r
 set statusline+=\ %h%w
+set statusline+=%{VCSStatusLine()}
 set statusline+=%=%y
 set statusline+=\ %l:%c/%L
 set statusline+=\ %P
@@ -243,6 +244,15 @@ function! CloseHiddenBuffers()
         endif
     endfor
     echon "Deleted " . l:tally . " buffers"
+endfunction
+
+" Compose status line for Git
+function! VCSStatusLine()
+    let l:status = fugitive#head()
+    if strlen(l:status)
+        return " [" . l:status . "]"
+    endif
+    return l:status
 endfunction
 
 " =============================================================================
