@@ -199,19 +199,22 @@ if has("autocmd")
         autocmd FileType c++,haxe,java,javascript,markdown,python,ruby,vim
                     \ match WarningMsg '\%>80v.\+'
 
-        " Setting autocompletion functions
+        " Set autocompletion functions
         autocmd FileType css set omnifunc=csscomplete#CompleteCSS
         autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
         autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
         autocmd FileType python set omnifunc=pythoncomplete#Complete
 
-        " Setting autowrite on
+        " Set autowrite on
         autocmd FileType haxe set autowrite
 
-        " Setting indentation to 4 columns
+        " Set indentation to 4 columns
         autocmd FileType c++,haxe,java,python,vim setlocal tabstop=4
         autocmd FileType c++,haxe,java,python,vim setlocal shiftwidth=4
         autocmd FileType c++,haxe,java,python,vim setlocal softtabstop=4
+
+        " Set statusline
+        autocmd FileType markdown setlocal statusline+=\ %{StatusLineWordCount()}
     endif
 endif
 
@@ -260,6 +263,19 @@ function! StatusLineBranchName()
         return "[" . l:branch . "]"
     endif
     return l:branch
+endfunction
+
+" Print word count on statusline
+function! StatusLineWordCount()
+  let l:wordcount = ""
+  if exists('*wordCount#WordCount')
+    let l:wordcount = wordCount#WordCount()
+  endif
+  if l:wordcount
+    return "[" . l:wordcount . " words]"
+  else
+    return ""
+  endif
 endfunction
 
 " =============================================================================
