@@ -146,7 +146,7 @@ xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
 " =============================================================================
 
 set statusline=
-set statusline+=%f
+set statusline+=%0.30f
 set statusline+=\ %m%r
 set statusline+=\ %h%w
 set statusline+=%{VCSStatusLine()}
