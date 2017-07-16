@@ -149,7 +149,7 @@ set statusline=
 set statusline+=%0.30f
 set statusline+=\ %m%r
 set statusline+=\ %h%w
-set statusline+=%{VCSStatusLine()}
+set statusline+=\ %{StatusLineBranchName()}
 set statusline+=%=%y
 set statusline+=\ %l:%c/%L
 set statusline+=\ %P
@@ -246,13 +246,19 @@ function! CloseHiddenBuffers()
     echon "Deleted " . l:tally . " buffers"
 endfunction
 
-" Compose status line for Git
-function! VCSStatusLine()
-    let l:status = fugitive#head()
-    if strlen(l:status)
-        return " [" . l:status . "]"
+" Print Git/Mercurial branch name on statusline
+function! StatusLineBranchName()
+    let l:branch = ""
+    if exists('*fugitive#head')
+        let l:branch = fugitive#head()
     endif
-    return l:status
+    if !strlen(l:branch) && exists('*lawrencium#statusline')
+        let l:branch = lawrencium#statusline()
+    endif
+    if strlen(l:branch)
+        return "[" . l:branch . "]"
+    endif
+    return l:branch
 endfunction
 
 " =============================================================================
