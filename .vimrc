@@ -154,6 +154,7 @@ set statusline+=\ %{StatusLineBranchName()}
 set statusline+=%=%y
 set statusline+=\ %l:%c/%L
 set statusline+=\ %P
+set statusline+=\ %{SyntasticStatuslineFlag()}
 
 " =============================================================================
 " Plugin settings
@@ -177,6 +178,7 @@ let g:fzf_layout = { 'down': '~20%' }
 
 " Syntastic settings
 let g:syntastic_html_checkers = [""]
+let g:syntastic_stl_format = "[%E{E:%fe #%e}%B{, }%W{W:%fw #%w}]"
 
 " =============================================================================
 " Commands
