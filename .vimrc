@@ -8,7 +8,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips.git'
-Plugin 'bling/vim-airline.git'
 Plugin 'othree/html5.vim.git'
 Plugin 'mattn/emmet-vim.git'
 Plugin 'nelstrom/vim-qargs.git'
@@ -19,7 +18,6 @@ Plugin 'jdonaldson/vaxe'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'majutsushi/tagbar'
@@ -149,16 +147,6 @@ xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
 
 " UltiSnips settings
 let g:UltiSnipsExpandTrigger = "<C-h>"
-
-" Airline settings
-let g:airline_left_sep = ' '
-let g:airline_right_sep = ' '
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_symbols.linenr = ''
-let g:airline_symbols.maxlinenr = ''
 
 " Markdown settings
 let g:markdown_fenced_languages = ['c', 'cpp', 'css', 'haxe', 'html', 'java',
