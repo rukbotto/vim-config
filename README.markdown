@@ -24,31 +24,10 @@ If you use MacVim, you may want to link `.gvimrc` file too:
 $ ln -svf ~/.vim/.gvimrc ~/.gvimrc
 ```
 
-Create a `.vimrc.local` file so you can overwrite variables, setup color scheme
-/ airline theme and add spelling settings:
+Create a `.vimrc.local` file so you can overwrite variables, setup color scheme,
+setup statusline or add spelling settings:
 
 ```bash
 $ touch ~/.vimrc.local
 $ vim ~/.vimrc.local
 ```
-
-## Color Scheme / Airline Theme Combinations
-
-This is a suggested list of color schemes / airline themes that play nice with
-each other:
-
-|Color Scheme|Airline Theme|
-|------------|-------------|
-|alduin|hybridline|
-|badwolf|base16_chalk|
-|badwolf|base16_default|
-|cabin|badcat|
-|cabin|jellybeans|
-|cabin|fairyfloss|
-|evening|base16_grayscale|
-|itg_flat|hybridline|
-|sierra|hybridline|
-|xoria256|base16_pop|
-|xoria256|qwq|
-|xoria256|term|
-|xoria256|wombat|
