@@ -148,11 +148,11 @@ xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
 
 set statusline=
 set statusline+=\ %0.40f
+set statusline+=\ %{StatusLineBranchName()}
 set statusline+=\ %m%r
 set statusline+=\ %h%w
-set statusline+=\ %{StatusLineBranchName()}
 set statusline+=%=%y
-set statusline+=\ %l/%L:C%c
+set statusline+=\ %4l/%-4L\ C%-4c
 set statusline+=\ %P
 set statusline+=\ %#StatusLineWarn#
 set statusline+=\ %{SyntasticStatuslineFlag()}
