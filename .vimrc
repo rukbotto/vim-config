@@ -147,14 +147,16 @@ xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
 " =============================================================================
 
 set statusline=
-set statusline+=%0.40f
+set statusline+=\ %0.40f
 set statusline+=\ %m%r
 set statusline+=\ %h%w
 set statusline+=\ %{StatusLineBranchName()}
 set statusline+=%=%y
 set statusline+=\ %l/%L:C%c
 set statusline+=\ %P
+set statusline+=\ %#StatusLineWarn#
 set statusline+=\ %{SyntasticStatuslineFlag()}
+set statusline+=\ %*
 
 " =============================================================================
 " Plugin settings
