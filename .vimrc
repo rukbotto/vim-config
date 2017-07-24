@@ -150,12 +150,11 @@ set statusline+=\ %0.40f
 set statusline+=\ %{StatusLineBranchName()}
 set statusline+=\ %m%r
 set statusline+=\ %h%w
-set statusline+=%=%y
+set statusline+=%=
+set statusline+=\ %y
 set statusline+=\ %4l/%-4L\ C%-3c
 set statusline+=\ %P
-set statusline+=\ %#StatusLineWarn#
 set statusline+=\ %{SyntasticStatuslineFlag()}
-set statusline+=\ %*
 
 " =============================================================================
 " Plugin settings
