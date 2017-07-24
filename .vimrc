@@ -27,7 +27,6 @@ Plugin 'tpope/vim-obsession'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-vinegar'
-Plugin 'ChesleyTan/wordCount.vim'
 
 call vundle#end()
 
@@ -216,9 +215,6 @@ if has("autocmd")
         autocmd FileType c++,haxe,java,python,vim setlocal tabstop=4
         autocmd FileType c++,haxe,java,python,vim setlocal shiftwidth=4
         autocmd FileType c++,haxe,java,python,vim setlocal softtabstop=4
-
-        " Set statusline
-        autocmd FileType markdown setlocal statusline+=\ %{StatusLineWordCount()}
     endif
 endif
 
@@ -267,19 +263,6 @@ function! StatusLineBranchName()
         return "[" . l:branch . "]"
     endif
     return l:branch
-endfunction
-
-" Print word count on statusline
-function! StatusLineWordCount()
-  let l:wordcount = ""
-  if exists('*wordCount#WordCount')
-    let l:wordcount = wordCount#WordCount()
-  endif
-  if l:wordcount
-    return "[" . l:wordcount . " words]"
-  else
-    return ""
-  endif
 endfunction
 
 " =============================================================================
