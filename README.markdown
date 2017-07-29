@@ -31,3 +31,22 @@ setup statusline or add spelling settings:
 $ touch ~/.vimrc.local
 $ vim ~/.vimrc.local
 ```
+
+## Color Schemes
+
+The `.vimrc` file included in this repo enables Vim's 24-bit color support,
+making it possible to use the color scheme for MacVim (or GVim) inside terminal
+Vim.
+
+This repo currently ships with a single color scheme called
+[Base2Tone_SpaceDark][1] by [Braam de Haan][2]. It's not set by default, but if
+you want to give it a try, place the following lines in your `.vimrc.local`
+file:
+
+```vim
+set background=dark
+colorscheme Base2Tone_SpaceDark
+```
+
+[1]: https://github.com/atelierbram/Base2Tone-vim
+[2]: https://github.com/atelierbram/
