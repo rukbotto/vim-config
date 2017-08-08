@@ -76,9 +76,6 @@ set completeopt=menu
 " All windows will have a status line
 set laststatus=2
 
-" Cursor will be 8 lines away from top/down edges when scrolling
-set scrolloff=8
-
 " Line numbers are relative to the current line
 set relativenumber
 
