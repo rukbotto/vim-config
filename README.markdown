@@ -16,13 +16,13 @@ Then install [fzf][3]:
 $ brew install fzf
 ```
 
-Next, setup [Vundle][4]:
+Next setup [Vundle][4]:
 
 ```
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-And finally run `:PluginInstall` from within vim.
+Finally install all plugins by running `:PluginInstall` from within vim.
 
 # Usage
 
