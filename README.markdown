@@ -22,9 +22,9 @@ Next setup [Vundle][4]:
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-Finally install all plugins by running `:PluginInstall` from within vim.
+Finally install all plugins by running `:PluginInstall` from within Vim.
 
-# Usage
+## Usage
 
 Link `.vimrc` file to your home directory:
 
@@ -49,7 +49,7 @@ $ vim ~/.vimrc.local
 ## Color Schemes
 
 The `.vimrc` file included in this repo enables Vim's 24-bit color support,
-making it possible to use the color scheme for MacVim (or GVim) inside terminal
+making it possible to use color schemes for MacVim (or GVim) inside terminal
 Vim.
 
 This repo currently ships with a single color scheme called
