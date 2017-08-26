@@ -10,7 +10,21 @@ Clone this repo in your home directory:
 $ git clone https://github.com/rukbotto/vim-config.git ~/.vim
 ```
 
-## Usage
+Then install [fzf][3]:
+
+```
+$ brew install fzf
+```
+
+Next, setup [Vundle][4]:
+
+```
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+And finally run `:PluginInstall` from within vim.
+
+# Usage
 
 Link `.vimrc` file to your home directory:
 
@@ -50,3 +64,5 @@ colorscheme Base2Tone_SpaceDark
 
 [1]: https://github.com/atelierbram/Base2Tone-vim
 [2]: https://github.com/atelierbram/
+[3]: https://github.com/junegunn/fzf
+[4]: https://github.com/VundleVim/Vundle.vim
