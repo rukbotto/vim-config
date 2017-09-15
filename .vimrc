@@ -15,7 +15,6 @@ Plugin 'mitsuhiko/vim-jinja'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'tpope/vim-commentary'
 Plugin 'jdonaldson/vaxe'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
@@ -157,7 +156,6 @@ set statusline+=%=
 set statusline+=\ %y
 set statusline+=\ %4l/%-4L\ C%-3c
 set statusline+=\ %P
-set statusline+=\ %{SyntasticStatuslineFlag()}
 
 " =============================================================================
 " Plugin settings
@@ -178,10 +176,6 @@ let g:vaxe_enable_airline_defaults = 0
 
 " FZF settings
 let g:fzf_layout = { 'down': '~20%' }
-
-" Syntastic settings
-let g:syntastic_html_checkers = [""]
-let g:syntastic_stl_format = "[%E{E:%fe #%e}%B{, }%W{W:%fw #%w}]"
 
 " =============================================================================
 " Commands
