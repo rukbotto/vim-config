@@ -31,12 +31,16 @@ call vundle#end()
 syntax on
 filetype plugin indent on
 
-" Set Vim-specific sequences for RGB colors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" Check if terminal supports truecolor
+let color=$COLORTERM
+if color ==? "truecolor" && has("termguicolors")
+    " Set Vim-specific sequences for RGB colors
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-" Enable 24-bit color
-set termguicolors
+    " Enable 24-bit color
+    set termguicolors
+endif
 
 " Enable matchit macro
 runtime macros/matchit.vim
