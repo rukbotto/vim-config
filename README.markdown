@@ -71,8 +71,9 @@ colorscheme Base2Tone_SpaceDark
 
 ## Credits
 
-+ [Braam de Haan][2] for authoring [Base2Tone_SpaceDark][1] color scheme.
 + [David Hodder][5] for authoring [django.vim][6].
++ [Bruno Michel][7], [Bruno Sutic][8] and [Juvenn Woo][9] for authoring [vim-mustache-handlebars][10]
++ [Braam de Haan][2] for authoring [Base2Tone_SpaceDark][1] color scheme.
 
 [1]: https://github.com/atelierbram/Base2Tone-vim
 [2]: https://github.com/atelierbram/
@@ -80,3 +81,7 @@ colorscheme Base2Tone_SpaceDark
 [4]: https://github.com/VundleVim/Vundle.vim
 [5]: https://vim.sourceforge.io/account/profile.php?user_id=9589
 [6]: https://vim.sourceforge.io/scripts/script.php?script_id=1487
+[7]: http://github.com/nono
+[8]: http://github.com/bruno-
+[9]: http://github.com/juvenn
+[10]: https://github.com/mustache/vim-mustache-handlebars
