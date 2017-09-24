@@ -160,6 +160,7 @@ set statusline+=%=
 set statusline+=\ %y
 set statusline+=\ %4l/%-4L\ C%-3c
 set statusline+=\ %P
+set statusline+=\ 
 
 " =============================================================================
 " Plugin settings
