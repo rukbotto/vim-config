@@ -12,11 +12,11 @@ function! s:TryDetectHTMLTemplate()
     while n < 50 && n <= line("$")
         let line = getline(n)
         if line =~ '{[{%]'
-            if line =~ '{%\s*\(extends\|load\|block\|if\|ifequal\|ifnotequal\|ifchanged\|for\|include\|trans\|url\)\>' || line =~ '{{\s*\S\+'
-                let filetype = 'htmldjango'
+            if line =~ '{%' || line =~ '{{'
+                let filetype = "htmldjango"
             endif
-            if line =~ '{{[#^>{]\s*\S\+'
-                let filetype = 'htmlmustache'
+            if line =~ '{{[#^>{]'
+                let filetype = "htmlmustache"
             endif
             let &l:filetype = filetype
             return
