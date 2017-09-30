@@ -8,9 +8,9 @@ endif
 " template file and then switch over to the corresponding filetype.
 function! s:TryDetectHTMLTemplate()
     let n = 1
+    let filetype = ""
     while n < 50 && n <= line("$")
         let line = getline(n)
-        let filetype = ''
         if line =~ '{[{%]'
             if line =~ '{%\s*\(extends\|load\|block\|if\|ifequal\|ifnotequal\|ifchanged\|for\|include\|trans\|url\)\>' || line =~ '{{\s*\S\+'
                 let filetype = 'htmldjango'
@@ -23,6 +23,10 @@ function! s:TryDetectHTMLTemplate()
         endif
         let n = n + 1
     endwhile
+    if filetype == ""
+        let &l:filetype = "html"
+        return
+    endif
 endfunction
 
 " Whenever the buffer finished writing we also try to upgrade to a valid
@@ -37,7 +41,9 @@ function! s:UpgradeToHTMLTemplate()
     call s:TryDetectHTMLTemplate()
 endfunction
 
-autocmd BufRead *.html,*.htm,*.shtml,*.stm,*.mustache call s:TryDetectHTMLTemplate()
-if !exists("g:htmltemplate_disable_upgrade") || !g:htmltemplate_disable_upgrade
-    autocmd BufWritePost *.html,*.htm,*.shtml,*.stm,*.mustache call s:UpgradeToHTMLTemplate()
+if has("autocmd")
+    autocmd BufRead *.html,*.htm,*.shtml,*.stm,*.mustache call s:TryDetectHTMLTemplate()
+    if !exists("g:htmltemplate_disable_upgrade") || !g:htmltemplate_disable_upgrade
+        autocmd BufWritePost *.html,*.htm,*.shtml,*.stm,*.mustache call s:UpgradeToHTMLTemplate()
+    endif
 endif
