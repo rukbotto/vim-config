@@ -42,8 +42,8 @@ function! s:UpgradeToHTMLTemplate()
 endfunction
 
 if has("autocmd")
-    autocmd BufRead *.html,*.htm,*.shtml,*.stm,*.mustache call s:TryDetectHTMLTemplate()
+    autocmd BufRead *.html,*.htm,*.shtml,*.stm call s:TryDetectHTMLTemplate()
     if !exists("g:htmltemplate_disable_upgrade") || !g:htmltemplate_disable_upgrade
-        autocmd BufWritePost *.html,*.htm,*.shtml,*.stm,*.mustache call s:UpgradeToHTMLTemplate()
+        autocmd BufWritePost *.html,*.htm,*.shtml,*.stm call s:UpgradeToHTMLTemplate()
     endif
 endif
