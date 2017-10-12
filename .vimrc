@@ -165,9 +165,6 @@ set statusline+=\
 " Plugin settings
 " =============================================================================
 
-" UltiSnips settings
-let g:UltiSnipsExpandTrigger = "<C-h>"
-
 " Markdown settings
 let g:markdown_fenced_languages = ['c', 'cpp', 'css', 'haxe', 'html', 'java',
       \ 'javascript', 'python', 'ruby', 'sass', 'scss']
