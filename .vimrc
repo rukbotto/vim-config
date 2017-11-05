@@ -24,6 +24,7 @@ Plugin 'tpope/vim-obsession'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-vinegar'
+Plugin 'rukbotto/vim-mustache-handlebars'
 
 call vundle#end()
 
