@@ -16,15 +16,15 @@ set linespace=3
 
 let g:colors_name = "smyck"
 
-hi Normal               cterm=none ctermbg=none     ctermfg=15      gui=none        guibg=#282828   guifg=#F7F7F7
-hi LineNr               cterm=none ctermbg=none     ctermfg=8       gui=none        guibg=#282828   guifg=#8F8F8F
+hi Normal               cterm=none ctermbg=none     ctermfg=15      gui=none        guibg=#242424   guifg=#F7F7F7
+hi LineNr               cterm=none ctermbg=none     ctermfg=8       gui=none        guibg=#242424   guifg=#8F8F8F
 hi StatusLine           cterm=none ctermbg=8        ctermfg=15      gui=none        guibg=#5D5D5D   guifg=#FBFBFB
-hi StatusLineNC         cterm=none ctermbg=15       ctermfg=8       gui=none        guibg=#5D5D5D   guifg=#FBFBFB
+hi StatusLineNC         cterm=none ctermbg=238      ctermfg=8       gui=none        guibg=#424242   guifg=#8F8F8F
 hi Search               cterm=none ctermbg=6        ctermfg=15      gui=none        guibg=#2EB5C1   guifg=#F7F7F7
 hi IncSearch            cterm=none ctermbg=3        ctermfg=8       gui=none        guibg=#F6DC69   guifg=#8F8F8F
 hi ColumnMargin         cterm=none ctermbg=0                        gui=none        guibg=#000000
-hi Error                cterm=none ctermbg=1        ctermfg=15      gui=none                        guifg=#F7F7F7
-hi ErrorMsg             cterm=none ctermbg=1        ctermfg=15      gui=none                        guifg=#F7F7F7
+hi Error                cterm=none ctermbg=none     ctermfg=1       gui=none        guibg=bg        guifg=#C75646
+hi ErrorMsg             cterm=none ctermbg=none     ctermfg=1       gui=none        guibg=bg        guifg=#C75646
 hi Folded               cterm=none ctermbg=8        ctermfg=2       gui=none        guibg=#3B3B3B   guifg=#90AB41
 hi FoldColumn           cterm=none ctermbg=8        ctermfg=2       gui=none        guibg=#3B3B3B   guifg=#90AB41
 hi NonText              cterm=bold ctermbg=none     ctermfg=8       gui=bold                        guifg=#8F8F8F
@@ -39,16 +39,20 @@ hi SpellLocal           cterm=none ctermbg=4        ctermfg=15      gui=none    
 hi Visual               cterm=none ctermbg=15       ctermfg=8       gui=none        guibg=#F7F7F7   guifg=#8F8F8F
 hi Directory            cterm=none ctermbg=none     ctermfg=4       gui=none        guibg=#242424   guifg=#88CCE7
 hi SpecialKey           cterm=none ctermbg=none     ctermfg=8       gui=none                        guifg=#8F8F8F
-hi DiffAdd              cterm=bold ctermbg=2        ctermfg=15
-hi DiffChange           cterm=bold ctermbg=4        ctermfg=15
-hi DiffDelete           cterm=bold ctermbg=1        ctermfg=15
-hi DiffText             cterm=bold ctermbg=3        ctermfg=8
+hi DiffAdd              cterm=bold ctermbg=2        ctermfg=15      gui=bold        guibg=#90AB41   guifg=#F7F7F7
+hi DiffChange           cterm=bold ctermbg=4        ctermfg=15      gui=bold        guibg=#2EB5C1   guifg=#F7F7F7
+hi DiffDelete           cterm=bold ctermbg=1        ctermfg=15      gui=bold        guibg=#C75646   guifg=#F7F7F7
+hi DiffText             cterm=bold ctermbg=3        ctermfg=8       gui=bold        guibg=#D0B03C   guifg=#F7F7F7
 hi MatchParen           cterm=none ctermbg=6        ctermfg=15      gui=none        guibg=#2EB5C1   guifg=#F7F7F7
 hi CursorLine           cterm=none ctermbg=238      ctermfg=none    gui=none        guibg=#424242
 hi CursorColumn         cterm=none ctermbg=238      ctermfg=none    gui=none        guibg=#424242
 hi Title                cterm=none ctermbg=none     ctermfg=4       gui=none                        guifg=#88CCE7
-hi VertSplit            cterm=bold ctermbg=none     ctermfg=8       gui=bold        guibg=#282828   guifg=#8F8F8F
-hi SignColumn           cterm=bold ctermbg=none     ctermfg=8       gui=bold        guibg=#282828   guifg=#8F8F8F
+hi VertSplit            cterm=bold ctermbg=none     ctermfg=8       gui=bold        guibg=#242424   guifg=#8F8F8F
+hi SignColumn           cterm=bold ctermbg=none     ctermfg=8       gui=bold        guibg=#242424   guifg=#8F8F8F
+hi TabLine              cterm=none ctermbg=none     ctermfg=8       gui=none        guibg=#242424   guifg=#8F8F8F
+hi TabLineFill          cterm=none ctermbg=none     ctermfg=10      gui=none        guibg=#242424   guifg=#D1FA71
+hi TabLineSel           cterm=bold ctermbg=none     ctermfg=10      gui=bold        guibg=#242424   guifg=#D1FA71
+hi WarningMsg           cterm=none ctermbg=none     ctermfg=13      gui=none                        guifg=#FBB1F9
 
 " ----------------------------------------------------------------------------
 " Syntax Highlighting
