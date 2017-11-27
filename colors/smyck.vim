@@ -1,9 +1,5 @@
-" ----------------------------------------------------------------------------
-" Vim color file
-" Maintainer:   John-Paul Bader <contact@smyck.org>
-" Last Change:  2012 April
-" License:      Beer Ware
-" ----------------------------------------------------------------------------
+" Vim color file adapted from Smyck colorscheme (http://color.smyck.org)
+" by John-Paul Bader <contact@smyck.org>
 
 " Reset Highlighting
 hi clear
@@ -51,7 +47,7 @@ hi VertSplit            cterm=bold ctermbg=none     ctermfg=8       gui=bold    
 hi SignColumn           cterm=bold ctermbg=none     ctermfg=8       gui=bold        guibg=#242424   guifg=#8F8F8F
 hi TabLine              cterm=none ctermbg=none     ctermfg=8       gui=none        guibg=#242424   guifg=#8F8F8F
 hi TabLineFill          cterm=none ctermbg=none     ctermfg=10      gui=none        guibg=#242424   guifg=#D1FA71
-hi TabLineSel           cterm=bold ctermbg=none     ctermfg=10      gui=bold        guibg=#242424   guifg=#D1FA71
+hi TabLineSel           cterm=bold ctermbg=none     ctermfg=15      gui=bold        guibg=#242424   guifg=#F7F7F7
 hi WarningMsg           cterm=none ctermbg=none     ctermfg=13      gui=none                        guifg=#FBB1F9
 
 " ----------------------------------------------------------------------------
@@ -79,6 +75,7 @@ hi Interpolation        cterm=none ctermbg=none ctermfg=6           gui=none    
 hi link erlangAtom            Keyword
 hi link erlangBitType         Keyword
 
+" Ruby
 hi link rubyBeginend          Keyword
 hi link rubyClass             Keyword
 hi link rubyModule            Keyword
@@ -98,4 +95,12 @@ hi link rubyInterpolation     Interpolation
 hi link rubyInterpolationDelimiter    Interpolation
 hi link rubyRailsMethod       Method
 
+" Markdown
+hi link markdownCode                Comment
+hi link markdownError               Special
+hi link markdownCodeBlock           Comment
+hi link markdownHeadingDelimiter    Type
 
+" Git
+hi link gitCommitOverflow   WarningMsg
+hi link gitCommitSummary    Method
