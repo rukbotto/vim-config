@@ -75,6 +75,20 @@ colorscheme Base2Tone_SpaceDark
 colorscheme smyck
 ```
 
+## Status line
+
+This `.vimrc` file also includes a simple status line displaying Git/Mercurial
+branch name, filetype, current and total line count, character count and
+position in the file.
+
+The status line can also be highlighted depending on the color scheme used,
+either Base2Tone_SpaceDark or smyck. To enable this feature, set the following
+global variable in the `.vimrc.local` file:
+
+```vim
+let g:simple_statusline = 1
+```
+
 ## Credits
 
 + [David Hodder][5] for authoring [django.vim][6].
