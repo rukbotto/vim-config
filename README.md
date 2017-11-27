@@ -60,13 +60,19 @@ The `.vimrc` file included in this repo enables Vim's 24-bit color support,
 making it possible to use color schemes for MacVim (or GVim) inside terminal
 Vim.
 
-This repo currently ships with a single color scheme called
-[Base2Tone_SpaceDark][1]. It's not set by default, but if you want to give it a
-try, place the following lines in your `.vimrc.local` file:
+This repo currently ships with two color schemes:
+
++ [Base2Tone_SpaceDark][1]
++ [smyck][11]
+
+They are not set by default, but if you want to give it a try, place the
+following lines in your `.vimrc.local` file:
 
 ```vim
 set background=dark
 colorscheme Base2Tone_SpaceDark
+" Or
+colorscheme smyck
 ```
 
 ## Credits
@@ -74,6 +80,7 @@ colorscheme Base2Tone_SpaceDark
 + [David Hodder][5] for authoring [django.vim][6].
 + [Bruno Michel][7], [Bruno Sutic][8] and [Juvenn Woo][9] for authoring [vim-mustache-handlebars][10].
 + [Braam de Haan][2] for authoring [Base2Tone_SpaceDark][1] color scheme.
++ [John-Paul Bader][12] for authoring [smyck][11] color scheme.
 
 [1]: https://github.com/atelierbram/Base2Tone-vim
 [2]: https://github.com/atelierbram/
@@ -85,3 +92,5 @@ colorscheme Base2Tone_SpaceDark
 [8]: http://github.com/bruno-
 [9]: http://github.com/juvenn
 [10]: https://github.com/mustache/vim-mustache-handlebars
+[11]: https://github.com/hukl/Smyck-Color-Scheme/
+[12]: https://github.com/hukl
