@@ -23,6 +23,7 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'rukbotto/vim-mustache-handlebars'
+Plugin 'mhinz/vim-signify'
 
 call vundle#end()
 
