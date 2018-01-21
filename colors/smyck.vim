@@ -104,3 +104,8 @@ hi link markdownHeadingDelimiter    Type
 " Git
 hi link gitCommitOverflow   WarningMsg
 hi link gitCommitSummary    Method
+
+" Signify
+hi SignifySignAdd       cterm=bold ctermbg=none     ctermfg=2       gui=bold                        guifg=#90AB41
+hi SignifySignChange    cterm=bold ctermbg=none     ctermfg=4       gui=bold                        guifg=#2EB5C1
+hi SignifySignDelete    cterm=bold ctermbg=none     ctermfg=1       gui=bold                        guifg=#C75646

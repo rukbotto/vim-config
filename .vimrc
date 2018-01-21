@@ -178,6 +178,9 @@ let g:vaxe_enable_airline_defaults = 0
 " FZF settings
 let g:fzf_layout = { 'down': '~20%' }
 
+" Signify settings
+let g:signify_vcs_list = ['git', 'hg']
+
 " =============================================================================
 " Commands
 " =============================================================================
