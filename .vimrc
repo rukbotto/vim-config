@@ -152,7 +152,6 @@ xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
 
 set statusline=
 set statusline+=\ %0.40f
-set statusline+=\ %{StatusLineBranchName()}
 set statusline+=\ %m%r
 set statusline+=\ %h%w
 set statusline+=%=
@@ -248,21 +247,6 @@ function! CloseHiddenBuffers()
         endif
     endfor
     echon "Deleted " . l:tally . " buffers"
-endfunction
-
-" Print Git/Mercurial branch name on statusline
-function! StatusLineBranchName()
-    let l:branch = ""
-    if exists('*fugitive#head')
-        let l:branch = fugitive#head()
-    endif
-    if !strlen(l:branch) && exists('*lawrencium#statusline')
-        let l:branch = lawrencium#statusline()
-    endif
-    if strlen(l:branch)
-        return "[" . l:branch . "]"
-    endif
-    return l:branch
 endfunction
 
 " =============================================================================
