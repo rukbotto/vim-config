@@ -65,7 +65,7 @@ run the following command inside vim:
 
 The autocompletion feature will show you the available _base16_ color schemes.
 
-To apply a color scheme, just add the following to your `.vimrc` file:
+To apply a color scheme, just add the following to your `.vimrc.local` file:
 
 ```vim
 colorscheme base16-circus
@@ -75,11 +75,7 @@ colorscheme base16-circus
 
 + [David Hodder][5] for authoring [django.vim][6].
 + [Bruno Michel][7], [Bruno Sutic][8] and [Juvenn Woo][9] for authoring [vim-mustache-handlebars][10].
-+ [Braam de Haan][2] for authoring [Base2Tone_SpaceDark][1] color scheme.
-+ [John-Paul Bader][12] for authoring [smyck][11] color scheme.
 
-[1]: https://github.com/atelierbram/Base2Tone-vim
-[2]: https://github.com/atelierbram/
 [3]: https://github.com/junegunn/fzf
 [4]: https://github.com/VundleVim/Vundle.vim
 [5]: https://vim.sourceforge.io/account/profile.php?user_id=9589
@@ -88,6 +84,4 @@ colorscheme base16-circus
 [8]: http://github.com/bruno-
 [9]: http://github.com/juvenn
 [10]: https://github.com/mustache/vim-mustache-handlebars
-[11]: https://github.com/hukl/Smyck-Color-Scheme/
-[12]: https://github.com/hukl
 [13]: https://github.com/chriskempson/base16-vim
