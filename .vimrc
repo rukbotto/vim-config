@@ -25,6 +25,9 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'rukbotto/vim-mustache-handlebars'
 Plugin 'mhinz/vim-signify'
 
+" Color schemes
+Plugin 'chriskempson/base16-vim'
+
 call vundle#end()
 
 syntax on
@@ -256,18 +259,4 @@ endfunction
 let g:local_vimrc = $HOME . "/.vimrc.local"
 if filereadable(g:local_vimrc)
     exec "source " . g:local_vimrc
-endif
-
-" =============================================================================
-" Source statusline color scheme
-" =============================================================================
-
-if exists("g:simple_statusline") && g:simple_statusline
-    let g:statusline_colorscheme = $HOME
-                \ . "/.vim/statusline/"
-                \ . g:colors_name
-                \ . ".vim"
-    if filereadable(g:statusline_colorscheme)
-        exec "source " . g:statusline_colorscheme
-    endif
 endif

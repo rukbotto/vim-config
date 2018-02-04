@@ -4,7 +4,6 @@ Rukbotto's Vim configuration files. It offers the following features:
 
 + Support for HTML5, Jinja, mustache, pug and Haxe files
 + Improved support for Django template files
-+ Git and Mercurial integration
 + Support for vim sessions
 + Fuzzy finder
 + Snippets
@@ -54,39 +53,22 @@ $ touch ~/.vimrc.local
 $ vim ~/.vimrc.local
 ```
 
-## Color Schemes
+## Color schemes
 
-The `.vimrc` file included in this repo enables Vim's 24-bit color support,
-making it possible to use color schemes for MacVim (or GVim) inside terminal
-Vim.
+After installing all plugins, you will be able to use any of the color schemes
+provided by [base16 plugin][13]. To figure out the available themes, you can
+run the following command inside vim:
 
-This repo currently ships with two color schemes:
-
-+ [Base2Tone_SpaceDark][1]
-+ [smyck][11]
-
-They are not set by default, but if you want to give it a try, place the
-following lines in your `.vimrc.local` file:
-
-```vim
-set background=dark
-colorscheme Base2Tone_SpaceDark
-" Or
-colorscheme smyck
+```
+:colorscheme base16<Tab>
 ```
 
-## Status line
+The autocompletion feature will show you the available _base16_ color schemes.
 
-This `.vimrc` file also includes a simple status line displaying Git/Mercurial
-branch name, filetype, current and total line count, character count and
-position in the file.
-
-The status line can also be highlighted depending on the color scheme used,
-either Base2Tone_SpaceDark or smyck. To enable this feature, set the following
-global variable in the `.vimrc.local` file:
+To apply a color scheme, just add the following to your `.vimrc` file:
 
 ```vim
-let g:simple_statusline = 1
+colorscheme base16-circus
 ```
 
 ## Credits
@@ -108,3 +90,4 @@ let g:simple_statusline = 1
 [10]: https://github.com/mustache/vim-mustache-handlebars
 [11]: https://github.com/hukl/Smyck-Color-Scheme/
 [12]: https://github.com/hukl
+[13]: https://github.com/chriskempson/base16-vim
