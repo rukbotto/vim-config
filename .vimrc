@@ -25,6 +25,9 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'rukbotto/vim-mustache-handlebars'
 Plugin 'mhinz/vim-signify'
 
+" Color schemes
+Plugin 'chriskempson/base16-vim'
+
 call vundle#end()
 
 syntax on
