@@ -53,6 +53,24 @@ $ touch ~/.vimrc.local
 $ vim ~/.vimrc.local
 ```
 
+## Color schemes
+
+After installing all plugins, you will be able to use any of the color schemes
+provided by [base16 plugin][13]. To figure out the available themes, you can
+run the following command inside vim:
+
+```
+:colorscheme base16<Tab>
+```
+
+The autocompletion feature will show you the available _base16_ color schemes.
+
+To apply a color scheme, just add the following to your `.vimrc` file:
+
+```vim
+colorscheme base16-circus
+```
+
 ## Credits
 
 + [David Hodder][5] for authoring [django.vim][6].
@@ -72,3 +90,4 @@ $ vim ~/.vimrc.local
 [10]: https://github.com/mustache/vim-mustache-handlebars
 [11]: https://github.com/hukl/Smyck-Color-Scheme/
 [12]: https://github.com/hukl
+[13]: https://github.com/chriskempson/base16-vim
