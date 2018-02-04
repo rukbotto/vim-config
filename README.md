@@ -4,7 +4,6 @@ Rukbotto's Vim configuration files. It offers the following features:
 
 + Support for HTML5, Jinja, mustache, pug and Haxe files
 + Improved support for Django template files
-+ Git and Mercurial integration
 + Support for vim sessions
 + Fuzzy finder
 + Snippets
