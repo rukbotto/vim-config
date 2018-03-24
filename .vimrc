@@ -24,6 +24,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'rukbotto/vim-mustache-handlebars'
 Plugin 'mhinz/vim-signify'
+Plugin 'plasticboy/vim-markdown'
 
 " Color schemes
 Plugin 'chriskempson/base16-vim'
@@ -201,7 +202,7 @@ if has("autocmd")
         " Highlight text when line length is beyond 80 chars for selected
         " filetypes
         autocmd FileType * match none
-        autocmd FileType c++,haxe,java,javascript,markdown,python,ruby,vim
+        autocmd FileType c++,haxe,java,javascript,python,ruby,vim
                     \ match WarningMsg '\%>80v.\+'
 
         " Set autocompletion functions
@@ -217,6 +218,14 @@ if has("autocmd")
         autocmd FileType c++,haxe,java,python,vim setlocal tabstop=4
         autocmd FileType c++,haxe,java,python,vim setlocal shiftwidth=4
         autocmd FileType c++,haxe,java,python,vim setlocal softtabstop=4
+
+        " Set line wrapping on
+        autocmd FileType markdown setlocal wrap
+        autocmd FileType markdown setlocal linebreak
+
+        " Set line numbers off
+        autocmd FileType markdown setlocal nonumber
+        autocmd FileType markdown setlocal norelativenumber
     endif
 endif
 
