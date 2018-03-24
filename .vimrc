@@ -24,6 +24,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'rukbotto/vim-mustache-handlebars'
 Plugin 'mhinz/vim-signify'
+Plugin 'plasticboy/vim-markdown'
 
 " Color schemes
 Plugin 'chriskempson/base16-vim'
