@@ -121,12 +121,6 @@ nnoremap <Leader><Space> :Files<CR>
 " Fuzzy find buffers
 nnoremap <Leader>b :Buffers<CR>
 
-" Disable arrow keys in normal mode
-nnoremap <Up> <Nop>
-nnoremap <Down> <Nop>
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-
 " Search for a pattern in current buffer
 nnoremap / /\v
 
