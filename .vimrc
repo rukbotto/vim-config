@@ -25,6 +25,7 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'rukbotto/vim-mustache-handlebars'
 Plugin 'mhinz/vim-signify'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'scrooloose/nerdtree'
 
 " Color schemes
 Plugin 'chriskempson/base16-vim'
@@ -123,6 +124,9 @@ nnoremap <Leader>b :Buffers<CR>
 
 " Search for a pattern in current buffer
 nnoremap / /\v
+
+" Open NERDTree
+nnoremap <Leader>nt :NERDTreeToggle<CR>
 
 " =============================================================================
 " Insert mode mappings
