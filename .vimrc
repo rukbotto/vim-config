@@ -125,8 +125,11 @@ nnoremap <Leader>b :Buffers<CR>
 " Search for a pattern in current buffer
 nnoremap / /\v
 
-" Open NERDTree
+" Toggle NERDTree window
 nnoremap <Leader>nt :NERDTreeToggle<CR>
+
+" Reveal current file in NERDTree window
+nnoremap <Leader>ntf :NERDTreeFind<CR>
 
 " =============================================================================
 " Insert mode mappings
@@ -220,10 +223,6 @@ if has("autocmd")
         " Set line wrapping on
         autocmd FileType markdown setlocal wrap
         autocmd FileType markdown setlocal linebreak
-
-        " Set line numbers off
-        autocmd FileType markdown setlocal nonumber
-        autocmd FileType markdown setlocal norelativenumber
     endif
 endif
 
