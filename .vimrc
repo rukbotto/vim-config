@@ -26,6 +26,7 @@ Plugin 'rukbotto/vim-mustache-handlebars'
 Plugin 'mhinz/vim-signify'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
+Plugin 'craigemery/vim-autotag'
 
 " Color schemes
 Plugin 'chriskempson/base16-vim'
@@ -101,26 +102,20 @@ let maplocalleader="\\"
 " Normal mode mappings
 " =============================================================================
 
-" Open .vimrc in the current buffer
-noremap <Leader>rc :edit $MYVIMRC<CR>
-
 " Open .vimrc.local in the current buffer
-noremap <Leader>lrc :edit $MYVIMRC.local<CR>
-
-" Open .gvimrc in the current buffer
-noremap <Leader>grc :edit $MYGVIMRC<CR>
+noremap <Leader>rc :edit $MYVIMRC.local<CR>
 
 " Execute the string subtitution command
 nnoremap <Leader>s :%substitute//
-
-" Open tagbar window
-nnoremap tag :TagbarOpen fjc<CR>
 
 " Fuzzy find files
 nnoremap <Leader><Space> :Files<CR>
 
 " Fuzzy find buffers
 nnoremap <Leader>b :Buffers<CR>
+
+" Fuzzy find tags
+nnoremap <Leader>t :Tags<CR>
 
 " Search for a pattern in current buffer
 nnoremap / /\v
