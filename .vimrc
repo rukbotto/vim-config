@@ -27,6 +27,7 @@ Plugin 'mhinz/vim-signify'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'craigemery/vim-autotag'
+Plugin 'KabbAmine/vCoolor.vim'
 
 " Color schemes
 Plugin 'chriskempson/base16-vim'
@@ -125,6 +126,9 @@ nnoremap <Leader>nt :NERDTreeToggle<CR>
 
 " Reveal current file in NERDTree window
 nnoremap <Leader>ntf :NERDTreeFind<CR>
+
+" Display color picker
+nnoremap <Leader>v :VCoolor<CR>
 
 " =============================================================================
 " Insert mode mappings
