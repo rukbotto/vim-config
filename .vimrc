@@ -199,12 +199,6 @@ if has("autocmd")
     if !exists("autocommands_loaded")
         let autocommands_loaded = 1
 
-        " Highlight text when line length is beyond 80 chars for selected
-        " filetypes
-        autocmd FileType * match none
-        autocmd FileType c++,haxe,java,javascript,python,ruby,vim
-                    \ match WarningMsg '\%>80v.\+'
-
         " Set autocompletion functions
         autocmd FileType css set omnifunc=csscomplete#CompleteCSS
         autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
