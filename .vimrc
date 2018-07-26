@@ -57,6 +57,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" Allow backspace over everything in insert mode
+set backspace=2
+
 " Autoindent text
 set autoindent
 
