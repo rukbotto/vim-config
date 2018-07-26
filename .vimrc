@@ -28,6 +28,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'craigemery/vim-autotag'
 Plugin 'KabbAmine/vCoolor.vim'
+Plugin 'vim-scripts/loremipsum'
 
 " Color schemes
 Plugin 'chriskempson/base16-vim'
