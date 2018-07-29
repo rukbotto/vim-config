@@ -29,6 +29,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'craigemery/vim-autotag'
 Plugin 'KabbAmine/vCoolor.vim'
 Plugin 'vim-scripts/loremipsum'
+Plugin 'wesQ3/vim-windowswap'
 
 " Color schemes
 Plugin 'chriskempson/base16-vim'
@@ -107,6 +108,29 @@ let maplocalleader="\\"
 " Normal mode mappings
 " =============================================================================
 
+" Window mappings
+noremap <Leader>k :wincmd k<CR>
+noremap <Leader>j :wincmd j<CR>
+noremap <Leader>h :wincmd h<CR>
+noremap <Leader>l :wincmd l<CR>
+noremap <Leader>K <C-W>K
+noremap <Leader>J <C-W>J
+noremap <Leader>H <C-W>H
+noremap <Leader>L <C-W>L
+noremap <Leader>wx <C-W>,
+noremap <Leader>wr <C-W>r
+noremap <Leader>wo <C-W>o
+noremap <Leader>wt <C-W>T
+
+" Tab mappings
+noremap <Leader>. :tabnext<CR>
+noremap <Leader>, :tabprevious<CR>
+noremap <Leader>> :tabmove+<CR>
+noremap <Leader>< :tabmove-<CR>
+noremap <Leader>tc :tabclose<CR>
+noremap <Leader>tn :tabnew<CR>
+noremap <Leader>to :tabonly<CR>
+
 " Open .vimrc.local in the current buffer
 noremap <Leader>rc :edit $MYVIMRC.local<CR>
 
@@ -120,13 +144,13 @@ nnoremap <Leader><Space> :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 
 " Fuzzy find tags
-nnoremap <Leader>t :Tags<CR>
+nnoremap <Leader>tg :Tags<CR>
 
 " Search for a pattern in current buffer
 nnoremap / /\v
 
 " Toggle NERDTree window
-nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>ntt :NERDTreeToggle<CR>
 
 " Reveal current file in NERDTree window
 nnoremap <Leader>ntf :NERDTreeFind<CR>
