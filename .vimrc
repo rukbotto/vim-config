@@ -95,7 +95,7 @@ set relativenumber
 
 " Use special unicode chars for displaying hidden tab chars, trail spaces and
 " whitespace
-set list listchars=tab:‣\ ,trail:∙,extends:»,precedes:«
+set list listchars=tab:\+\ ,trail:.,extends:»,precedes:«
 
 " Make clipboard work with tmux
 set clipboard=unnamed
@@ -283,7 +283,7 @@ endfunction
 " Source local vimrc file
 " =============================================================================
 
-let g:local_vimrc = $HOME . "/.vimrc.local"
+let g:local_vimrc = $HOME . "/.local.vimrc"
 if filereadable(g:local_vimrc)
     exec "source " . g:local_vimrc
 endif
