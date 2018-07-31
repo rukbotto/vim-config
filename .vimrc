@@ -283,7 +283,7 @@ endfunction
 " Source local vimrc file
 " =============================================================================
 
-let g:local_vimrc = $HOME . "/.vimrc.local"
+let g:local_vimrc = $HOME . "/.local.vimrc"
 if filereadable(g:local_vimrc)
     exec "source " . g:local_vimrc
 endif
