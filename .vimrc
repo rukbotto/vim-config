@@ -123,13 +123,13 @@ noremap <Leader>wo <C-W>o
 noremap <Leader>wt <C-W>T
 
 " Tab mappings
-noremap <Leader>. :tabnext<CR>
-noremap <Leader>, :tabprevious<CR>
 noremap <Leader>> :tabmove+<CR>
 noremap <Leader>< :tabmove-<CR>
-noremap <Leader>tc :tabclose<CR>
 noremap <Leader>tn :tabnew<CR>
+noremap <Leader>tc :tabclose<CR>
+noremap <Leader>tfc :tabclose!<CR>
 noremap <Leader>to :tabonly<CR>
+noremap <Leader>tfo :tabonly!<CR>
 
 " Open .vimrc.local in the current buffer
 noremap <Leader>rc :edit $MYVIMRC.local<CR>
