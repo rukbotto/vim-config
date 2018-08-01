@@ -121,6 +121,9 @@ noremap <Leader>wx <C-W>,
 noremap <Leader>wr <C-W>r
 noremap <Leader>wo <C-W>o
 noremap <Leader>wt <C-W>T
+noremap <Leader>w- <C-W><C-_>
+noremap <Leader>w\ <C-W><Bar>
+noremap <Leader>w= <C-W><C-=>
 
 " Tab mappings
 noremap <Leader>> :tabmove+<CR>
