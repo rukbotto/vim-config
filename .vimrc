@@ -244,6 +244,9 @@ if has("autocmd")
         " Set line wrapping on
         autocmd FileType markdown setlocal wrap
         autocmd FileType markdown setlocal linebreak
+
+        " Set filetype for haskell files
+        autocmd BufNewFile,BufRead *xmobarrc set filetype=haskell
     endif
 endif
 
