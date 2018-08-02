@@ -117,7 +117,8 @@ noremap <Leader>K <C-W>K
 noremap <Leader>J <C-W>J
 noremap <Leader>H <C-W>H
 noremap <Leader>L <C-W>L
-noremap <Leader>wx <C-W>,
+noremap <Leader>wx <C-W>x
+noremap <Leader>ws <C-W>w
 noremap <Leader>wr <C-W>r
 noremap <Leader>wo <C-W>o
 noremap <Leader>wt <C-W>T
