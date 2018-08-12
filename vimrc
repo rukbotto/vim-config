@@ -251,6 +251,9 @@ if has("autocmd")
 
         " Set filetype for haskell files
         autocmd BufNewFile,BufRead *xmobarrc set filetype=haskell
+
+        " Set filetype for tmux files
+        autocmd BufNewFile,BufRead *tmux.conf set filetype=tmux
     endif
 endif
 
