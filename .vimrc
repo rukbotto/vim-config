@@ -250,6 +250,9 @@ if has("autocmd")
 
         " Set filetype for haskell files
         autocmd BufNewFile,BufRead *xmobarrc set filetype=haskell
+
+        " Set filetype for xdefaults files
+        autocmd BufNewFile,BufRead *Xresources set filetype=xdefaults
     endif
 endif
 
