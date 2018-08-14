@@ -108,24 +108,6 @@ let maplocalleader="\\"
 " Normal mode mappings
 " =============================================================================
 
-" Window mappings
-noremap <Leader>k :wincmd k<CR>
-noremap <Leader>j :wincmd j<CR>
-noremap <Leader>h :wincmd h<CR>
-noremap <Leader>l :wincmd l<CR>
-noremap <Leader>K <C-W>K
-noremap <Leader>J <C-W>J
-noremap <Leader>H <C-W>H
-noremap <Leader>L <C-W>L
-noremap <Leader>wx <C-W>x
-noremap <Leader>ws <C-W>w
-noremap <Leader>wr <C-W>r
-noremap <Leader>wo <C-W>o
-noremap <Leader>wt <C-W>T
-noremap <Leader>w- <C-W><C-_>
-noremap <Leader>w\ <C-W><Bar>
-noremap <Leader>w= <C-W><C-=>
-
 " Tab mappings
 noremap <Leader>> :tabmove+<CR>
 noremap <Leader>< :tabmove-<CR>
