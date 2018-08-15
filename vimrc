@@ -108,6 +108,10 @@ let maplocalleader="\\"
 " Normal mode mappings
 " =============================================================================
 
+" Window mappings
+noremap <Leader>z <C-w>\|<C-w>_
+noremap <Leader>x <C-w>=
+
 " Tab mappings
 noremap <Leader>> :tabmove+<CR>
 noremap <Leader>< :tabmove-<CR>
