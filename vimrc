@@ -202,6 +202,9 @@ let g:fzf_layout = { 'down': '~20%' }
 " Signify settings
 let g:signify_vcs_list = ['git', 'hg']
 
+" NERDTree settings
+let NERDTreeQuitOnOpen = 1
+
 " =============================================================================
 " Commands
 " =============================================================================
