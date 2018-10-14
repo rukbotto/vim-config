@@ -30,6 +30,8 @@ Plugin 'craigemery/vim-autotag'
 Plugin 'KabbAmine/vCoolor.vim'
 Plugin 'vim-scripts/loremipsum'
 Plugin 'wesQ3/vim-windowswap'
+Plugin 'Yggdroot/indentLine'
+Plugin 'tell-k/vim-autopep8'
 
 " Color schemes
 Plugin 'chriskempson/base16-vim'
