@@ -42,8 +42,7 @@ syntax on
 filetype plugin indent on
 
 " Check if terminal supports truecolor
-let color=$COLORTERM
-if color ==? "truecolor" && has("termguicolors")
+if $COLORTERM ==? "truecolor" && has("termguicolors")
     " Set Vim-specific sequences for RGB colors
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -133,6 +132,7 @@ noremap <Leader>tc :tabclose<CR>
 noremap <Leader>tfc :tabclose!<CR>
 noremap <Leader>to :tabonly<CR>
 noremap <Leader>tfo :tabonly!<CR>
+noremap <Leader>tr :terminal<CR>
 
 " Open .vimrc.local in the current buffer
 noremap <Leader>rc :edit $MYVIMRC.local<CR>
