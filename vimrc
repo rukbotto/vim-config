@@ -24,7 +24,6 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'rukbotto/vim-mustache-handlebars'
 Plugin 'mhinz/vim-signify'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'craigemery/vim-autotag'
 Plugin 'KabbAmine/vCoolor.vim'
@@ -192,16 +191,11 @@ set statusline+=\ %h%w
 set statusline+=%=
 set statusline+=\ %y
 set statusline+=\ %4l/%-4L\ C%-3c
-set statusline+=\ %P
-set statusline+=\ 
+set statusline+=\ %P\ %*
 
 " =============================================================================
 " Plugin settings
 " =============================================================================
-
-" Markdown settings
-let g:markdown_fenced_languages = ['c', 'cpp', 'css', 'haxe', 'html', 'java',
-      \ 'javascript', 'python', 'ruby', 'sass', 'scss']
 
 " Jinja settings
 let g:htmljinja_disable_detection = 1
