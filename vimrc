@@ -24,7 +24,6 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'rukbotto/vim-mustache-handlebars'
 Plugin 'mhinz/vim-signify'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'craigemery/vim-autotag'
 Plugin 'KabbAmine/vCoolor.vim'
@@ -42,14 +41,24 @@ syntax on
 filetype plugin indent on
 
 " Check if terminal supports truecolor
-let color=$COLORTERM
-if color ==? "truecolor" && has("termguicolors")
+if $COLORTERM ==? "truecolor" && has("termguicolors")
     " Set Vim-specific sequences for RGB colors
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
     " Enable 24-bit color
     set termguicolors
+endif
+
+" Change cursor depending on the current mode
+if $TERM =~ "xterm"
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+elseif $TERM =~ "screen"
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 endif
 
 " Enable matchit macro
@@ -122,6 +131,7 @@ noremap <Leader>tc :tabclose<CR>
 noremap <Leader>tfc :tabclose!<CR>
 noremap <Leader>to :tabonly<CR>
 noremap <Leader>tfo :tabonly!<CR>
+noremap <Leader>tr :terminal<CR>
 
 " Open .vimrc.local in the current buffer
 noremap <Leader>rc :edit $MYVIMRC.local<CR>
@@ -181,16 +191,11 @@ set statusline+=\ %h%w
 set statusline+=%=
 set statusline+=\ %y
 set statusline+=\ %4l/%-4L\ C%-3c
-set statusline+=\ %P
-set statusline+=\ 
+set statusline+=\ %P\ %*
 
 " =============================================================================
 " Plugin settings
 " =============================================================================
-
-" Markdown settings
-let g:markdown_fenced_languages = ['c', 'cpp', 'css', 'haxe', 'html', 'java',
-      \ 'javascript', 'python', 'ruby', 'sass', 'scss']
 
 " Jinja settings
 let g:htmljinja_disable_detection = 1
