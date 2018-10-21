@@ -177,7 +177,7 @@ inoremap <Right> <Nop>
 " Search for a pattern in current buffer
 vnoremap / /\v
 
-" Search the current word in current buffer
+" Search the current visual selection
 xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
 
 " =============================================================================
@@ -211,6 +211,10 @@ let g:signify_vcs_list = ['git', 'hg']
 
 " NERDTree settings
 let NERDTreeQuitOnOpen = 1
+
+" Autopep8 settings
+let g:autopep8_max_line_length=79
+let g:autopep8_disable_show_diff=1
 
 " =============================================================================
 " Commands
