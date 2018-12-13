@@ -259,7 +259,7 @@ if has("autocmd")
         autocmd BufNewFile,BufRead *tmux.conf set filetype=tmux
 
         " Automatically format Python files on save
-        autocmd BufWritePost *.py :Autopep8
+        autocmd BufWritePre *.py :Autopep8
     endif
 endif
 
