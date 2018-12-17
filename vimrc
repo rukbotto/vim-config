@@ -31,6 +31,7 @@ Plugin 'vim-scripts/loremipsum'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tell-k/vim-autopep8'
+Plugin 'w0rp/ale'
 
 " Color schemes
 Plugin 'chriskempson/base16-vim'
@@ -159,6 +160,10 @@ nnoremap <Leader>ntf :NERDTreeFind<CR>
 
 " Display color picker
 nnoremap <Leader>v :VCoolor<CR>
+
+" Navigate through linter errors
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " =============================================================================
 " Insert mode mappings
