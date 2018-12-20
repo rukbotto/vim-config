@@ -225,6 +225,11 @@ let NERDTreeQuitOnOpen = 1
 let g:autopep8_max_line_length=79
 let g:autopep8_disable_show_diff=1
 
+" ALE settings
+let g:ale_linters = { 'rust': ['rls', 'cargo', 'rustc'] }
+let g:ale_rust_rustc_options = ''
+let g:ale_set_highlights = 0
+
 " rust.vim settings
 let g:rustfmt_autosave = 1
 
