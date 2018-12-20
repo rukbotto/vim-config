@@ -33,6 +33,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'w0rp/ale'
 Plugin 'rust-lang/rust.vim'
+Plugin 'cespare/vim-toml'
 
 " Color schemes
 Plugin 'chriskempson/base16-vim'
