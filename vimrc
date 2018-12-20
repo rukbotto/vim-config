@@ -32,6 +32,7 @@ Plugin 'wesQ3/vim-windowswap'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'w0rp/ale'
+Plugin 'rust-lang/rust.vim'
 
 " Color schemes
 Plugin 'chriskempson/base16-vim'
@@ -223,6 +224,9 @@ let NERDTreeQuitOnOpen = 1
 " Autopep8 settings
 let g:autopep8_max_line_length=79
 let g:autopep8_disable_show_diff=1
+
+" rust.vim settings
+let g:rustfmt_autosave = 1
 
 " =============================================================================
 " Commands
