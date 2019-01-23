@@ -135,9 +135,7 @@ noremap <Leader>> :tabmove+<CR>
 noremap <Leader>< :tabmove-<CR>
 noremap <Leader>tn :tabnew<CR>
 noremap <Leader>tc :tabclose<CR>
-noremap <Leader>tfc :tabclose!<CR>
 noremap <Leader>to :tabonly<CR>
-noremap <Leader>tfo :tabonly!<CR>
 noremap <Leader>tr :terminal<CR>
 
 " Open .vimrc.local in the current buffer
