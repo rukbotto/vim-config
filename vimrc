@@ -158,10 +158,10 @@ nnoremap <Leader>tb :TagbarOpen jf<CR>
 nnoremap / /\v
 
 " Toggle NERDTree window
-nnoremap <Leader>ntt :NERDTreeToggle<CR>
+nnoremap <Leader>nt :NERDTreeToggle<CR>
 
 " Reveal current file in NERDTree window
-nnoremap <Leader>ntf :NERDTreeFind<CR>
+nnoremap <Leader>nf :NERDTreeFind<CR>
 
 " Display color picker
 nnoremap <Leader>v :VCoolor<CR>
