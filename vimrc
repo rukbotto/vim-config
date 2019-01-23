@@ -113,7 +113,7 @@ set relativenumber
 
 " Use special unicode chars for displaying hidden tab chars, trail spaces and
 " whitespace
-set list listchars=tab:\+\ ,trail:.,extends:»,precedes:«
+set list listchars=tab:›.,trail:.,extends:»,precedes:«
 
 " Make clipboard work with tmux
 set clipboard=unnamed
