@@ -152,6 +152,7 @@ nnoremap <Leader>b :Buffers<CR>
 
 " Fuzzy find tags
 nnoremap <Leader>tg :Tags<CR>
+nnoremap <Leader>tb :TagbarOpen jf<CR>
 
 " Search for a pattern in current buffer
 nnoremap / /\v
@@ -231,6 +232,9 @@ let g:signify_vcs_list = ['git', 'hg']
 
 " NERDTree settings
 let NERDTreeQuitOnOpen = 1
+
+" Tagbar settings
+let g:tagbar_autoclose = 1
 
 " Autopep8 settings
 let g:autopep8_max_line_length=79
