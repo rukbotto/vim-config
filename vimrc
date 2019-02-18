@@ -290,6 +290,9 @@ if has("autocmd")
         " Set filetype for tmux files
         autocmd BufNewFile,BufRead *tmux.conf set filetype=tmux
 
+        " Set filetype for Dockerfile files
+        autocmd BufNewFile,BufRead *Dockerfile* set filetype=dockerfile
+
         " Automatically format Python files on save
         autocmd BufWritePre *.py :Autopep8
     endif
