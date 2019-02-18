@@ -1,46 +1,4 @@
 set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'SirVer/ultisnips.git'
-Plugin 'othree/html5.vim.git'
-Plugin 'mattn/emmet-vim.git'
-Plugin 'nelstrom/vim-qargs.git'
-Plugin 'mitsuhiko/vim-jinja'
-Plugin 'digitaltoad/vim-pug'
-Plugin 'tpope/vim-commentary'
-Plugin 'jdonaldson/vaxe'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-repeat'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-obsession'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'tpope/vim-vinegar'
-Plugin 'rukbotto/vim-mustache-handlebars'
-Plugin 'mhinz/vim-signify'
-Plugin 'scrooloose/nerdtree'
-Plugin 'craigemery/vim-autotag'
-Plugin 'KabbAmine/vCoolor.vim'
-Plugin 'vim-scripts/loremipsum'
-Plugin 'wesQ3/vim-windowswap'
-Plugin 'Yggdroot/indentLine'
-Plugin 'tell-k/vim-autopep8'
-Plugin 'w0rp/ale'
-Plugin 'rust-lang/rust.vim'
-Plugin 'cespare/vim-toml'
-Plugin 'tpope/vim-fugitive'
-
-" Color schemes
-Plugin 'chriskempson/base16-vim'
-
-call vundle#end()
-
 syntax on
 filetype plugin indent on
 
