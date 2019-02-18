@@ -23,14 +23,6 @@ Then install [fzf](https://github.com/junegunn/fzf):
 $ brew install fzf
 ```
 
-Next setup [Vundle](https://github.com/VundleVim/Vundle.vim):
-
-```
-$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-```
-
-Finally install all plugins by running `:PluginInstall` from within Vim.
-
 ## Usage
 
 Link `.vimrc` file to your home directory:
