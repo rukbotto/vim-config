@@ -115,15 +115,6 @@ nnoremap <Leader>tb :TagbarOpen jf<CR>
 " Search for a pattern in current buffer
 nnoremap / /\v
 
-" Toggle NERDTree window
-nnoremap <Leader>nt :NERDTreeToggle<CR>
-
-" Reveal current file in NERDTree window
-nnoremap <Leader>nf :NERDTreeFind<CR>
-
-" Display color picker
-nnoremap <Leader>v :VCoolor<CR>
-
 " Navigate through linter errors
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
@@ -187,9 +178,6 @@ let g:fzf_layout = { 'down': '~20%' }
 
 " Signify settings
 let g:signify_vcs_list = ['git', 'hg']
-
-" NERDTree settings
-let NERDTreeQuitOnOpen = 1
 
 " Tagbar settings
 let g:tagbar_autoclose = 1
