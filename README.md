@@ -14,7 +14,7 @@ Vim configuration files. It offers the following features:
 Clone this repo in your home directory:
 
 ```
-$ git clone https://github.com/rukbotto/vim-config.git ~/.vim
+$ git clone --recursive https://github.com/rukbotto/vim-config.git ~/.vim
 ```
 
 Then install [fzf](https://github.com/junegunn/fzf):
