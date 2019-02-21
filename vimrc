@@ -96,8 +96,9 @@ noremap <Leader>tc :tabclose<CR>
 noremap <Leader>to :tabonly<CR>
 noremap <Leader>tr :terminal<CR>
 
-" Open .vimrc.local in the current buffer
-noremap <Leader>rc :edit $MYVIMRC.local<CR>
+" Split mappings
+nnoremap <Leader>hn :new<CR>
+nnoremap <Leader>vn :vnew<CR>
 
 " Execute the string subtitution command
 nnoremap <Leader>s :%substitute//
