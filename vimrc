@@ -130,9 +130,9 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ` ``<left>
+inoremap "" ""<left>
+inoremap '' ''<left>
+inoremap `` ``<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap [<CR> [<CR>]<ESC>O
