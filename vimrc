@@ -15,9 +15,6 @@ endif
 " Enable matchit macro
 runtime macros/matchit.vim
 
-" Highlight current line
-set cursorline
-
 " Insert spaces instead of tabs when indenting text
 set tabstop=2
 set shiftwidth=2
