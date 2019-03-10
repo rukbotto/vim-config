@@ -148,6 +148,9 @@ set statusline+=\ %P\ %*
 " Plugin settings
 " =============================================================================
 
+" netrw settings
+let g:netrw_localrmdir='rm -r'
+
 " Jinja settings
 let g:htmljinja_disable_detection = 1
 
