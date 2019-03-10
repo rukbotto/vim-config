@@ -200,9 +200,12 @@ if has("autocmd")
         autocmd FileType haxe set autowrite
 
         " Set indentation to 4 columns
-        autocmd FileType c++,haxe,java,python,vim setlocal tabstop=4
-        autocmd FileType c++,haxe,java,python,vim setlocal shiftwidth=4
-        autocmd FileType c++,haxe,java,python,vim setlocal softtabstop=4
+        autocmd FileType c++,haxe,java,python,vim,sh setlocal tabstop=4
+        autocmd FileType c++,haxe,java,python,vim,sh setlocal shiftwidth=4
+        autocmd FileType c++,haxe,java,python,vim,sh setlocal softtabstop=4
+
+        " Don't convert tab to spaces
+        autocmd FileType sh setlocal noexpandtab
 
         " Set line wrapping on
         autocmd FileType markdown setlocal wrap
