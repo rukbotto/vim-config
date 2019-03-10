@@ -1,3 +1,6 @@
 [submodule "pack/vim-plugins"]
 	path = pack/vim-plugins
 	url = git@github.com:rukbotto/vim-plugins.git
+[submodule "UltiSnips"]
+	path = UltiSnips
+	url = git@github.com:rukbotto/vim-snippets.git
