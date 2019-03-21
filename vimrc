@@ -36,8 +36,8 @@ set ruler
 " No color column
 set colorcolumn=
 
-" Don't wrap lines
-set nowrap
+" Don't break words when wrapping lines
+set linebreak
 
 " Highlight all search matches as we type
 set hlsearch
