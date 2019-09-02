@@ -33,6 +33,9 @@ set encoding=utf-8
 " Display info at the bottom of each window
 set ruler
 
+" Display line numbers
+set number
+
 " No color column
 set colorcolumn=
 
@@ -48,6 +51,9 @@ set completeopt=menu
 
 " All windows will have a status line
 set laststatus=2
+
+" Line numbers are relative to the current line
+set relativenumber
 
 " Use special unicode chars for displaying hidden tab chars, trail spaces and
 " whitespace
