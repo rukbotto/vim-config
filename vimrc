@@ -154,9 +154,6 @@ set statusline+=\ %P\ %*
 " Plugin settings
 " =============================================================================
 
-" netrw settings
-let g:netrw_localrmdir='rm -r'
-
 " Jinja settings
 let g:htmljinja_disable_detection = 1
 
@@ -171,18 +168,6 @@ let g:signify_vcs_list = ['git', 'hg']
 
 " Tagbar settings
 let g:tagbar_autoclose = 1
-
-" Autopep8 settings
-let g:autopep8_max_line_length=79
-let g:autopep8_disable_show_diff=1
-
-" ALE settings
-let g:ale_linters = { 'rust': ['rls', 'cargo', 'rustc'] }
-let g:ale_rust_rustc_options = ''
-let g:ale_set_highlights = 0
-
-" rust.vim settings
-let g:rustfmt_autosave = 1
 
 " =============================================================================
 " Commands
