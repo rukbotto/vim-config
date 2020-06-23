@@ -102,10 +102,6 @@ nnoremap <Leader>tb :TagbarOpen jf<CR>
 " Search for a pattern in current buffer
 nnoremap / /\v
 
-" Navigate through linter errors
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
 " =============================================================================
 " Insert mode mappings
 " =============================================================================
@@ -149,25 +145,6 @@ set statusline+=%=
 set statusline+=\ %y
 set statusline+=\ %4l/%-4L\ C%-3c
 set statusline+=\ %P\ %*
-
-" =============================================================================
-" Plugin settings
-" =============================================================================
-
-" Jinja settings
-let g:htmljinja_disable_detection = 1
-
-" Vaxe settings
-let g:vaxe_enable_airline_defaults = 0
-
-" FZF settings
-let g:fzf_layout = { 'down': '~20%' }
-
-" Signify settings
-let g:signify_vcs_list = ['git', 'hg']
-
-" Tagbar settings
-let g:tagbar_autoclose = 1
 
 " =============================================================================
 " Commands
