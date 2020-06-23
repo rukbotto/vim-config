@@ -59,6 +59,9 @@ set relativenumber
 " whitespace
 set list listchars=tab:›-,trail:-,extends:»,precedes:«
 
+" Ignore the following dirs and files
+set wildignore+=*/node_modules/*,.git/
+
 " Make clipboard work with tmux
 set clipboard=unnamed
 
