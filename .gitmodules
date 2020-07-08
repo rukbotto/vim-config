@@ -7,3 +7,6 @@
 [submodule "pack/navigation/start/fzf"]
 	path = pack/navigation/start/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "pack/version-control/start/vim-gitgutter"]
+	path = pack/version-control/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
