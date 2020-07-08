@@ -66,7 +66,7 @@ set wildignore+=*/node_modules/*,.git/
 set clipboard=unnamed
 
 " Leader and local leader remappings
-let mapleader=","
+let mapleader=" "
 let maplocalleader="\\"
 
 " =============================================================================
