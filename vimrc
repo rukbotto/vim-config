@@ -83,7 +83,7 @@ noremap <Leader>< :tabmove-<CR>
 noremap <Leader>tn :tabnew<CR>
 noremap <Leader>tc :tabclose<CR>
 noremap <Leader>to :tabonly<CR>
-noremap <Leader>tr :terminal<CR>
+noremap <Leader>tr :terminal<Space>
 
 " Split mappings
 nnoremap <Leader>hn :new<CR>
