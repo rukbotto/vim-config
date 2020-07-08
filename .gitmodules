@@ -1,3 +1,9 @@
 [submodule "pack/color-schemes/opt/base16-vim"]
 	path = pack/color-schemes/opt/base16-vim
 	url = https://github.com/chriskempson/base16-vim.git
+[submodule "pack/navigation/start/fzf-vim"]
+	path = pack/navigation/start/fzf-vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "pack/navigation/start/fzf"]
+	path = pack/navigation/start/fzf
+	url = https://github.com/junegunn/fzf.git
