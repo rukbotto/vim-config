@@ -95,6 +95,12 @@ nnoremap <Leader>s :%substitute//
 " Fuzzy find files
 nnoremap <Leader><Space> :Files<CR>
 
+" Fuzzy find text in directory (ripgrep)
+nnoremap <Leader>rg :Rg<CR>
+
+" Fuzzy find text in directory (the_silver_searcher)
+nnoremap <Leader>ag :Ag<CR>
+
 " Fuzzy find buffers
 nnoremap <Leader>b :Buffers<CR>
 
