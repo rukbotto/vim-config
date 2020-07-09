@@ -129,6 +129,7 @@ nnoremap / /\v
 
 " Plugin mappings
 nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gp :Git push<CR>
 
 " =============================================================================
 " Insert mode mappings
