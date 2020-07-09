@@ -22,3 +22,6 @@
 [submodule "pack/file-checkers/start/syntastic"]
 	path = pack/file-checkers/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "pack/autocompletion/start/coc"]
+	path = pack/autocompletion/start/coc
+	url = https://github.com/neoclide/coc.nvim.git
