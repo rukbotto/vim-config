@@ -15,6 +15,10 @@ endif
 " Enable matchit macro
 runtime macros/matchit.vim
 
+" Leader and local leader remappings
+let mapleader=" "
+let maplocalleader="\\"
+
 " Insert spaces instead of tabs when indenting text
 set tabstop=2
 set shiftwidth=2
@@ -65,9 +69,18 @@ set wildignore+=*/node_modules/*,.git/
 " Make clipboard work with tmux
 set clipboard=unnamed
 
-" Leader and local leader remappings
-let mapleader=" "
-let maplocalleader="\\"
+" =============================================================================
+" Status line
+" =============================================================================
+
+set statusline=
+set statusline+=\ %0.40f
+set statusline+=\ %m%r
+set statusline+=\ %h%w
+set statusline+=%=
+set statusline+=\ %y
+set statusline+=\ %4l/%-4L\ C%-3c
+set statusline+=\ %P\ %*
 
 " =============================================================================
 " Normal mode mappings
@@ -141,19 +154,6 @@ vnoremap / /\v
 
 " Search the current visual selection
 xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
-
-" =============================================================================
-" Status line
-" =============================================================================
-
-set statusline=
-set statusline+=\ %0.40f
-set statusline+=\ %m%r
-set statusline+=\ %h%w
-set statusline+=%=
-set statusline+=\ %y
-set statusline+=\ %4l/%-4L\ C%-3c
-set statusline+=\ %P\ %*
 
 " =============================================================================
 " Commands
