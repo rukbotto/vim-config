@@ -252,7 +252,7 @@ endfunction
 " =============================================================================
 
 " Make plugins help tags available
-exec "helptags pack"
+exec "helptags " . $HOME . "/.vim/pack"
 
 " =============================================================================
 " Source local vimrc file
