@@ -102,6 +102,9 @@ noremap <Leader>tr :terminal<Space>
 nnoremap <Leader>hn :new<CR>
 nnoremap <Leader>vn :vnew<CR>
 
+" Buffer mappings
+nnoremap <Leader>o :Only<CR>
+
 " Execute the string subtitution command
 nnoremap <Leader>s :%substitute//
 
@@ -123,6 +126,9 @@ nnoremap <Leader>tb :TagbarOpen jf<CR>
 
 " Search for a pattern in current buffer
 nnoremap / /\v
+
+" Plugin mappings
+nnoremap <Leader>gs :Gstatus<CR>
 
 " =============================================================================
 " Insert mode mappings
