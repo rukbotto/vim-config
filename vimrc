@@ -244,6 +244,9 @@ if has("autocmd")
 
         " Automatically format Python files on save
         autocmd BufWritePre *.py :Autopep8
+
+        " Remove color columns for terminal buffers
+        autocmd TerminalOpen * setlocal colorcolumn=
     endif
 endif
 
