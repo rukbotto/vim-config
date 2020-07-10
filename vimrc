@@ -239,6 +239,9 @@ if has("autocmd")
         " Set filetype for Dockerfile files
         autocmd BufNewFile,BufRead *Dockerfile* set filetype=dockerfile
 
+        " Include node binaries in $PATH for typescript files
+        autocmd BufNewFile,BufRead *ts let $PATH .= ':./node_modules/.bin'
+
         " Automatically format Python files on save
         autocmd BufWritePre *.py :Autopep8
     endif
