@@ -31,3 +31,6 @@
 [submodule "pack/utils/start/vim-case-convert"]
 	path = pack/utils/start/vim-case-convert
 	url = https://github.com/chiedo/vim-case-convert.git
+[submodule "pack/utils/start/vim-surround"]
+	path = pack/utils/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
