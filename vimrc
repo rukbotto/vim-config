@@ -144,6 +144,14 @@ nnoremap / /\v
 
 " Plugin mappings
 
+" Conquer of completion
+nmap <Leader>jd <Plug>(coc-definition)
+nmap <Leader>jt <Plug>(coc-type-definition)
+nmap <Leader>jl <Plug>(coc-declaration)
+nmap <Leader>ji <Plug>(coc-implementation)
+nmap <Leader>jr <Plug>(coc-references)
+nmap <Leader>rn <Plug>(coc-rename)
+
 " Fugitive
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gp :Git push<CR>
