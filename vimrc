@@ -15,9 +15,22 @@ endif
 " Enable matchit macro
 runtime macros/matchit.vim
 
+" =============================================================================
+" Variables
+" =============================================================================
+
 " Leader and local leader remappings
 let mapleader=" "
 let maplocalleader="\\"
+
+" Plugin variables
+
+" Syntastic variables
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_typescript_checkers = ['tslint']
 
 " Insert spaces instead of tabs when indenting text
 set tabstop=2
@@ -78,6 +91,7 @@ set statusline+=\ %0.40f
 set statusline+=\ %m%r
 set statusline+=\ %h%w
 set statusline+=%=
+set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=\ %y
 set statusline+=\ %4l/%-4L\ C%-3c
 set statusline+=\ %P\ %*
@@ -130,6 +144,9 @@ nnoremap / /\v
 " Plugin mappings
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gp :Git push<CR>
+
+" Syntastic
+nnoremap <Leader>sc :SyntasticCheck<CR>
 
 " =============================================================================
 " Insert mode mappings
