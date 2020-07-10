@@ -32,11 +32,18 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_typescript_checkers = ['tslint']
 
+" =============================================================================
+" Settings
+" =============================================================================
+
 " Insert spaces instead of tabs when indenting text
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+
+" Disable line wrapping
+set nowrap
 
 " Allow backspace over everything in insert mode
 set backspace=2
@@ -54,7 +61,7 @@ set ruler
 set number
 
 " No color column
-set colorcolumn=
+set colorcolumn=80,120
 
 " Don't break words when wrapping lines
 set linebreak
@@ -82,10 +89,7 @@ set wildignore+=*/node_modules/*,.git/
 " Make clipboard work with tmux
 set clipboard=unnamed
 
-" =============================================================================
 " Status line
-" =============================================================================
-
 set statusline=
 set statusline+=\ %0.40f
 set statusline+=\ %m%r
