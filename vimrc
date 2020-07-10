@@ -92,6 +92,7 @@ set statusline+=\ %m%r
 set statusline+=\ %h%w
 set statusline+=%=
 set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%{FugitiveStatusline()}
 set statusline+=\ %y
 set statusline+=\ %4l/%-4L\ C%-3c
 set statusline+=\ %P\ %*
@@ -142,8 +143,11 @@ nnoremap <Leader>tb :TagbarOpen jf<CR>
 nnoremap / /\v
 
 " Plugin mappings
+
+" Fugitive
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gp :Git push<CR>
+nnoremap <Leader>gpl :Git pull<CR>
 
 " Syntastic
 nnoremap <Leader>sc :SyntasticCheck<CR>
