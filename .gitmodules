@@ -34,3 +34,6 @@
 [submodule "pack/utils/start/vim-surround"]
 	path = pack/utils/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "pack/navigation/start/vim-vinegar"]
+	path = pack/navigation/start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git
