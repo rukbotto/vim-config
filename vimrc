@@ -159,7 +159,10 @@ nmap <Leader>rn <Plug>(coc-rename)
 " Fugitive
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gp :Git push<CR>
-nnoremap <Leader>gpl :Git pull<CR>
+nnoremap <Leader>gpl :Git pull<Space>
+nnoremap <Leader>gc :Git checkout<Space>
+nnoremap <Leader>gb :Git branch<Space>
+nnoremap <Leader>gbl :Gblame<CR>
 
 " Syntastic
 nnoremap <Leader>sc :SyntasticCheck<CR>
