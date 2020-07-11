@@ -210,47 +210,57 @@ if has("autocmd")
     if !exists("autocommands_loaded")
         let autocommands_loaded = 1
 
-        " Set autocompletion functions
-        autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-        autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-        autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-        autocmd FileType python set omnifunc=pythoncomplete#Complete
+        " Autocommands for dockerfile files
+        autocmd BufNewFile,BufRead *Dockerfile* set filetype=dockerfile
 
-        " Set autowrite on
-        autocmd FileType haxe set autowrite
+        " Autocommands for haskell files
+        autocmd BufNewFile,BufRead *xmobarrc set filetype=haskell
 
-        " Set indentation to 4 columns
-        autocmd FileType c++,haxe,java,python,sh,snippets,vim setlocal tabstop=4
-        autocmd FileType c++,haxe,java,python,sh,snippets,vim setlocal shiftwidth=4
-        autocmd FileType c++,haxe,java,python,sh,snippets,vim setlocal softtabstop=4
+        " Autocommands for haxe files
+        autocmd FileType haxe setlocal autowrite
+        autocmd FileType haxe setlocal tabstop=4
+        autocmd FileType haxe setlocal shiftwidth=4
+        autocmd FileType haxe setlocal softtabstop=4
 
-        " Don't convert tab to spaces
-        autocmd FileType sh,snippets setlocal noexpandtab
-
-        " Set line wrapping on
+        " Autocommands for markdown files
         autocmd FileType markdown setlocal wrap
         autocmd FileType markdown setlocal linebreak
 
-        " Set filetype for haskell files
-        autocmd BufNewFile,BufRead *xmobarrc set filetype=haskell
-
-        " Set filetype for xdefaults files
-        autocmd BufNewFile,BufRead *Xresources set filetype=xdefaults
-
-        " Set filetype for tmux files
-        autocmd BufNewFile,BufRead *tmux.conf set filetype=tmux
-
-        " Set filetype for Dockerfile files
-        autocmd BufNewFile,BufRead *Dockerfile* set filetype=dockerfile
-
-        " Include node binaries in $PATH for typescript files
-        autocmd BufNewFile,BufRead *ts let $PATH .= ':./node_modules/.bin'
-
-        " Automatically format Python files on save
+        " Autocommands for python files
+        autocmd FileType python setlocal tabstop=4
+        autocmd FileType python setlocal shiftwidth=4
+        autocmd FileType python setlocal softtabstop=4
         autocmd BufWritePre *.py :Autopep8
 
-        " Remove color columns for terminal buffers
+        " Autocommands for shell files
+        autocmd FileType sh setlocal tabstop=4
+        autocmd FileType sh setlocal shiftwidth=4
+        autocmd FileType sh setlocal softtabstop=4
+        autocmd FileType sh setlocal noexpandtab
+
+        " Autocommands for snippets files
+        autocmd FileType snippets setlocal tabstop=4
+        autocmd FileType snippets setlocal shiftwidth=4
+        autocmd FileType snippets setlocal softtabstop=4
+        autocmd FileType snippets setlocal noexpandtab
+
+        " Autocommands for terminal buffers
         autocmd TerminalOpen * setlocal colorcolumn=
+
+        " Autocommands for tmux config files
+        autocmd BufNewFile,BufRead *tmux.conf set filetype=tmux
+
+        " Autocommands for typescript files
+        autocmd FileType typescript let $PATH .= ":./node_modules/.bin"
+        autocmd FileType typescript setlocal commentstring=//\ %s
+
+        " Autocommands for viml files
+        autocmd FileType vim setlocal tabstop=4
+        autocmd FileType vim setlocal shiftwidth=4
+        autocmd FileType vim setlocal softtabstop=4
+
+        " Autocommands for xdefaults files
+        autocmd BufNewFile,BufRead *Xresources set filetype=xdefaults
     endif
 endif
 
