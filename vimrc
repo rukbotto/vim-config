@@ -119,9 +119,10 @@ noremap <Leader>tn :tabnew<CR>
 noremap <Leader>tc :tabclose<CR>
 noremap <Leader>to :tabonly<CR>
 noremap <Leader>tr :terminal<Space>
+noremap <Leader>vtr :vertical terminal<Space>
 
 " Split mappings
-nnoremap <Leader>hn :new<CR>
+nnoremap <Leader>n :new<CR>
 nnoremap <Leader>vn :vnew<CR>
 
 " Buffer mappings
@@ -129,8 +130,6 @@ nnoremap <Leader>o :Only<CR>
 
 " Execute the string subtitution command
 nnoremap <Leader>s :%substitute//
-
-nnoremap <Leader>tb :TagbarOpen jf<CR>
 
 " Search for a pattern in current buffer
 nnoremap / /\v
@@ -147,7 +146,7 @@ nmap <Leader>rn <Plug>(coc-rename)
 
 " Fugitive
 nnoremap <Leader>gs :Gstatus<CR>
-nnoremap <Leader>gp :Git push<CR>
+nnoremap <Leader>gp :Git push<Space>
 nnoremap <Leader>gpl :Git pull<Space>
 nnoremap <Leader>gc :Git checkout<Space>
 nnoremap <Leader>gb :Git branch<Space>
@@ -162,6 +161,9 @@ nnoremap <Leader>tg :Tags<CR>
 
 " Syntastic
 nnoremap <Leader>sc :SyntasticCheck<CR>
+
+" Tagbar mappings
+nnoremap <Leader>tb :TagbarOpen jf<CR>
 
 " =============================================================================
 " Insert mode mappings
