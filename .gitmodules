@@ -37,3 +37,6 @@
 [submodule "pack/navigation/start/vim-vinegar"]
 	path = pack/navigation/start/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
+[submodule "pack/snippets/start/ultisnips"]
+	path = pack/snippets/start/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
