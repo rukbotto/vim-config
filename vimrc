@@ -36,6 +36,9 @@ let g:syntastic_typescript_checkers = ['tslint']
 " Settings
 " =============================================================================
 
+" Turn off bell
+set belloff=all
+
 " Insert spaces instead of tabs when indenting text
 set tabstop=2
 set shiftwidth=2
