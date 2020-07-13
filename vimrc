@@ -130,20 +130,6 @@ nnoremap <Leader>o :Only<CR>
 " Execute the string subtitution command
 nnoremap <Leader>s :%substitute//
 
-" Fuzzy find files
-nnoremap <Leader><Space> :Files<CR>
-
-" Fuzzy find text in directory (ripgrep)
-nnoremap <Leader>rg :Rg<CR>
-
-" Fuzzy find text in directory (the_silver_searcher)
-nnoremap <Leader>ag :Ag<CR>
-
-" Fuzzy find buffers
-nnoremap <Leader>b :Buffers<CR>
-
-" Fuzzy find tags
-nnoremap <Leader>tg :Tags<CR>
 nnoremap <Leader>tb :TagbarOpen jf<CR>
 
 " Search for a pattern in current buffer
@@ -166,6 +152,13 @@ nnoremap <Leader>gpl :Git pull<Space>
 nnoremap <Leader>gc :Git checkout<Space>
 nnoremap <Leader>gb :Git branch<Space>
 nnoremap <Leader>gbl :Gblame<CR>
+
+" FZF mappings
+nnoremap <Leader><Space> :Files<CR>
+nnoremap <Leader>rg :Rg<Space>
+nnoremap <Leader>ag :Ag<Space>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>tg :Tags<CR>
 
 " Syntastic
 nnoremap <Leader>sc :SyntasticCheck<CR>
