@@ -221,6 +221,9 @@ if has("autocmd")
         autocmd FileType haxe setlocal shiftwidth=4
         autocmd FileType haxe setlocal softtabstop=4
 
+        " Autocommands for help buffers
+        autocmd FileType help setlocal colorcolumn=
+
         " Autocommands for markdown files
         autocmd FileType markdown setlocal wrap
         autocmd FileType markdown setlocal linebreak
