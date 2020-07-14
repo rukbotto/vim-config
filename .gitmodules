@@ -43,3 +43,6 @@
 [submodule "pack/snippets/start/vim-snippets"]
 	path = pack/snippets/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "pack/utils/start/vim-obsession"]
+	path = pack/utils/start/vim-obsession
+	url = https://github.com/tpope/vim-obsession.git
