@@ -108,6 +108,9 @@ set statusline+=\ %P\ %*
 " Normal mode mappings
 " =============================================================================
 
+" General mappings
+nnoremap <Leader>lrc :source $MYVIMRC<CR>
+
 " Session mappings
 nnoremap <Leader>mks :mksession!<CR>
 nnoremap <Leader>lds :source Session.vim<CR>
