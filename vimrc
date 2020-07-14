@@ -108,6 +108,10 @@ set statusline+=\ %P\ %*
 " Normal mode mappings
 " =============================================================================
 
+" Session mappings
+nnoremap <Leader>mks :mksession!<CR>
+nnoremap <Leader>lds :source Session.vim<CR>
+
 " Window mappings
 noremap <Leader>z <C-w>\|<C-w>_
 noremap <Leader>x <C-w>=
