@@ -98,8 +98,8 @@ set statusline+=\ %0.40f
 set statusline+=\ %m%r
 set statusline+=\ %h%w
 set statusline+=%=
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%{FugitiveStatusline()}
+set statusline+=\ %{SyntasticStatuslineFlag()}
+set statusline+=\ %{FugitiveStatusline()}
 set statusline+=\ %y
 set statusline+=\ %4l/%-4L\ C%-3c
 set statusline+=\ %P\ %*
