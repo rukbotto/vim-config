@@ -203,6 +203,9 @@ if has("autocmd")
         " Autocommands for dockerfile files
         autocmd BufNewFile,BufRead *Dockerfile* set filetype=dockerfile
 
+        " Autocommands for gitcommit buffers
+        autocmd FileType gitcommit set colorcolumn=
+
         " Autocommands for haskell files
         autocmd BufNewFile,BufRead *xmobarrc set filetype=haskell
 
@@ -218,6 +221,9 @@ if has("autocmd")
         " Autocommands for markdown files
         autocmd FileType markdown setlocal wrap
         autocmd FileType markdown setlocal linebreak
+
+        " Autocommands for netrw buffers
+        autocmd FileType netrw setlocal colorcolumn=
 
         " Autocommands for python files
         autocmd FileType python setlocal tabstop=4
