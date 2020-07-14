@@ -175,17 +175,6 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
-inoremap "" ""<left>
-inoremap '' ''<left>
-inoremap `` ``<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap [<CR> [<CR>]<ESC>O
-inoremap [;<CR> [<CR>];<ESC>O
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
-
 " =============================================================================
 " Visual mode mappings
 " =============================================================================
