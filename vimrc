@@ -63,9 +63,6 @@ set ruler
 " Display line numbers
 set number
 
-" No color column
-set colorcolumn=80,120
-
 " Don't break words when wrapping lines
 set linebreak
 
@@ -210,33 +207,30 @@ if has("autocmd")
         " Autocommands for dockerfile files
         autocmd BufNewFile,BufRead *Dockerfile* set filetype=dockerfile
 
-        " Autocommands for gitcommit buffers
-        autocmd FileType gitcommit set colorcolumn=
-
         " Autocommands for haskell files
         autocmd BufNewFile,BufRead *xmobarrc set filetype=haskell
+        autocmd FileType haskell setlocal colorcolumn=80,120
 
         " Autocommands for haxe files
         autocmd FileType haxe setlocal autowrite
         autocmd FileType haxe setlocal tabstop=4
         autocmd FileType haxe setlocal shiftwidth=4
         autocmd FileType haxe setlocal softtabstop=4
+        autocmd FileType haxe setlocal colorcolumn=80,120
 
-        " Autocommands for help buffers
-        autocmd FileType help setlocal colorcolumn=
+        " Autocommands for javascript files
+        autocmd FileType javascript setlocal colorcolumn=80,120
 
         " Autocommands for markdown files
         autocmd FileType markdown setlocal wrap
         autocmd FileType markdown setlocal linebreak
 
-        " Autocommands for netrw buffers
-        autocmd FileType netrw setlocal colorcolumn=
-
         " Autocommands for python files
+        autocmd BufWritePre *.py :Autopep8
         autocmd FileType python setlocal tabstop=4
         autocmd FileType python setlocal shiftwidth=4
         autocmd FileType python setlocal softtabstop=4
-        autocmd BufWritePre *.py :Autopep8
+        autocmd FileType python setlocal colorcolumn=80,120
 
         " Autocommands for shell files
         autocmd FileType sh setlocal tabstop=4
@@ -250,15 +244,13 @@ if has("autocmd")
         autocmd FileType snippets setlocal softtabstop=4
         autocmd FileType snippets setlocal noexpandtab
 
-        " Autocommands for terminal buffers
-        autocmd TerminalOpen * setlocal colorcolumn=
-
         " Autocommands for tmux config files
         autocmd BufNewFile,BufRead *tmux.conf set filetype=tmux
 
         " Autocommands for typescript files
         autocmd FileType typescript let $PATH .= ":./node_modules/.bin"
         autocmd FileType typescript setlocal commentstring=//\ %s
+        autocmd FileType typescript setlocal colorcolumn=80,120
 
         " Autocommands for viml files
         autocmd FileType vim setlocal tabstop=4
