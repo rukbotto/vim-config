@@ -158,6 +158,11 @@ nnoremap <Leader>gpl :Git pull<Space>
 nnoremap <Leader>gc :Git checkout<Space>
 nnoremap <Leader>gb :Git branch<Space>
 nnoremap <Leader>gbl :Gblame<CR>
+nnoremap <Leader>gz :Git stash<Space>
+nnoremap <Leader>gf :Git fetch<Space>
+nnoremap <Leader>gl :Git log<Space>
+nnoremap <Leader>gtg :Git tag<Space>
+nnoremap <Leader>grs :Git reset<Space>
 
 " FZF mappings
 nnoremap <Leader><Space> :Files<CR>
