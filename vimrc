@@ -106,7 +106,10 @@ set statusline+=\ %P\ %*
 " =============================================================================
 
 " General mappings
-nnoremap <Leader>lrc :source $MYVIMRC<CR>
+nnoremap <Leader>src :source $MYVIMRC<CR>
+nnoremap <Leader>erc :new $MYVIMRC<CR>
+nnoremap <Leader>egrc :new $MYGVIMRC<CR>
+nnoremap <Leader>elrc :new $HOME/.local.vimrc<CR>
 
 " Session mappings
 nnoremap <Leader>mks :mksession!<CR>
