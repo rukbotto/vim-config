@@ -112,7 +112,7 @@ nnoremap <Leader>egrc :new $MYGVIMRC<CR>
 nnoremap <Leader>elrc :new $HOME/.local.vimrc<CR>
 
 " Session mappings
-nnoremap <Leader>mks :mksession!<CR>
+nnoremap <Leader>ss :Obsession!<CR>
 nnoremap <Leader>lds :source Session.vim<CR>
 
 " Window mappings
