@@ -170,6 +170,8 @@ nnoremap <Leader>rg :Rg<Space>
 nnoremap <Leader>ag :Ag<Space>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>tg :Tags<CR>
+nnoremap <Leader>cr :Colors<CR>
+nnoremap <Leader>cm :Commands<CR>
 
 " Syntastic
 nnoremap <Leader>sc :SyntasticCheck<CR>
