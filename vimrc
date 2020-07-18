@@ -189,6 +189,9 @@ vnoremap / /\v
 " Search the current visual selection
 xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
 
+" Execute a macro inside a visual selection block
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
 " =============================================================================
 " Commands
 " =============================================================================
@@ -292,6 +295,11 @@ function! CloseHiddenBuffers()
         endif
     endfor
     echon "Deleted " . l:tally . " buffers"
+endfunction
+
+function! ExecuteMacroOverVisualRange()
+    echo "@".getcmdline()
+    execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
 " =============================================================================
