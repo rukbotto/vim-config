@@ -176,9 +176,6 @@ nnoremap <Leader>cm :Commands<CR>
 " Syntastic
 nnoremap <Leader>sc :SyntasticCheck<CR>
 
-" Tagbar mappings
-nnoremap <Leader>tb :TagbarOpen jf<CR>
-
 " =============================================================================
 " Insert mode mappings
 " =============================================================================
