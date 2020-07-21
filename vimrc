@@ -132,9 +132,7 @@ nnoremap <Leader>s :%substitute//
 " Search for a pattern in current buffer
 nnoremap / /\v
 
-" Plugin mappings
-
-" Conquer of completion
+" Conquer of completion mappings
 nmap <Leader>jd <Plug>(coc-definition)
 nmap <Leader>jt <Plug>(coc-type-definition)
 nmap <Leader>jl <Plug>(coc-declaration)
@@ -142,7 +140,7 @@ nmap <Leader>ji <Plug>(coc-implementation)
 nmap <Leader>jr <Plug>(coc-references)
 nmap <Leader>rn <Plug>(coc-rename)
 
-" Fugitive
+" Fugitive mappings
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gp :Git push<Space>
 nnoremap <Leader>gpl :Git pull<Space>
@@ -163,8 +161,10 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>tg :Tags<CR>
 nnoremap <Leader>cr :Colors<CR>
 nnoremap <Leader>cm :Commands<CR>
+nnoremap <Leader>ht :Helptags<CR>
+nnoremap <Leader>mp :Maps<CR>
 
-" Syntastic
+" Syntastic mappings
 nnoremap <Leader>sc :SyntasticCheck<CR>
 
 " =============================================================================
