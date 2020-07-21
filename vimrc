@@ -23,7 +23,10 @@ runtime macros/matchit.vim
 let mapleader=" "
 let maplocalleader="\\"
 
-" Plugin variables
+" Lightline variables
+let g:lightline = {
+    \ 'colorscheme': 'Tomorrow',
+    \ }
 
 " Syntastic variables
 let g:syntastic_always_populate_loc_list = 1
@@ -88,18 +91,6 @@ set wildignore+=*/node_modules/*,.git/
 
 " Make clipboard work with tmux
 set clipboard=unnamed
-
-" Status line
-set statusline=
-set statusline+=\ %0.40f
-set statusline+=\ %m%r
-set statusline+=\ %h%w
-set statusline+=%=
-set statusline+=\ %{SyntasticStatuslineFlag()}
-set statusline+=\ %{FugitiveStatusline()}
-set statusline+=\ %y
-set statusline+=\ %4l/%-4L\ C%-3c
-set statusline+=\ %P\ %*
 
 " =============================================================================
 " Normal mode mappings
