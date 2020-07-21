@@ -46,3 +46,6 @@
 [submodule "pack/utils/start/vim-obsession"]
 	path = pack/utils/start/vim-obsession
 	url = https://github.com/tpope/vim-obsession.git
+[submodule "pack/utils/start/vim-lightline"]
+	path = pack/utils/start/vim-lightline
+	url = https://github.com/itchyny/lightline.vim.git
