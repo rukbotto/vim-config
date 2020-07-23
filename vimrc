@@ -102,6 +102,9 @@ nnoremap <Leader>erc :new $MYVIMRC<CR>
 nnoremap <Leader>egrc :new $MYGVIMRC<CR>
 nnoremap <Leader>elrc :new $HOME/.local.vimrc<CR>
 
+" Spelling mappings
+nnoremap <Leader>spl :setlocal spell<Space>
+
 " Session mappings
 nnoremap <Leader>ss :Obsession!<CR>
 nnoremap <Leader>lds :source Session.vim<CR>
