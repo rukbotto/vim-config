@@ -261,6 +261,10 @@ if has("autocmd")
         autocmd FileType vim setlocal shiftwidth=4
         autocmd FileType vim setlocal softtabstop=4
 
+        " Autocommands for vimwiki buffers
+        autocmd FileType vimwiki setlocal nonumber
+        autocmd FileType vimwiki setlocal norelativenumber
+
         " Autocommands for xdefaults files
         autocmd BufNewFile,BufRead *Xresources set filetype=xdefaults
     endif
