@@ -38,6 +38,7 @@ Vim configuration files.
 - [Lightline](https://github.com/itchyny/lightline.vim)
 - [Obsession](https://github.com/tpope/vim-obsession)
 - [Surround](https://github.com/tpope/vim-surround)
+- [Vimwiki](https://github.com/vimwiki/vimwiki)
 
 ### Version control
 
@@ -72,7 +73,7 @@ Link `gvimrc` file to your home directory:
 $ ln -svf ~/.vim/gvimrc ~/.gvimrc
 ```
 
-Create a `.local.vimrc` file so you can, for example, setup the color scheme or add spelling settings:
+Create a `.local.vimrc` file so you can, for example, setup the color scheme, add spelling settings or configure vimwiki directories:
 
 ```
 $ touch ~/.local.vimrc
