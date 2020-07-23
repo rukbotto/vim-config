@@ -25,7 +25,16 @@ let maplocalleader="\\"
 
 " Lightline variables
 let g:lightline = {
-    \ 'colorscheme': 'Tomorrow',
+    \ "colorscheme": "Tomorrow",
+    \ "active": {
+    \     "left": [
+    \         ["mode", "paste"],
+    \         ["gitbranch", "readonly", "filename", "modified"]
+    \     ]
+    \ },
+    \ "component_function": {
+    \     "gitbranch": "FugitiveHead"
+    \ }
     \ }
 
 " Syntastic variables
