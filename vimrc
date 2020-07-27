@@ -23,6 +23,13 @@ runtime macros/matchit.vim
 let mapleader=" "
 let maplocalleader="\\"
 
+" FZF variables
+" TODO: Enable this when vim is updated to version 8.2.191+
+" let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+
+" goyo variables
+let g:goyo_width=120
+
 " Lightline variables
 let g:lightline = {
     \ "colorscheme": "Tomorrow",
@@ -36,6 +43,9 @@ let g:lightline = {
     \     "gitbranch": "FugitiveHead"
     \ }
     \ }
+
+" Limelight variables
+let g:limelight_default_coefficient = 0.7
 
 " Syntastic variables
 let g:syntastic_always_populate_loc_list = 1
@@ -237,6 +247,9 @@ if has("autocmd")
         " Autocommands for markdown files
         autocmd FileType markdown setlocal wrap
         autocmd FileType markdown setlocal linebreak
+        autocmd FileType markdown setlocal spell
+        autocmd FileType markdown setlocal nonumber
+        autocmd FileType markdown setlocal norelativenumber
 
         " Autocommands for python files
         autocmd BufWritePre *.py :Autopep8
@@ -270,12 +283,12 @@ if has("autocmd")
         autocmd FileType vim setlocal shiftwidth=4
         autocmd FileType vim setlocal softtabstop=4
 
-        " Autocommands for vimwiki buffers
-        autocmd FileType vimwiki setlocal nonumber
-        autocmd FileType vimwiki setlocal norelativenumber
-
         " Autocommands for xdefaults files
         autocmd BufNewFile,BufRead *Xresources set filetype=xdefaults
+
+        " Autocommands for goyo plugin
+        autocmd! User GoyoEnter Limelight
+        autocmd! User GoyoLeave Limelight!
     endif
 endif
 

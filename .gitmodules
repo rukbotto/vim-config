@@ -52,3 +52,12 @@
 [submodule "pack/utils/start/vimwiki"]
 	path = pack/utils/start/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule "pack/navigation/start/vim-sneak"]
+	path = pack/navigation/start/vim-sneak
+	url = https://github.com/justinmk/vim-sneak.git
+[submodule "pack/writing/start/goyo-vim"]
+	path = pack/writing/start/goyo-vim
+	url = https://github.com/junegunn/goyo.vim.git
+[submodule "pack/writing/start/limelight-vim"]
+	path = pack/writing/start/limelight-vim
+	url = https://github.com/junegunn/limelight.vim.git

@@ -4,7 +4,7 @@ Vim configuration files.
 
 ## Included plugins
 
-### Autocompletion
+### Auto-completion
 
 - [Conquer of completion](https://github.com/neoclide/coc.nvim)
 
@@ -20,7 +20,7 @@ Vim configuration files.
 
 - [Dotenv](https://github.com/tpope/vim-dotenv)
 
-### Code navigation
+### Code/file navigation
 
 - [FZF](https://github.com/junegunn/fzf.vim)
 - [Unimpaired](https://github.com/tpope/vim-unimpaired)
@@ -44,6 +44,11 @@ Vim configuration files.
 
 - [Fugitive](https://github.com/tpope/vim-fugitive)
 - [Git gutter](https://github.com/airblade/vim-gitgutter)
+
+### Writing
+
+- [Goyo](https://github.com/junegunn/goyo.vim)
+- [Limelight](https://github.com/junegunn/limelight.vim)
 
 ## Installation
 
