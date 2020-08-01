@@ -64,6 +64,12 @@ let g:vimwiki_conceallevel = 0
 " Turn off bell
 set belloff=all
 
+" Set minimal number of lines above and below the cursor
+set scrolloff=5
+
+" Disable native mode indicator
+set noshowmode
+
 " Insert spaces instead of tabs when indenting text
 set tabstop=2
 set shiftwidth=2
