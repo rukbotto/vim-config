@@ -250,17 +250,12 @@ if has("autocmd")
 
         " Autocommands for haskell files
         autocmd BufNewFile,BufRead *xmobarrc set filetype=haskell
-        autocmd FileType haskell setlocal colorcolumn=80,120
 
         " Autocommands for haxe files
         autocmd FileType haxe setlocal autowrite
         autocmd FileType haxe setlocal tabstop=4
         autocmd FileType haxe setlocal shiftwidth=4
         autocmd FileType haxe setlocal softtabstop=4
-        autocmd FileType haxe setlocal colorcolumn=80,120
-
-        " Autocommands for javascript files
-        autocmd FileType javascript setlocal colorcolumn=80,120
 
         " Autocommands for markdown files
         autocmd FileType markdown setlocal wrap
@@ -274,7 +269,6 @@ if has("autocmd")
         autocmd FileType python setlocal tabstop=4
         autocmd FileType python setlocal shiftwidth=4
         autocmd FileType python setlocal softtabstop=4
-        autocmd FileType python setlocal colorcolumn=80,120
 
         " Autocommands for shell files
         autocmd FileType sh setlocal tabstop=4
@@ -294,7 +288,6 @@ if has("autocmd")
         " Autocommands for typescript files
         autocmd FileType typescript let $PATH .= ":./node_modules/.bin"
         autocmd FileType typescript setlocal commentstring=//\ %s
-        autocmd FileType typescript setlocal colorcolumn=80,120
 
         " Autocommands for viml files
         autocmd FileType vim setlocal tabstop=4
