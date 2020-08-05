@@ -61,3 +61,6 @@
 [submodule "pack/writing/start/limelight-vim"]
 	path = pack/writing/start/limelight-vim
 	url = https://github.com/junegunn/limelight.vim.git
+[submodule "pack/navigation/start/vim-startify"]
+	path = pack/navigation/start/vim-startify
+	url = https://github.com/mhinz/vim-startify.git
