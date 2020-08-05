@@ -195,8 +195,17 @@ nnoremap <Leader>cm :Commands<CR>
 nnoremap <Leader>ht :Helptags<CR>
 nnoremap <Leader>mp :Maps<CR>
 
+" Goyo mappings
+nnoremap <Leader>gy :Goyo<CR>
+
+" Startify mappings
+nnoremap <Leader>st :Startify<CR>
+
 " Syntastic mappings
 nnoremap <Leader>sc :SyntasticCheck<CR>
+
+" Vimwiki mappings
+nnoremap <Leader>wh :Vimwiki2HTML<CR>
 
 " =============================================================================
 " Insert mode mappings
