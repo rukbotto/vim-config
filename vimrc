@@ -208,6 +208,7 @@ nnoremap <Leader>sc :SyntasticCheck<CR>
 
 " Vimwiki mappings
 nnoremap <Leader>wh :Vimwiki2HTML<CR>
+nnoremap <Leader>whb :Vimwiki2HTMLBrowse<CR>
 
 " =============================================================================
 " Insert mode mappings
