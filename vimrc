@@ -32,7 +32,6 @@ let g:goyo_width=120
 
 " Lightline variables
 let g:lightline = {
-    \ "colorscheme": "Tomorrow",
     \ "active": {
     \     "left": [
     \         ["mode", "paste"],
