@@ -67,6 +67,9 @@ set belloff=all
 " Set minimal number of lines above and below the cursor
 set scrolloff=5
 
+" Enable indentation for soft-wrapped lines
+set breakindent
+
 " Disable native mode indicator
 set noshowmode
 
