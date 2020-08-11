@@ -183,8 +183,8 @@ nnoremap <Leader>gbl :Gblame<CR>
 nnoremap <Leader>gz :Git stash<Space>
 nnoremap <Leader>gf :Git fetch<Space>
 nnoremap <Leader>gl :Git log<Space>
-nnoremap <Leader>gtg :Git tag<Space>
-nnoremap <Leader>grs :Git reset<Space>
+nnoremap <Leader>gt :Git tag<Space>
+nnoremap <Leader>gr :Git reset<Space>
 
 " FZF mappings
 nnoremap <Leader><Space> :Files<CR>
