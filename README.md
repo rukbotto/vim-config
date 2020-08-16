@@ -64,6 +64,18 @@ Install Conquer of Completion extensions from within vim:
 :CocInstall coc-marketplace coc-json coc-tsserver coc-eslint
 ```
 
+Install `vimwiki_markdown` for generating HTML pages from markdown vimwiki files:
+
+```
+$ sudo pip install vimwiki_markdown
+```
+
+Install `jsx-lexer` for Pygments in order to get proper JSX syntax highlighting in HTML files:
+
+```
+$ pip install jsx-lexer
+```
+
 ## Usage
 
 Link `vimrc` file to your home directory:
