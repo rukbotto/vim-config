@@ -208,8 +208,7 @@ nnoremap <Leader>st :Startify<CR>
 nnoremap <Leader>sc :SyntasticCheck<CR>
 
 " Vimwiki mappings
-nnoremap <Leader>wh :Vimwiki2HTML<CR>
-nnoremap <Leader>whb :Vimwiki2HTMLBrowse<CR>
+nnoremap <Leader>wl <Plug>VimwikiToggleListItem
 
 " =============================================================================
 " Insert mode mappings
