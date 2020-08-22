@@ -185,6 +185,7 @@ nnoremap <Leader>gf :Git fetch<Space>
 nnoremap <Leader>gl :Git log<Space>
 nnoremap <Leader>gt :Git tag<Space>
 nnoremap <Leader>gr :Git reset<Space>
+nnoremap <Leader>gm :Git merge<Space>
 
 " FZF mappings
 nnoremap <Leader><Space> :Files<CR>
