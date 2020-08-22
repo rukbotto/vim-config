@@ -32,21 +32,33 @@ let g:goyo_width=120
 
 " Lightline variables
 let g:lightline = {
-    \ "active": {
-    \     "left": [
-    \         ["mode", "paste"],
-    \         ["gitbranch", "readonly", "filename", "modified"]
-    \     ]
-    \ },
-    \ "component_function": {
-    \     "gitbranch": "FugitiveHead"
-    \ }
+    \     "active": {
+    \         "left": [
+    \             ["mode", "paste"],
+    \             ["readonly", "filename", "modified"]
+    \         ],
+    \         "right": [
+    \             ["syntastic", "lineinfo"],
+    \             ["percent"],
+    \             ["gitbranch", "fileformat", "fileencoding", "filetype"],
+    \         ]
+    \     },
+    \     "component_expand": {
+    \         "syntastic": "SyntasticStatuslineFlag",
+    \     },
+    \     "component_function": {
+    \         "gitbranch": "FugitiveHead",
+    \     },
+    \     "component_type": {
+    \         "syntastic": "error",
+    \     },
     \ }
 
 " Limelight variables
 let g:limelight_default_coefficient = 0.7
 
 " Syntastic variables
+let g:syntastic_stl_format = "(%F:%t)"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -341,6 +353,11 @@ endfunction
 function! ExecuteMacroOverVisualRange()
     echo "@".getcmdline()
     execute ":'<,'>normal @".nr2char(getchar())
+endfunction
+
+" Update lightline after Syntastic error check
+function! SyntasticCheckHook(errors)
+    call lightline#update()
 endfunction
 
 " =============================================================================
