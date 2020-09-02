@@ -15,9 +15,7 @@ endif
 " Enable matchit macro
 runtime macros/matchit.vim
 
-" =============================================================================
 " Variables
-" =============================================================================
 
 " Leader and local leader remappings
 let mapleader=" "
@@ -68,9 +66,7 @@ let g:syntastic_typescript_checkers = ["tslint"]
 " Vimwiki variables
 let g:vimwiki_conceallevel = 0
 
-" =============================================================================
 " Settings
-" =============================================================================
 
 " Turn off bell
 set belloff=all
@@ -134,9 +130,7 @@ set wildignore+=*/node_modules/*,.git/
 " Make clipboard work with tmux
 set clipboard=unnamed
 
-" =============================================================================
 " Normal mode mappings
-" =============================================================================
 
 " General mappings
 nnoremap <Leader>src :source $MYVIMRC<CR>
@@ -222,9 +216,7 @@ nnoremap <Leader>sc :SyntasticCheck<CR>
 " Vimwiki mappings
 nnoremap <Leader>wl <Plug>VimwikiToggleListItem
 
-" =============================================================================
 " Insert mode mappings
-" =============================================================================
 
 " Disable arrow keys in insert mode
 inoremap <Up> <Nop>
@@ -232,9 +224,7 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
-" =============================================================================
 " Visual mode mappings
-" =============================================================================
 
 " Search for a pattern in current buffer
 vnoremap / /\v
@@ -245,16 +235,12 @@ xnoremap * :<C-u> call <SID>SearchVisualSelection()<CR>/<C-r>=@/<CR><CR>
 " Execute a macro inside a visual selection block
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
-" =============================================================================
 " Commands
-" =============================================================================
 
 " Delete all hidden buffers
 command! -nargs=* Only call CloseHiddenBuffers()
 
-" =============================================================================
 " Autocommands
-" =============================================================================
 
 if has("autocmd")
     if !exists("autocommands_loaded")
@@ -318,9 +304,7 @@ if has("autocmd")
     endif
 endif
 
-" =============================================================================
 " Functions
-" =============================================================================
 
 " Select a word in visual mode
 function! s:SearchVisualSelection()
@@ -360,9 +344,7 @@ function! SyntasticCheckHook(errors)
     call lightline#update()
 endfunction
 
-" =============================================================================
 " Source local vimrc file
-" =============================================================================
 
 let g:local_vimrc = $HOME . "/.local.vimrc"
 if filereadable(g:local_vimrc)
