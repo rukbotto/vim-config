@@ -247,6 +247,13 @@ if has("autocmd")
         " Autocommands for dockerfile files
         autocmd BufNewFile,BufRead *Dockerfile* set filetype=dockerfile
 
+        " Autocommands for bash files
+        autocmd BufNewFile,BufRead *bash* set filetype=bash
+        autocmd FileType bash setlocal tabstop=4
+        autocmd FileType bash setlocal shiftwidth=4
+        autocmd FileType bash setlocal softtabstop=4
+        autocmd FileType bash setlocal noexpandtab
+
         " Autocommands for haskell files
         autocmd BufNewFile,BufRead *xmobarrc set filetype=haskell
 
