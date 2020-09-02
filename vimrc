@@ -214,9 +214,6 @@ nnoremap <Leader>st :Startify<CR>
 " Syntastic mappings
 nnoremap <Leader>sc :SyntasticCheck<CR>
 
-" Vimwiki mappings
-nnoremap <Leader>wl <Plug>VimwikiToggleListItem
-
 " Insert mode mappings
 
 " Disable arrow keys in insert mode
