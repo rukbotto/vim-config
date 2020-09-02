@@ -142,8 +142,8 @@ nnoremap <Leader>elrc :new $HOME/.local.vimrc<CR>
 nnoremap <Leader>spl :setlocal spell<Space>
 
 " Session mappings
-nnoremap <Leader>ss :Obsession!<CR>
-nnoremap <Leader>lds :source Session.vim<CR>
+nnoremap <Leader>ss :Obsession<Space>
+nnoremap <Leader>lds :source<Space>
 
 " Window mappings
 noremap <Leader>z <C-w>\|<C-w>_
