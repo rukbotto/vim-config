@@ -64,3 +64,6 @@
 [submodule "pack/navigation/start/vim-startify"]
 	path = pack/navigation/start/vim-startify
 	url = https://github.com/mhinz/vim-startify.git
+[submodule "pack/color-schemes/opt/base16-vim-lightline"]
+	path = pack/color-schemes/opt/base16-vim-lightline
+	url = https://github.com/mike-hearn/base16-vim-lightline.git
