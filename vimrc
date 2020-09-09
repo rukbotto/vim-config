@@ -63,9 +63,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_typescript_checkers = ["tslint"]
 
-" Vimwiki variables
-let g:vimwiki_conceallevel = 0
-
 " Settings
 
 " Turn off bell
