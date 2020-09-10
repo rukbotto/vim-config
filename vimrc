@@ -55,6 +55,9 @@ let g:lightline = {
 " Limelight variables
 let g:limelight_default_coefficient = 0.7
 
+" Startify
+let g:startify_session_dir = $HOME . "/.vim-sessions"
+
 " Syntastic variables
 let g:syntastic_stl_format = "(%F:%t)"
 let g:syntastic_always_populate_loc_list = 1
