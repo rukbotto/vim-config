@@ -193,6 +193,7 @@ nnoremap <Leader>gt :Git tag<Space>
 nnoremap <Leader>gr :Git reset<Space>
 nnoremap <Leader>grb :Git rebase<Space>
 nnoremap <Leader>gm :Git merge<Space>
+nnoremap <Leader>gcp :Git cherry-pick<Space>
 
 " FZF mappings
 nnoremap <Leader><Space> :Files<CR>
@@ -350,7 +351,6 @@ function! SyntasticCheckHook(errors)
 endfunction
 
 " Source local vimrc file
-
 let g:local_vimrc = $HOME . "/.local.vimrc"
 if filereadable(g:local_vimrc)
     exec "source " . g:local_vimrc
