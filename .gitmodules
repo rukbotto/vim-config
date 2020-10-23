@@ -19,8 +19,8 @@
 [submodule "pack/navigation/start/vim-unimpaired"]
 	path = pack/navigation/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
-[submodule "pack/file-checkers/start/syntastic"]
-	path = pack/file-checkers/start/syntastic
+[submodule "pack/file-checkers/opt/syntastic"]
+	path = pack/file-checkers/opt/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
 [submodule "pack/autocompletion/opt/coc"]
 	path = pack/autocompletion/opt/coc
