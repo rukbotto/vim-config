@@ -35,7 +35,6 @@ Vim configuration files.
 
 - [Case convert](https://github.com/chiedo/vim-case-convert)
 - [Commentary](https://github.com/tpope/vim-commentary)
-- [Lightline](https://github.com/itchyny/lightline.vim)
 - [Obsession](https://github.com/tpope/vim-obsession)
 - [Surround](https://github.com/tpope/vim-surround)
 

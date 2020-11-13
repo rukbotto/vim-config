@@ -28,30 +28,6 @@ let maplocalleader="\\"
 " goyo variables
 let g:goyo_width=120
 
-" Lightline variables
-let g:lightline = {
-    \     "active": {
-    \         "left": [
-    \             ["mode", "paste"],
-    \             ["readonly", "filename", "modified"]
-    \         ],
-    \         "right": [
-    \             ["syntastic", "lineinfo"],
-    \             ["percent"],
-    \             ["gitbranch", "fileformat", "fileencoding", "filetype"],
-    \         ]
-    \     },
-    \     "component_expand": {
-    \         "syntastic": "SyntasticStatuslineFlag",
-    \     },
-    \     "component_function": {
-    \         "gitbranch": "FugitiveHead",
-    \     },
-    \     "component_type": {
-    \         "syntastic": "error",
-    \     },
-    \ }
-
 " Limelight variables
 let g:limelight_default_coefficient = 0.7
 
@@ -129,6 +105,18 @@ set wildignore+=*/node_modules/*,.git/
 
 " Make clipboard work with tmux
 set clipboard=unnamed
+
+" Status line
+set statusline=
+set statusline+=\ %0.40f
+set statusline+=\ %m%r
+set statusline+=\ %h%w
+set statusline+=%=
+set statusline+=\ %{SyntasticStatuslineFlag()}
+set statusline+=\ %{FugitiveStatusline()}
+set statusline+=\ %y
+set statusline+=\ %4l/%-4L\ C%-3c
+set statusline+=
 
 " Normal mode mappings
 
@@ -343,11 +331,6 @@ endfunction
 function! ExecuteMacroOverVisualRange()
     echo "@".getcmdline()
     execute ":'<,'>normal @".nr2char(getchar())
-endfunction
-
-" Update lightline after Syntastic error check
-function! SyntasticCheckHook(errors)
-    call lightline#update()
 endfunction
 
 " Source local vimrc file
