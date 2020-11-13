@@ -10,7 +10,7 @@ Vim configuration files.
 
 ### Color schemes
 
-- [Base16 color scheme](https://github.com/chriskempson/base16-vim)
+- [Rainglow colorscheme](https://github.com/rainglow/vim)
 
 ### File checkers
 
