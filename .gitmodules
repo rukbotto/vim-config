@@ -64,3 +64,6 @@
 [submodule "pack/color-schemes/opt/base16-vim-lightline"]
 	path = pack/color-schemes/opt/base16-vim-lightline
 	url = https://github.com/mike-hearn/base16-vim-lightline.git
+[submodule "pack/color-schemes/opt/rainglow-vim"]
+	path = pack/color-schemes/opt/rainglow-vim
+	url = git@github.com:rainglow/vim.git
