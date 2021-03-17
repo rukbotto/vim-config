@@ -58,3 +58,6 @@
 [submodule "pack/color-schemes/opt/rainglow-vim"]
 	path = pack/color-schemes/opt/rainglow-vim
 	url = git@github.com:rainglow/vim.git
+[submodule "pack/color-schemes/opt/vim-one"]
+	path = pack/color-schemes/opt/vim-one
+	url = https://github.com/rakr/vim-one
