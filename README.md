@@ -4,17 +4,9 @@ Vim configuration files.
 
 ## Included plugins
 
-### Auto-completion
-
-- [Conquer of completion](https://github.com/neoclide/coc.nvim)
-
 ### Color schemes
 
 - [Rainglow colorscheme](https://github.com/rainglow/vim)
-
-### File checkers
-
-- [Syntastic](https://github.com/vim-syntastic/syntastic)
 
 ### Additional file type support
 
@@ -40,7 +32,6 @@ Vim configuration files.
 
 ### Version control
 
-- [Fugitive](https://github.com/tpope/vim-fugitive)
 - [Git gutter](https://github.com/airblade/vim-gitgutter)
 
 ### Writing
@@ -50,16 +41,12 @@ Vim configuration files.
 
 ## Installation
 
+Install FZF. (<https://github.com/junegunn/fzf#installation>)
+
 Clone this repo in your home directory:
 
 ```
 $ git clone --recursive https://github.com/rukbotto/vim-config.git ~/.vim
-```
-
-Install Conquer of Completion extensions from within vim:
-
-```
-:CocInstall coc-marketplace coc-json coc-tsserver coc-eslint
 ```
 
 ## Usage
@@ -76,7 +63,7 @@ Link `gvimrc` file to your home directory:
 $ ln -svf ~/.vim/gvimrc ~/.gvimrc
 ```
 
-Create a `.local.vimrc` file so you can, for example, setup the color scheme, add spelling settings or configure vimwiki directories:
+Create a `.local.vimrc` file so you can activate optional plugins, setup the color scheme or add spelling settings:
 
 ```
 $ touch ~/.local.vimrc
