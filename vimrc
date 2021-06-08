@@ -114,7 +114,6 @@ set statusline+=\ %h%w
 set statusline+=%=
 set statusline+=\ %y
 set statusline+=\ %4l/%-4L\ C%-3c
-set statusline+=\ %{FugitiveStatusline()}
 
 " Normal mode mappings
 
