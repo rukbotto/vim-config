@@ -19,9 +19,6 @@
 [submodule "pack/file-checkers/opt/syntastic"]
 	path = pack/file-checkers/opt/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "pack/autocompletion/opt/coc"]
-	path = pack/autocompletion/opt/coc
-	url = https://github.com/neoclide/coc.nvim.git
 [submodule "pack/utils/start/vim-commentary"]
 	path = pack/utils/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
