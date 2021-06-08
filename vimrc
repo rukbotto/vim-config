@@ -257,7 +257,6 @@ if has("autocmd")
         autocmd FileType markdown setlocal norelativenumber
 
         " Autocommands for python files
-        autocmd BufWritePre *.py :Autopep8
         autocmd FileType python setlocal tabstop=4
         autocmd FileType python setlocal shiftwidth=4
         autocmd FileType python setlocal softtabstop=4
