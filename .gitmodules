@@ -13,9 +13,6 @@
 [submodule "pack/navigation/start/vim-unimpaired"]
 	path = pack/navigation/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
-[submodule "pack/file-checkers/opt/syntastic"]
-	path = pack/file-checkers/opt/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
 [submodule "pack/utils/start/vim-commentary"]
 	path = pack/utils/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
