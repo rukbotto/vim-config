@@ -46,22 +46,10 @@ Install FZF. (<https://github.com/junegunn/fzf#installation>)
 Clone this repo in your home directory:
 
 ```
-$ git clone --recursive https://github.com/rukbotto/vim-config.git ~/.vim
+$ git clone --recurse-submodules -j8 https://github.com/rukbotto/vim-config.git ~/.vim
 ```
 
 ## Usage
-
-Link `vimrc` file to your home directory:
-
-```
-$ ln -svf ~/.vim/vimrc ~/.vimrc
-```
-
-Link `gvimrc` file to your home directory:
-
-```
-$ ln -svf ~/.vim/gvimrc ~/.gvimrc
-```
 
 Create a `.local.vimrc` file so you can activate optional plugins, setup the color scheme or add spelling settings:
 
